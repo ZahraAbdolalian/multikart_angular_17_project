@@ -1,0 +1,310 @@
+@import '../../shared/shared-style/shared-style';
+
+@mixin line_hover_act() {
+    
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        background-color: $main-color;
+        transition: 0.5s ease;
+        height: 2px;
+        width: 0;
+        top: 33px;
+    }
+
+    &:hover::before {
+        width: 50px;
+    }
+}
+
+.bottom-header-container{
+    padding-top: 20px;
+}
+
+.top_header_container {
+    background-color: $white-color;
+}
+
+mat-toolbar {
+    background-color: transparent;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-right: 19px;
+    padding-left: 8px;
+    padding-top: 14px;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.menu_icon {
+    padding: 14px 64px 40px 0;
+    font-weight: 800;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.multikart-logo {
+    padding-left: 64px;
+
+    img {
+        padding: 37px 0;
+        cursor: pointer;
+    }
+}
+
+.bottom_header_icon {
+    padding: 40px 0 40px 20px;
+    cursor: pointer;
+}
+
+.bottom_header_icon_container {
+    padding-left: 25px;
+    display: flex;
+}
+
+.header_bottom_content {
+    display: flex;
+}
+
+.header_bottom_item {
+    overflow: visible;
+    text-transform: uppercase;
+    color: $main-text-color;
+    letter-spacing: 0.07em;
+    position: relative;
+    padding: 42px 18px;
+    line-height: 23px;
+    cursor: pointer !important;
+    transition: all 0.5s ease 0s;
+
+    &:hover .header_item_title,
+    &:hover .header_item_icon {
+        color: $main-color;
+        transition: all 0.5s ease 0s;
+    }
+
+    &:hover .header_submenu {
+        opacity: 1;
+        visibility: visible;
+        margin-top: 45px;
+        z-index: 90;
+    }
+
+    .header_item_icon {
+        font-size: 10px;
+        position: absolute;
+        top: 39%;
+        display: block;
+        right: -3px;
+    }
+}
+
+.header_submenu {
+    opacity: 0;
+    visibility: hidden;
+    text-transform: capitalize;
+    box-shadow: 0 0 1px #ebebeb;
+    padding: 15px 0;
+    position: absolute;
+    top: 40px;
+    width: 200px;
+    background-color: $white-color;
+}
+
+.features{
+    display: flex;
+    right: 800px;
+    top: 25px;
+    background-color: unset;
+    box-shadow: none;
+
+    h3{
+        padding: 5px 35px;
+        font-weight: 700;
+        font-size: 14px;
+    }
+}
+
+
+.angle_right {
+    position: absolute;
+    top: 50%;
+    margin-top: -17px;
+    left: auto;
+    right: 15px;
+    text-align: center;
+}
+
+.header_submenu_container {
+    background-color: $white-color;
+    box-shadow: 0 0 1px #ebebeb;
+    height: 330px;
+    padding-left: 30px;
+    padding-top: 30px;
+
+    &:last-child {
+        padding-right: 30px;
+    }
+}
+
+.header_submenu_item {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    height: 36px !important;
+
+    a {
+        @include line_hover_act();
+        color: $main-text-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 2.3;
+        padding: 5px 34px;
+    }
+}
+
+.sub_submenu {
+    opacity: 1;
+    visibility: visible;
+    text-transform: none;
+    box-shadow: 0 0 1px #ebebeb;
+    padding: 15px 0;
+    position: absolute;
+    left: 200px;
+    top: 10px;
+
+    mat-list-item {
+        height: 36px;
+    }
+
+    a {
+        @include line_hover_act();
+        color: $main-text-color;
+        font-size: 14px;
+    }
+}
+
+.cart-badge {
+    background-color: $main-color;
+    width: 20px;
+    height: 20px;
+    top: 21px;
+    right: -10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.new-badge-box {
+    position: absolute;
+}
+
+.new-badge {
+    background-color: $main-color;
+    color: $white-color;
+    position: absolute;
+    top: -24px;
+    right: 54px;
+    font-size: 9px;
+    line-height: 11px;
+    padding: 2px 7px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+
+.new-badge::before {
+    content: "";
+    position: absolute;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $main-color;
+    top: 15px;
+    left: 5px;
+}
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    text-transform: none;
+    box-shadow: 0 0 1px #ccc;
+    padding: 15px 0;
+    top: 61px;
+}
+
+.new_tag {
+    color: $main-color;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.bottom_header_icon_box {
+    position: relative;
+
+    &:hover .bottom_header_icon_hover {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+        transition: all linear 0.3s;
+    }
+}
+
+.bottom_header_icon_hover {
+    min-width: 160px;
+    padding: 15px 20px;
+    background-color: $white-color;
+    position: absolute;
+    transform: translateY(30px);
+    transition: all linear 0.3s;
+    z-index: 10;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    top: 93px;
+    right: -20px;
+    box-shadow: 0 0 1px 0 #ebebeb;
+
+    mat-list-item {
+        height: 28px !important;
+
+        a {
+            color: #333333;
+            font-size: 16px;
+            letter-spacing: 0.8px;
+        }
+    }
+
+    h4 {
+        color: #333333;
+        font-weight: 700;
+        padding-bottom: 5px;
+    }
+}
+
+.card_title{
+    width: 170px;
+    text-wrap: balance;
+}
+
+.card_image{
+    margin-bottom: 8px;
+}
+
+.card_action{
+    display: flex;
+    justify-content: space-between;
+
+    button{
+        font-size: 14px;
+
+        &:hover {
+            color: $main-color;
+            transition: 0.5s ease;
+        }
+    }
+}

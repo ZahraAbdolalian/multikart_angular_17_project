@@ -1,0 +1,36 @@
+<div class="top_header_container">
+    <mat-toolbar class="top_header_content">
+        <span class="top_header_left">Welcome to Our store Multikart</span>
+        <mat-icon class="call_icon">call</mat-icon>
+        <span class="top_header_left">Call Us: 123 - 456 - 7890</span>
+        <span class="example-spacer"></span>
+
+        <mat-list class="top_header_right">
+            <mat-list-item class="header_hover_color">
+                <a href="#" class="compare header_right_content">
+                    <i class="fa fa-random"></i>
+                    <span>Compare</span>
+                </a>
+            </mat-list-item>
+            <mat-list-item class="header_hover_color">
+                <a href="#" class="header_right_content">
+                    <mat-icon>favorite</mat-icon>
+                    <span>Wishlist</span>
+                </a>
+            </mat-list-item>
+            <mat-list-item class="acount_hover_action">
+                <a href="#" class="my_account header_right_content">
+                    <mat-icon>person</mat-icon>
+                    <button mat-button [matMenuTriggerFor]="menu">
+                        Menu
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>Login</button>
+                        <button mat-menu-item>Logout</button>
+                    </mat-menu>
+                </a>
+            </mat-list-item>
+        </mat-list>
+    </mat-toolbar>
+</div>

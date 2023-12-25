@@ -1,0 +1,23 @@
+$main-color : #ff4c3b;
+$border-color : #dddddd;
+$main-text-color : #222222;
+$white-color : #fff;
+$light-text-color : #777777;
+$secondary-text-content: #444444;
+$icon-color: #6f6f6f;
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}

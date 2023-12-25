@@ -1,0 +1,115 @@
+@import '../../shared/shared-style/shared-style';
+
+.top_header_container{
+    background-color: #f8f8f8;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.top_header_content{
+    color: rgb(153, 153, 153);
+    max-width: 1400px;
+    background-color: transparent;
+    margin: 0 auto;
+    height: 51px;
+    padding: 0 8px;
+    line-height: 21px;
+    font-weight: 100;
+
+    span {
+        font-size: 14px;
+    }
+}
+
+.top_header_right{
+    display: flex;
+
+    mat-list-item {
+        overflow: visible;
+        padding: 0;
+    }
+
+    .header_right_content{
+        color: rgb(153, 153, 153);
+        padding: 15px 25px;
+        transition: all 0.5s ease 0s;
+        mat-icon{
+            font-size: 16px;
+            height: 15px;
+        }
+        .fa-random{
+            padding-right: 5px;
+        }
+        .fa-solid{
+            font-size: 10px;
+            padding-left: 10px;
+        }
+    }
+    .compare{
+        padding-right: 0;
+    }
+    .my_account{
+        padding-left: 0;
+    }
+}
+
+.header_hover_color *:hover{
+    color: $main-color;
+}
+
+.top_header_left{
+    padding-right: 25px;
+}
+
+.call_icon{
+    font-size: 14px;
+    height: 14px;
+    color: $main-color;
+}
+
+.my_account_hover{
+    min-width: 160px;
+    padding: 15px 20px;
+    background-color: $white-color;
+    position: absolute;
+    transform: translateY(30px);
+    transition: all linear 0.3s;
+    z-index: 10;
+    text-align: left;
+    opacity: 0;
+    visibility: hidden;
+    top: 45px;
+    right: -20px;
+    box-shadow: 0 0 1px 0 #ebebeb;
+
+    & > *{
+        font-size: 15px;
+    }
+}
+
+.my_account_item{
+    height: 28px !important;
+    a {
+        color: #333333;
+        font-size: 15px;
+
+        &:hover{
+            color: $main-color;
+        }
+    }
+
+}
+
+.acount_hover_action:hover * {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+    transition: all linear 0.3s;
+}
+
+.my_account:hover mat-icon {
+    color: $main-color;
+    transition: all linear 0.3s;
+}

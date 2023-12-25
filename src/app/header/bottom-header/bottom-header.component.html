@@ -1,0 +1,121 @@
+<div class="bottom-header-container">
+    <mat-toolbar>
+        <a routerLink="home" class="multikart-logo">
+            <img src="../../../assets/images/multikart-logo.png" alt="multikart-logo" />
+        </a>
+        <span class="example-spacer"></span>
+        <div>
+            <mat-list class="header_bottom_content">
+                @for (headerItem of headerItems; track $index) {
+                    @if (headerItem.name != 'features') {
+                    <mat-list-item class="header_bottom_item">
+                        <div>
+                            <span class="header_item_title">{{headerItem.name}}</span>
+                            <i class="fa-solid fa-chevron-down header_item_icon"></i>
+                            <mat-list class="header_submenu">
+                                @for (item of headerItem.list; track $index) {
+                                    @if (item.link) {
+                                    <mat-list-item class="header_submenu_item">
+                                        <a>
+                                            {{ item.name }}
+                                        </a>
+                                    </mat-list-item>
+                                    }
+                                }
+                            </mat-list>
+                        </div>
+                    </mat-list-item>
+                    }@else {
+                    <mat-list-item class="header_bottom_item">
+                        <span class="header_item_title">features</span>
+                        <i class="fa-solid fa-chevron-down header_item_icon"></i>
+                        <mat-list class="header_submenu features">
+                            @for (item of features; track $index) {
+                            <div class="header_submenu_container">
+                                <h3>{{item.name}}</h3>
+                                @for (item of item.options; track $index) {
+                                <mat-list-item class="header_submenu_item">
+                                    <a>
+                                        {{ item.title }}
+                                    </a>
+                                </mat-list-item>
+                                }
+                            </div>
+                            }
+                        </mat-list>
+                        <span class="new-badge-box">
+                            <span class="new-badge">new</span>
+                        </span>
+                    </mat-list-item>
+                    }
+                }
+
+            </mat-list>
+        </div>
+
+        <div class="bottom_header_icon_container">
+            <div class="bottom_header_icon_box">
+                <a href="">
+                    <img class="bottom_header_icon" src="../../../assets/images/search.png" alt="search" />
+                </a>
+            </div>
+
+            <div class="bottom_header_icon_box">
+                <a href="">
+                    <img class="bottom_header_icon" src="../../../assets/images/setting.png" alt="setting" />
+                </a>
+                <mat-list class="bottom_header_icon_hover">
+                    @for (item of settingItems; track $index) {
+                        <ng-container>
+                            <div>
+                                <h4>Language</h4>
+                                @for (item of item.language; track $index) {
+                                    <mat-list-item><a href="">{{ item }}</a></mat-list-item>
+                                }
+                            </div>
+                            <div>
+                                <h4>Currency</h4>
+                                @for (item of item.currency; track $index) {
+                                    <mat-list-item><a href="">{{item}}</a></mat-list-item>
+                                }
+                            </div>
+                        </ng-container>
+                    }
+                </mat-list>
+            </div>
+
+            <div class="bottom_header_icon_box">
+                <a routerLink="cart">
+                    <img class="bottom_header_icon" src="../../../assets/images/cart.png" alt="cart" />
+                    <span id="mat-badge-content-0" aria-hidden="true"
+                        class="mat-badge-content mat-badge-active cart-badge">{{shoppingCartSize}}</span>
+                </a>
+                <mat-list class="bottom_header_icon_hover">
+                    @if (!cartProduct.length) {
+                        <mat-list-item><a href="#">Your cart is currently
+                            empty.</a></mat-list-item>
+                    }@else {
+                        <ng-template>
+                            @for (item of cartProduct; track $index) {
+                                <mat-card class="example-card">
+                                    <mat-card-header>
+                                        <mat-card-title-group>
+                                            <mat-card-title class="card_title">{{item.name}}</mat-card-title>
+                                            <mat-card-subtitle>{{item.price | currency}}</mat-card-subtitle>
+                                            <img class="card_image" mat-card-sm-image [src]="item.image">
+                                        </mat-card-title-group>
+                                    </mat-card-header>
+                                </mat-card>
+                            }
+                            <mat-card-actions class="card_action">
+                                <button mat-button routerLink="cart">View Cart</button>
+                                <button mat-button routerLink="checkout">Checkout</button>
+                            </mat-card-actions>
+                        </ng-template>
+                    }
+                    
+                </mat-list>
+            </div>
+        </div>
+    </mat-toolbar>
+</div>

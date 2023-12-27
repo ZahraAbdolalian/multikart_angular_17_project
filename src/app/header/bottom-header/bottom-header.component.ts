@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
-import { UserCartService } from '../../service/user-cart.service';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { CurrencyPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+
+import { UserCartService } from '../../service/user-cart.service';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @Component({
   selector: 'app-bottom-header',
@@ -14,7 +17,8 @@ import { RouterLink } from '@angular/router';
     MatListModule,
     MatCardModule,
     CurrencyPipe,
-    RouterLink
+    RouterLink,
+    MatButtonModule
   ],
   templateUrl: './bottom-header.component.html',
   styleUrl: './bottom-header.component.scss'
@@ -225,11 +229,9 @@ export class BottomHeaderComponent {
     }, {
       name: 'Typography',
       link: '#',
-      // newTag: true
     }, {
       name: 'Review',
       link: '#',
-      // newTag: true
     }, {
       name: 'Order Success',
       link: '#',
@@ -248,7 +250,6 @@ export class BottomHeaderComponent {
     }, {
       name: 'Coming Soon',
       link: '#',
-      // newTag: true
     }, {
       name: 'Faq',
       link: '#',
@@ -290,7 +291,10 @@ export class BottomHeaderComponent {
     }
   ]
 
-  constructor(private userCart: UserCartService) { }
+  constructor(private userCart: UserCartService) {
+
+    console.log(this.userCart.cartProducts);
+   }
 
   get shoppingCartSize() {
     return this.userCart.cartProducts.length;
@@ -298,5 +302,6 @@ export class BottomHeaderComponent {
 
   get cartProduct() {
     return this.userCart.cartProducts;
+    
   }
 }

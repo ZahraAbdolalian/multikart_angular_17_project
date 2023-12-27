@@ -95,7 +95,6 @@
                         <mat-list-item><a href="#">Your cart is currently
                             empty.</a></mat-list-item>
                     }@else {
-                        <ng-template>
                             @for (item of cartProduct; track $index) {
                                 <mat-card class="example-card">
                                     <mat-card-header>
@@ -108,10 +107,9 @@
                                 </mat-card>
                             }
                             <mat-card-actions class="card_action">
-                                <button mat-button routerLink="cart">View Cart</button>
-                                <button mat-button routerLink="checkout">Checkout</button>
+                                <button mat-button [routerLink]="'/cart'">View Cart</button>
+                                <button mat-button [routerLink]="'/checkout'">Checkout</button>
                             </mat-card-actions>
-                        </ng-template>
                     }
                     
                 </mat-list>

@@ -1,0 +1,77 @@
+@import '../../shared/shared-style/shared-style';
+
+.service {
+    max-width: 1400px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+    margin: 0 auto;
+}
+
+.service_container {
+    padding-top: 35px;
+    padding-bottom: 35px;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+}
+
+.sevrice_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33%;
+    padding: 23px 12px;
+
+    &:hover .service_svg {
+        animation: service_effect 1000ms ease-in-out;
+        transition: all 0.3s ease;
+    }
+
+    &:hover .service_h4 {
+        color: $main-color;
+        transition: all 0.3s ease;
+    }
+}
+
+.service_svg {
+    width: 60px;
+    height: 60px;
+    transition: all 0.5s ease;
+    margin-right: 12px;
+}
+
+@keyframes service_effect {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.service_h4 {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.54px;
+    text-transform: uppercase;
+    line-height: 1;
+    transition: all 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.service_text {
+    font-size: 14px;
+    color: $light-text-color;
+    letter-spacing: 0.42px;
+    line-height: 24px;
+}
+
+.service_border {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+}

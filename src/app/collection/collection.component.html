@@ -1,1 +1,20 @@
-<p>collection works!</p>
+<app-title [titleOfPage]="'collection'" [lacationOfPage]="'collection'"></app-title>
+
+<section class="collection_container">
+    <div class="collection_box">
+        <div class="collection_box_left">
+            <app-collection-filter></app-collection-filter>
+            <app-category-filters></app-category-filters>
+            <app-new-product></app-new-product>
+            <div class="collection_left_banner">
+                <a href="#"><img src="../../assets/images/collection-sidebar-banner.png" alt="collection-sidebar-banner"></a>
+            </div>
+        </div>
+        <div class="collection_box_right">
+            <div>
+                <app-collection-banner></app-collection-banner>
+                <app-products-categorization></app-products-categorization>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+<div class="collection_left_center">
+    <div class="brand">
+        <h3 class="filter_title" (click)="toggleBrandList()">brand</h3>
+        <div class="brand_filter">
+            <div class="brand_name" [class.open]="isBrandListOpen">
+                @for (brand of brandList; track $index) {
+                    <div class="collection_item beand_titan">
+                        <input type="checkbox" [value]="brand" [id]="brand">
+                        <label [for]="brand">{{brand}}</label>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="colors">
+        <h3 class="filter_title" (click)="toggleColorList()">colors</h3>
+        <div class="colors_filter">
+            <div class="color_box" [class.open]="isColorListOpen">
+                @for (color of colorList; track $index) {
+                    <div class="collection_item">
+                        <input type="checkbox" [value]="color" [id]="color">
+                        <span class="color_item" [style]="{'background-color' : color}"></span>
+                        <label [for]="color">{{color}}</label>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <div class="price">
+        <h3 class="filter_title" (click)="togglePriceList()">price</h3>
+        <div class="price_filter">
+            <div class="price_box" [class.open]="isPriceListOpen">
+                <mat-slider min="0" max="1000" discrete >
+                    <input value="0" matSliderStartThumb>
+                    <input value="1000" matSliderEndThumb>
+                </mat-slider>
+            </div>
+        </div>
+    </div>
+</div>

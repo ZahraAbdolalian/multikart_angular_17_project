@@ -1,0 +1,32 @@
+.collection_container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.collection_box {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+}
+
+.collection_box_left {
+    width: 25%;
+    padding-right: 12px;
+}
+
+.collection_left_banner{
+    margin-top: 30px;
+    width: 345px;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.collection_box_right{
+    width: 75%;
+    padding-left: 12px;
+}

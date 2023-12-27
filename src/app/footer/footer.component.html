@@ -1,0 +1,128 @@
+<footer class="footer">
+    <div class="footer_container">
+        <div class="footer_top">
+            <div class="footer_top_left">
+                <h4 class="footer_top_title">know it all first!</h4>
+                <p class="footer_top_text">
+                    Never Miss Anything From Multikart By Signing Up To Our Newsletter.x
+                </p>
+            </div>
+            <div class="footer_top_right">
+                <form class="example-form">
+                    <mat-form-field>
+                        <mat-label>Enter your email</mat-label>
+                        <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+                        @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
+                        <mat-error>
+                            Please enter a valid email address
+                        </mat-error>
+                        }
+                        @else if (emailFormControl.hasError('required')) {
+                        <mat-error>
+                            Email is <strong>required</strong>
+                        </mat-error>
+                        }
+                    </mat-form-field>
+                </form>
+                <button mat-flat-button color="primary" class="footer_top_btn">subscribe</button>
+            </div>
+        </div>
+        
+        
+        <div class="footer_bottom">
+            <div class="footer_bottom_left">
+                <div class="footer_bottom_logo">
+                    <img src="../../../assets/images/multikart-logo.png" alt="logo" />
+                </div>
+                <p class="footer_bottom_text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam,
+                </p>
+        
+                <div class="footer_bottom_icon">
+                    <mat-list class="footer_bottom_icon_list">
+                        @for (iconName of iconsList; track $index) {
+                            <mat-list-item class="footer_bottom_icon_item">
+                                <a href="#">
+                                    <i aria-hidden="true" class="footer_bottom_i fa" [class]="iconName"></i>
+                                </a>
+                            </mat-list-item>
+                        }
+                    </mat-list>
+                </div>
+            </div>
+        
+            <div class="footer_bottom_center footer_margin">
+                <div class="footer_bottom_center_title">
+                    <h4 class="footer_bottom_center_h4">Categories</h4>
+                </div>
+                <div class="footer_bottom_center_content">
+                    <mat-list>
+                        @for (category of categoriesList; track $index) {
+                            <mat-list-item class="footer_bottom_center_item list_hov_item">
+                                <a matListItemTitle class="footer_bottom_center_link" href="#">{{
+                                    category
+                                    }}</a>
+                            </mat-list-item>
+                        }
+                    </mat-list>
+                </div>
+            </div>
+            <div class="footer_bottom_center">
+                <div class="footer_bottom_center_title">
+                    <h4 class="footer_bottom_center_h4">why we choose</h4>
+                </div>
+                <div class="footer_bottom_center_content">
+                    <mat-list>
+                        @for (item of chooseList; track $index) {
+                            <mat-list-item class="footer_bottom_center_item list_hov_item">
+                                <a matListItemTitle class="footer_bottom_center_link" href="#">{{
+                                    item
+                                    }}</a>
+                            </mat-list-item>
+                        }
+                    </mat-list>
+                </div>
+            </div>
+            <div class="footer_bottom_center">
+                <div class="footer_bottom_center_title">
+                    <h4 class="footer_bottom_center_h4">store information</h4>
+                </div>
+                <div class="footer_bottom_center_content">
+                    <mat-list>
+                        @for (item of informationsList; track $index) {
+                            <mat-list-item class="footer_bottom_center_item">
+                                <div class="footer_bootom_item_left">
+                                    <i class="footer_bottom_center_i fa" [class]="item.icon"></i>
+                                    <div>{{ item.text }}</div>
+                                </div>
+                            </mat-list-item>
+                        }
+                    </mat-list>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="sub_footer">
+        <div class="sub_footer_container">
+            <div class="sub_footer_left">
+                <p class="sub_footer_text">
+                    <i class="fa fa-copyright"></i>
+                    2023 theme forest powered by pixelstrap
+                </p>
+            </div>
+    
+            <div class="sub_footer_right">
+                <mat-list class="sub_footer_icon_list">
+                    @for (item of paymentCards; track $index) {
+                    <mat-list-item>
+                        <img class="sub_footer_icon" [src]="item.imgUrl" [alt]="item.name">
+                    </mat-list-item>
+                    }
+                </mat-list>
+            </div>
+        </div>
+    </div>
+</footer>

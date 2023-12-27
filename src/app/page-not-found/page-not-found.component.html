@@ -1,1 +1,7 @@
-<p>page-not-found works!</p>
+<app-title [titleOfPage]="'404'" [lacationOfPage]="'404'"></app-title>
+
+<div class="text_container">
+    <h1>404</h1>
+    <h3>page not found!</h3>
+    <button mat-raised-button color="primary" [routerLink]="'/home'">back to home</button>
+</div>

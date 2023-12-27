@@ -1,0 +1,213 @@
+@import '../../shared/shared-style/shared-style';
+
+.trending_products_part1 {
+    background-color: rgb(250, 234, 232);
+    padding: 70px 50px 5px;
+    position: relative;
+}
+
+.trending_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: opacity 0.15s linear;
+}
+
+.trending_product {
+    margin: 0px 12px 30px;
+    margin-bottom: 130px;
+}
+
+.trending_list_box {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.title_h2 {
+    text-align: center;
+    font-size: 36px;
+    color: $main-text-color;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.72px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+    margin-top: -5px;
+}
+
+.page_line {
+    position: relative;
+    width: 180px;
+    height: 1px;
+    background-color: $main-color;
+    bottom: 0;
+    top: 0;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $main-color;
+    top: -4px;
+}
+
+.page_line::before {
+    left: 64px;
+}
+
+.page_line::after {
+    left: 78px;
+}
+
+.page_line_span::before {
+    right: 64px;
+}
+
+.page_line_span::after {
+    right: 78px;
+}
+
+
+.trending_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trending_new {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: $main-color;
+    color: $white-color;
+    border-radius: 100%;
+    padding: 11px 4px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    text-align: center;
+}
+
+.trending_product_box {
+    width: 315px;
+    height: 340px;
+}
+
+.trending_img_container {
+    position: relative;
+    overflow: hidden;
+}
+
+.trending_img_box{
+    background-color: $white-color;
+    height: 360px;
+    width: 330px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.trending_img {
+    height: 270px;
+    width: 230px;
+}
+
+.trending_icons {
+    text-align: left;
+    bottom: 0;
+    left: unset;
+    position: absolute;
+    right: -10px;
+    margin: 0 auto;
+    display: inline-block;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.trending_icons_link {
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.shopping {
+    padding: 10px;
+    display: block;
+    color: $icon-color;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.shopping:hover {
+    color: $main-color;
+    transition: all 0.5s ease;
+}
+
+.trending_product_box:hover .trending_icons {
+    opacity: 1;
+    transition: all 0.5s ease;
+    right: 0px;
+    animation: icons;
+
+    .heart {
+        animation: icons 500ms ease-in-out;
+    }
+
+    .magnifying {
+        animation: icons 700ms ease-in-out;
+    }
+
+    .refresh {
+        animation: icons 1000ms ease-in-out;
+    }
+}
+
+@keyframes icons {
+    from {
+        right: -50px;
+    }
+
+    to {
+        right: 0px;
+    }
+}
+
+.trending_detail {
+    display: block;
+}
+
+.stars {
+    display: flex;
+    font-size: 18px;
+    color: #edb867;
+}
+
+.trending_name{
+    color: $light-text-color;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+
+.trending_price{
+    color: $main-text-color;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0;
+}

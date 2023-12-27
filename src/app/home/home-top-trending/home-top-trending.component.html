@@ -1,0 +1,70 @@
+<section class="trending_products_part1">
+    <div>
+      <div class="trending_title">
+        <h2 class="title_h2">trending products</h2>
+  
+        <div class="page_line">
+          <span class="page_line_span"></span>
+        </div>
+      </div>
+  
+      <div class="trending_list_box">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="trending_list">
+            @for (item of labels; track $index) {
+                <mat-tab [label]="item">
+        
+                    @if (!newArrivalItems) {
+                        <app-spinner></app-spinner>
+                    }
+                    @else {
+                        <div>
+                          <div class="trending_container">
+                            @for (item of newArrivalItems; track $index) {
+                                <div class="trending_product">
+                                  <div class="trending_product_box">
+                                    <div class="trending_img_container">
+                                      <span class="trending_new"> new </span>
+                                      <a>
+                                        <div class="trending_img_box">
+                                          <img class="trending_img" [src]="item.image" alt="trending_img" />
+                                        </div>
+                                      </a>
+                                      <div class="trending_icons">
+                                        <a title="Add to cart" class="trending_icons_link" href="#">
+                                          <i class="fa fa-shopping-cart fa-flip-horizontal shopping"></i>
+                                        </a>
+                                        <a title="Add to Wishlist" class="trending_icons_link" href="#">
+                                          <i class="fa fa-heart shopping heart"></i>
+                                        </a>
+                                        <a title="Quick View" class="trending_icons_link" href="#">
+                                          <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                        </a>
+                                        <a title="Compare" class="trending_icons_link" href="#">
+                                          <i class="fa fa-refresh shopping refresh"></i>
+                                        </a>
+                                      </div>
+                                    </div>
+                                    <div class="trending_detail">
+                                      <div class="stars">
+                                        @for (item of starsArray; track $index) {
+                                            <div class="star">★</div>
+                                        }
+                                      </div>
+                                      <a>
+                                        <h6 class="trending_name">{{ item.title }}</h6>
+                                      </a>
+                                      <h4 class="trending_price">{{ item.price | currency}}</h4>
+                                    </div>
+                                  </div>
+                                </div>
+                            }
+                          </div>
+                        </div>
+                    }
+                  
+                </mat-tab>
+            }
+        </mat-tab-group>
+      </div>
+    </div>
+  </section>

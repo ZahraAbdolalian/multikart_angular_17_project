@@ -3,6 +3,7 @@ import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { HomeBrandsComponent } from './home-brands/home-brands.component';
 import { HomeBannerTimerComponent } from './home-banner-timer/home-banner-timer.component';
 import { HomeCategoryComponent } from './home-category/home-category.component';
+import { HomeTopTrendingComponent } from './home-top-trending/home-top-trending.component';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,8 @@ import { HomeCategoryComponent } from './home-category/home-category.component';
     HomeSliderComponent,
     HomeBrandsComponent,
     HomeBannerTimerComponent,
-    HomeCategoryComponent
+    HomeCategoryComponent,
+    HomeTopTrendingComponent
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

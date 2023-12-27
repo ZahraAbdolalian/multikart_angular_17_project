@@ -35,11 +35,11 @@
                 </div>
                 <div class="quantity_link">
                     <button mat-raised-button color="primary" class="quantity_link_btn"
-                        [class]="stock === 'Out of Stock' ? 'disable' : 'able'" routerLink="/cart"
+                        [class]="stock === 'Out of Stock' ? 'disable' : 'able'" [routerLink]="'/cart'"
                         (click)="addToCart(product,quantity)">add to cart</button>
     
                     <button mat-raised-button color="primary" class="quantity_link_btn"
-                        [class]="stock === 'Out of Stock' ? 'disable' : 'able'" routerLink="/checkout"
+                        [class]="stock === 'Out of Stock' ? 'disable' : 'able'" [routerLink]="'/checkout'"
                         (click)="addToCart(product,quantity)">buy now</button>
                 </div>
             </div>

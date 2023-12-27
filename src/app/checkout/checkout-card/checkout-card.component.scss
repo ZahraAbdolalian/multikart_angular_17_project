@@ -1,0 +1,41 @@
+@import '../../shared/shared-style/shared-style';
+
+.stripe_js {
+    width: 96%;
+    background-color: #f9f9f9;
+    border: 1px solid $border-color;
+    box-shadow: none;
+    border-radius: 0;
+    margin-bottom: 20px;
+    padding: 20px;
+
+    table {
+        background-color: inherit;
+
+        td {
+            color: #9a9a9a;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+}
+
+.card_title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 16px;
+    color: $main-text-color;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+}
+
+.card_subtitle {
+    margin-bottom: 8px;
+    color: #4f4f4f;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.value {
+    text-align: end;
+}

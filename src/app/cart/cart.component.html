@@ -1,1 +1,90 @@
-<p>cart works!</p>
+<app-title [titleOfPage]="'cart'" [lacationOfPage]="'cart'"></app-title>
+
+@if (!dataSource.length) {
+    <section class="cart_empty">
+        <div>
+            <img class="icon_empty" src="../../assets/images/icon-empty-cart.png" alt="empty-cart">
+            <h3>Your Cart is Empty</h3>
+            <h4>Add Something To Make Me Happy :)</h4>
+        </div>
+    </section>
+}
+@else {
+    <section class="cart_container">
+        <div class="product_info">
+            <table mat-table [dataSource]="dataSource">
+                <ng-container matColumnDef="image">
+                    <th mat-header-cell *matHeaderCellDef> image </th>
+                    <td mat-cell *matCellDef="let element">
+                        <a [routerLink]="['/product-details',element.id]">
+                            <img [src]="element.image" alt="product image">
+                        </a>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef> name </th>
+                    <td mat-cell *matCellDef="let element">
+                        <a href="" class="product_name">
+                            {{element.name}}
+                        </a>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="price">
+                    <th mat-header-cell *matHeaderCellDef> price </th>
+                    <td mat-cell *matCellDef="let element">
+                        <h2 class="product_price">
+                            {{element.price | currency}}
+                        </h2>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="quantity">
+                    <th mat-header-cell *matHeaderCellDef> quantity </th>
+                    <td mat-cell *matCellDef="let element">
+
+                        <div class="product_quantity quantity_wrapper">
+                            <div class="quantity_box">
+                                <button class="quantity_btn quantity_btn_left" type="button"
+                                    (click)="reduceQuantity(quantity,element.id)">
+                                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                </button>
+                                <input type="number" disabled [value]="element.quantity" class="quantity_num" #quantity>
+                                <button class="quantity_btn quantity_btn_right" type="button"
+                                    (click)="increaseQuantity(quantity,element.id)">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell *matHeaderCellDef> action </th>
+                    <td mat-cell *matCellDef="let element">
+                        <mat-icon (click)="removeProduct(element.id)">close</mat-icon>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="total">
+                    <th mat-header-cell *matHeaderCellDef> total </th>
+                    <td mat-cell *matCellDef="let element" class="total_price"> {{element.total | currency}} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+
+            <div class="total_footer">
+                Total Price:
+                <h2>{{getTotalCost() | currency}}</h2>
+            </div>
+            <div class="cart_btn">
+                <button mat-raised-button color="primary" routerLink="/collection/electronics">continue shopping</button>
+                <button mat-raised-button color="primary" routerLink="/checkout">check out</button>
+            </div>
+        </div>
+
+    </section>
+}

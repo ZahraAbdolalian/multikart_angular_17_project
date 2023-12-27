@@ -5,7 +5,7 @@ import { CurrencyPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 
 @Component({
@@ -14,7 +14,8 @@ import { Router } from '@angular/router';
   imports: [
     MatTabsModule,
     SpinnerComponent,
-    CurrencyPipe
+    CurrencyPipe,
+    RouterLink
   ],
   templateUrl: './home-top-trending.component.html',
   styleUrl: './home-top-trending.component.scss'

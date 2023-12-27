@@ -50,7 +50,7 @@
                                             <div class="star">★</div>
                                         }
                                       </div>
-                                      <a>
+                                      <a [routerLink]="['/product-details',item.id]">
                                         <h6 class="trending_name">{{ item.title }}</h6>
                                       </a>
                                       <h4 class="trending_price">{{ item.price | currency}}</h4>

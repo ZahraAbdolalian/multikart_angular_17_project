@@ -1,1 +1,122 @@
-<p>checkout works!</p>
+<app-title [titleOfPage]="'checkout'" [lacationOfPage]="'checkout'"></app-title>
+
+<section class="billing_details">
+    <div class="billing_container">
+        <div class="billing_title">
+            <h3>Billing Details</h3>
+        </div>
+        <form [formGroup]="checkoutForm" class="billing_form">
+            @for (item of formFields; let i = $index; track i){
+                @if (item != 'Country') {
+                    <span>
+                        <mat-form-field color="accent"
+                            [class]="{'half-width': i < 4, 'full-width': i >= 4}">
+                            <mat-label>{{item}}</mat-label>
+                            <input matInput [formControlName]="item" required>
+                            @if (checkoutForm.get(item)?.invalid) {
+                                <mat-error>
+                                    {{getErrorMessage(item)}}
+                                </mat-error>
+                            }
+                        </mat-form-field>
+                    </span>
+                }
+                @else {
+                    <ng-template #countrySelector>
+                        <mat-form-field color="accent" class="full-width">
+                            <mat-label>Select Country</mat-label>
+                            <mat-select formControlName="Country" required>
+                                @for (country of countryOptions; track $index) {
+                                    <mat-option [value]="country">{{country}}</mat-option>
+                                }
+                            </mat-select>
+                            @if(checkoutForm.get('Country')?.invalid){
+                                <mat-error>
+                                    {{getErrorMessage('Country')}}
+                                </mat-error>
+                            }
+                        </mat-form-field>
+                    </ng-template>
+                }
+            }
+
+        </form>
+
+        <app-checkout-card [cardTitle]="'STRIPE JS'" [cardSubtitle]="'DUMMY TEST'"
+            [dataSource]="dataSourceStripeJs"></app-checkout-card>
+
+        <app-checkout-card [cardTitle]="'PAYPAL'" [cardSubtitle]="'DUMMY TEST'"
+            [dataSource]="dataSourcePaypal"></app-checkout-card>
+
+    </div>
+    <div class="order_container">
+        <mat-card class="order_card">
+            <mat-card-content>
+                <div>
+                    <div class="odrer_title">
+                        <h2>Product</h2>
+                        <h2 class="last_child">Total</h2>
+                    </div>
+
+                    @for (item of productsList; track $index) {
+                        <div class="product_detail">
+                            <p class="product_name">
+                                {{item.name}}
+                                <mat-icon>close</mat-icon>
+                                {{item.quantity}}
+                            </p>
+                            <p class="product_price last_child">{{item.price | currency}}</p>
+                        </div>
+                    }
+
+                    <div class="subtotal_box">
+                        <div class="subtotal">
+                            <p class="total_title">subtotal</p>
+                            <p class="total_price last_child">{{subtotal | currency}}</p>
+                        </div>
+                        <div class="shipping">
+                            <p class="total_title">shipping</p>
+                            <div class="shoping_option">
+
+                                <div>
+                                    <input type="radio" name="radio1" id="shipping_option">
+                                    <label for="shipping_option">Shipping</label>
+                                </div>
+
+                                <div>
+                                    <input type="radio" name="radio1" id="local_pickup_option">
+                                    <label for="local_pickup_option">Local Pickup</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="total_box">
+                        <p class="total">total</p>
+                        <p class="total_price last_child">{{subtotal | currency}}</p>
+                    </div>
+                </div>
+                <div class="payment">
+                    <div class="payment_radio">
+                        <div>
+                            <input type="radio" name="radio2" id="stripe_option">
+                            <label for="stripe_option">Stripe</label>
+                        </div>
+                        <div class="paypal_box">
+                            <input type="radio" name="radio2" id="paypal_option">
+                            <label for="paypal_option">PayPal</label>
+
+                            <div class="payment_img">
+                                <img src="../../assets/images/paypal-checkout.png" alt="paypal">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment_btn_box">
+                        <button mat-raised-button type="submit" color="primary" [disabled]="!checkoutForm.valid"
+                            class="payment_btn">Place Order</button>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>

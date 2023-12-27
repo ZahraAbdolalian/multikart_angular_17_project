@@ -1,0 +1,18 @@
+<mat-card class="stripe_js">
+    <mat-card-header>
+        <mat-card-title class="card_title">{{cardTitle}}</mat-card-title>
+        <mat-card-subtitle class="card_subtitle">{{cardSubtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <table mat-table [dataSource]="dataSource">
+            <ng-container matColumnDef="title">
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="value">
+                <td mat-cell *matCellDef="let element" class="value"> {{element.value}} </td>
+            </ng-container>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+    </mat-card-content>
+</mat-card>

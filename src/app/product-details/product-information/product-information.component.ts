@@ -2,7 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, RouterLink } from '@angular/router';
 import { CartProduct } from '../../model/cart-product.model';
 import { ApiService } from '../../service/api.service';
 import { UserCartService } from '../../service/user-cart.service';
@@ -18,7 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     SpinnerComponent,
     CurrencyPipe,
     MatListModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterLink
   ],
   templateUrl: './product-information.component.html',
   styleUrl: './product-information.component.scss'

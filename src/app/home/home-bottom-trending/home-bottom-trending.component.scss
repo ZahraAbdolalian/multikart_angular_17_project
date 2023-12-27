@@ -1,0 +1,209 @@
+@import '../../shared/shared-style/shared-style';
+
+.trending_products_part2 {
+    padding: 70px 50px 5px;
+    position: relative;
+}
+
+
+.trending_product_part2,
+.special_product {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 140px;
+}
+
+.trending_container_part2 {
+    text-align: center;
+    width: 344px;
+    display: flex;
+    align-items: center;
+}
+
+.title_h2 {
+    text-align: center;
+    font-size: 36px;
+    color: $main-text-color;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.72px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+    margin-top: -5px;
+}
+
+.page_line {
+    position: relative;
+    width: 180px;
+    height: 1px;
+    background-color: $main-color;
+    bottom: 0;
+    top: 0;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $main-color;
+    top: -4px;
+}
+
+.page_line::before {
+    left: 64px;
+}
+
+.page_line::after {
+    left: 78px;
+}
+
+.page_line_span::before {
+    right: 64px;
+}
+
+.page_line_span::after {
+    right: 78px;
+}
+
+.trending_icons_part2 {
+    background-color: $white-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    padding: 3px 8px;
+    display: flex;
+    width: max-content;
+    border-radius: 50px;
+    box-shadow: 0 0 12px 0 $border-color;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.trending_product_box {
+    width: 315px;
+    height: 340px;
+}
+
+.trending_img_container_part2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.trending_img_container {
+    position: relative;
+    overflow: hidden;
+}
+
+.trending_img_box{
+    background-color: $white-color;
+    height: 360px;
+    width: 330px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.trending_img {
+    height: 270px;
+    width: 230px;
+}
+
+.trending_new{
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: $main-color;
+    color: $white-color;
+    border-radius: 100%;
+    padding: 11px 4px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    text-align: center;
+}
+
+.trending_product_part2:hover .trending_icons_part2,
+.special_product:hover .special_icons {
+    opacity: 1;
+    transition: all 0.2s ease;
+    animation: icons_part2 400ms ease-in-out;
+}
+
+@keyframes icons_part2 {
+    from {
+        bottom: 0px;
+    }
+
+    to {
+        bottom: 30px;
+    }
+}
+
+
+.trending_detail {
+    display: block;
+}
+
+
+.stars {
+    display: flex;
+    font-size: 18px;
+    color: #edb867;
+    justify-content: center;
+}
+
+.trending_icons_link {
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.trending_name{
+    color: $light-text-color;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1; 
+    -webkit-box-orient: vertical;
+}
+
+.trending_price{
+    color: $main-text-color;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    margin: 0;
+}
+
+.shopping {
+    padding: 10px;
+    display: block;
+    color: $icon-color;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    position: relative;
+}
+
+.shopping:hover {
+    color: $main-color;
+    transition: all 0.5s ease;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

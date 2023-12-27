@@ -1,0 +1,61 @@
+<section class="trending_products_part2">
+    <div>
+        <div class="trending_title">
+            <h2 class="title_h2">trending products</h2>
+
+            <div class="page_line">
+                <span class="page_line_span"></span>
+            </div>
+        </div>
+
+        @if (!productsArray) {
+        <app-spinner></app-spinner>
+        }
+        @else {
+            <div class="trending_container_part2">
+                @for (item of productsArray; track $index) {
+                    <div class="trending_product_part2">
+                        <div class="trending_product_box">
+                            <div class="trending_img_container_part2">
+                                <span class="trending_new"> new </span>
+                                <a>
+                                    <div class="trending_img_box">
+                                        <img class="trending_img" [src]="item.image" alt="" />
+                                    </div>
+                                </a>
+                                <div class="trending_icons_part2">
+                                    <a title="Add to cart" class="trending_icons_link" href="#">
+                                        <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                                    </a>
+        
+                                    <a title="Add to Wishlist" class="trending_icons_link" href="#">
+                                        <i class="fa fa-heart shopping heart"></i>
+                                    </a>
+        
+                                    <a title="Quick View" class="trending_icons_link" href="#">
+                                        <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                    </a>
+        
+                                    <a title="Compare" class="trending_icons_link" href="#">
+                                        <i class="fa fa-refresh shopping refresh"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="trending_detail">
+                                <div class="stars">
+                                    @for (item of starsArray; track $index) {
+                                        <div class="star">★</div>
+                                    }
+                                </div>
+                                <a>
+                                    <h6 class="trending_name">{{ item.title }}</h6>
+                                </a>
+                                <h4 class="trending_price">{{ item.price | currency}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</section>

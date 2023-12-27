@@ -1,0 +1,18 @@
+<section class="slider" [style.background-image]="'url(' + imagePath  + ')'">
+    <div class="slider_contents slider_effect">
+      <h4 class="slider_subtitile">{{ subtitle }}</h4>
+      <h1 class="slider_title">{{ title }}</h1>
+      <button 
+      mat-raised-button 
+      color="primary" 
+      class="slider_btn">Shop now</button>
+    </div>
+  
+    <div class="arrow_left" (click)="sliderHandler()">
+      <i class="fa fa-angle-left"></i>
+    </div>
+  
+    <div class="arrow_right" (click)="sliderHandler()">
+      <i class="fa fa-angle-right"></i>
+    </div>
+  </section>

@@ -1,0 +1,115 @@
+@import '../../shared/shared-style/shared-style';
+
+.slider {
+    height: 75vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    padding: 74px;
+    position: relative;
+    margin-top: 32px;
+
+    &:hover .arrow_left {
+        left: 100px;
+    }
+
+    &:hover .arrow_right {
+        right: 100px;
+    }
+
+    &:hover .arrow_left,
+    &:hover .arrow_right {
+        opacity: 1;
+        transform: scale(2.5);
+        transition: all 0.5s ease;
+    }
+}
+
+.slider_effect {
+    animation-name: slider_effect;
+    animation-duration: 1.5s;
+}
+
+@keyframes slider_effect {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 100px;
+    }
+}
+
+.slider_contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider_subtitile,
+.slider_title,
+.slider_btn {
+    text-align: center;
+    font-weight: 700;
+}
+
+.slider_subtitile {
+    color: $light-text-color;
+    letter-spacing: 7px;
+    font-size: 18px;
+}
+
+.slider_title {
+    color: $main-text-color;
+    font-size: 60px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.slider_btn {
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 20px 29px;
+    margin-top: 20px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+}
+
+.arrow_left,
+.arrow_right {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin-top: -10px;
+    opacity: 0;
+    transform: scale(1);
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    padding: 4px 7px;
+    margin: 5px;
+    cursor: pointer;
+
+    i {
+        color: #212529;
+        font-size: 8px;
+    }
+}
+
+.arrow_right {
+    right: 1px;
+}
+
+.arrow_left {
+    left: 1px;
+}

@@ -1,0 +1,7 @@
+<section class="brands">
+    @for (item of brandsItems; track $index) {
+        <div class="brand_img">
+            <img [src]="item.url" [alt]="item.alt">
+        </div>
+    }
+</section>

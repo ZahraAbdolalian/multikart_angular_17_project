@@ -1,1 +1,41 @@
-<app-header></app-header>
+<mat-drawer-container class="container" autosize>
+    <mat-drawer #drawer class="sidenav" mode="over">
+        <a class="back_btn" (click)="drawer.toggle()">
+            <i aria-hidden="true" class="fa fa-angle-left"></i>
+            back
+        </a>
+        <mat-list role="list">
+            <mat-list-item role="listitem" class="menu_item">
+                <a routerLink="home" (click)="drawer.toggle()">home</a>
+            </mat-list-item>
+            <mat-list-item role="listitem" class="menu_item" >collection
+                <i [matMenuTriggerFor]="menu" aria-hidden="true" class="fa fa-angle-right"></i>
+                <mat-menu #menu="matMenu" class="mat_menu" xPosition="after">
+                    <button 
+                    mat-menu-item 
+                    *ngFor="let item of collection"
+                    (click)="drawer.toggle()"
+                    >{{item}}</button>
+                </mat-menu>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <a routerLink="cart" (click)="drawer.toggle()">cart</a>
+            </mat-list-item>
+            <mat-list-item role="listitem">
+                <a routerLink="checkout" (click)="drawer.toggle()">checkout</a>
+            </mat-list-item>
+        </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="sidenav_icon">
+            <button type="button" mat-button (click)="drawer.toggle()">
+                <mat-icon class="menu_icon">menu</mat-icon>
+            </button>
+        </div>
+        <!-- <app-top-button></app-top-button> -->
+        <app-header></app-header>
+        <app-home></app-home>
+        <!-- <router-outlet></router-outlet> -->
+        <!-- <app-footer></app-footer> -->
+    </mat-drawer-content>
+</mat-drawer-container>

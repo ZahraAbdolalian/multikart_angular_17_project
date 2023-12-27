@@ -1,0 +1,75 @@
+@import '../../shared/shared-style/shared-style';
+
+.offer {
+    max-width: 1400px;
+    padding: 0 12px;
+    margin: 0 auto;
+    padding-top: 70px;
+}
+
+.offer_container {
+    background-image: url(../../../assets/images/offer-banner.jpg);
+    background-size: cover;
+    height: 126px;
+    display: flex;
+}
+
+.offer_title_box {
+    width: 50%;
+}
+
+.offer_title {
+    padding: 45px 0;
+    text-align: center;
+    color: $main-text-color;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 0.72px;
+    margin-top: 0;
+}
+
+.offer_amount {
+    color: $main-color;
+}
+
+.offer_timer_box {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer_timer {
+    background-color: #2d2a25;
+    width: 280px;
+    padding: 15px 0;
+    padding-left: 40px;
+    margin-top: 16px;
+    display: flex;
+}
+
+.days,
+.hrs,
+.min,
+.sec {
+    display: flex;
+    flex-direction: column;
+}
+
+.offer_dot {
+    padding-left: 22px;
+}
+
+.offer_time {
+    color: $white-color;
+    font-size: 18px;
+}
+
+.offer_call {
+    color: $light-text-color;
+    display: inline-block;
+    line-height: 24px;
+    width: 70px;
+    padding-top: 4px;
+    font-size: 12px;
+}

@@ -1,0 +1,22 @@
+@import '../../shared/shared-style/shared-style';
+
+.brands {
+    display: flex;
+    padding: 15px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.brand_img {
+    margin: 0 auto;
+    padding-top: 70px;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: 0.5s ease;
+    cursor: pointer;
+
+    &:hover {
+        filter: grayscale(0);
+        opacity: 1;
+    }
+}

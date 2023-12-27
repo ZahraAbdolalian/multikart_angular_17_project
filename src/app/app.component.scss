@@ -1,0 +1,56 @@
+@import 'shared/shared-style/shared-style';
+
+.mat-drawer-container {
+    background-color: $white-color !important;
+}
+
+.container {
+    position: relative;
+}
+
+.mat-drawer-content{
+    overflow: hidden !important;
+}
+
+.sidenav_icon {
+    position: absolute;
+    top: 90px;
+    left: 50px;
+
+    mat-icon {
+        font-size: 28px;
+        width: auto;
+        height: auto;
+        margin-right: 0;
+    }
+}
+
+.sidenav {
+    width: 300px;
+    padding: 27px;
+    text-transform: uppercase;
+}
+
+.back_btn {
+    display: block;
+    cursor: pointer;
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+    color: $main-text-color;
+    font-size: 18px;
+    font-weight: 700;
+
+    i {
+        padding-right: 10px;
+    }
+}
+
+.menu_item i {
+    padding-left: 62px;
+    cursor: pointer;
+}
+
+a {
+    color: $main-text-color;
+}
+

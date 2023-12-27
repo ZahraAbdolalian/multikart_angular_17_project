@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { UserCartService } from '../../service/user-cart.service';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatListModule} from '@angular/material/list';
-import {MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { CurrencyPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-bottom-header',
@@ -12,7 +13,8 @@ import { CurrencyPipe } from '@angular/common';
     MatToolbarModule,
     MatListModule,
     MatCardModule,
-    CurrencyPipe
+    CurrencyPipe,
+    RouterLink
   ],
   templateUrl: './bottom-header.component.html',
   styleUrl: './bottom-header.component.scss'
@@ -274,11 +276,11 @@ export class BottomHeaderComponent {
 
   headerItems = [
     { name: 'home', list: this.home },
-    { name: 'shop', list:this.shop},
-    { name: 'products', list:this.products},
-    { name: 'features'},
-    { name: 'pages', list:this.pages},
-    { name: 'blogs', list:this.blogs}
+    { name: 'shop', list: this.shop },
+    { name: 'products', list: this.products },
+    { name: 'features' },
+    { name: 'pages', list: this.pages },
+    { name: 'blogs', list: this.blogs }
   ]
 
   settingItems = [
@@ -294,7 +296,7 @@ export class BottomHeaderComponent {
     return this.userCart.cartProducts.length;
   }
 
-  get cartProduct(){
+  get cartProduct() {
     return this.userCart.cartProducts;
   }
 }

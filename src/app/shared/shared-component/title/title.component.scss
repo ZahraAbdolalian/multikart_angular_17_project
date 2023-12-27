@@ -1,0 +1,39 @@
+@import '../../shared-style/shared-style';
+
+
+.title {
+    background-color: #f8f8f8;
+    padding: 30px 0;
+    margin-top: 30px;
+}
+
+.title_box {
+    max-width: 1400px;
+    padding: 0 12px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title_h2 {
+    color: $main-text-color;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+}
+
+.location a,
+.location {
+    text-transform: uppercase;
+    color: #555555;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.location a+span {
+    margin-right: 5px;
+    margin-left: 5px;
+}

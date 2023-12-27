@@ -4,13 +4,15 @@ import { CurrencyPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home-bottom-trending',
   standalone: true,
   imports: [
     SpinnerComponent,
-    CurrencyPipe
+    CurrencyPipe,
+    RouterLink
   ],
   templateUrl: './home-bottom-trending.component.html',
   styleUrl: './home-bottom-trending.component.scss'

@@ -1,0 +1,57 @@
+<div class="related_products_container">
+    <div class="related_product_title">
+        <h2>Related Products</h2>
+    </div>
+
+    @if (!relatedProducts) {
+        <app-spinner></app-spinner>
+    }
+    @else {
+        <div class="related_product_list">
+            @for (item of relatedProducts; track $index) {
+                <div class="related_product_item">
+                    <div class="related_product_item_box">
+                        <div class="related_product_img_box">
+                            <span class="new_sapn">
+                                new
+                            </span>
+                            <a [routerLink]="['/product-details',item.id]" class="related_product_img_container">
+                                <img class="related_product_img" [src]="item.image" alt="">
+                            </a>
+                            <div class="related_product_icons">
+                                <a class="related_product_icons_link" href="#" title="Add to cart">
+                                    <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                                </a>
+        
+                                <a class="related_product_icons_link" href="#" title="Add to Wishlist">
+                                    <i class="fa fa-heart shopping heart"></i>
+                                </a>
+        
+                                <a class="related_product_icons_link" href="#" title="Quick View">
+                                    <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                </a>
+        
+                                <a class="related_product_icons_link" href="#" title="Compare">
+                                    <i class="fa fa-refresh shopping refresh"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="related_product_detail">
+                            <div class="stars">
+                                @for (item of starsArray; track $index) {
+                                    <div class="star">★</div>
+                                }
+                            </div>
+                            <a [routerLink]="['/product-details',item.id]">
+                                <h6 class="related_product_name">{{item.title}}</h6>
+                            </a>
+                            <h4 class="related_product_discounted_price"> {{item.price | currency}}
+                                <del class="related_product_price">{{45 | currency}}</del>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

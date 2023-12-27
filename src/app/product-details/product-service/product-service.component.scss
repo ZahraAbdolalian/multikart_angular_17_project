@@ -1,0 +1,49 @@
+@import '../../shared/shared-style/shared-style';
+
+.product_left_center {
+    background-color: $white-color;
+    border: 1px solid $border-color;
+    padding: 0px 30px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+
+.product_service{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+        margin-bottom: 0;
+        border: 0;
+    }
+}
+
+.product_service_icon svg {
+    height: 40px;
+    width: 40px;
+}
+
+.product_service_text{
+    padding-left: 10px;
+
+    h4 {
+        margin-bottom: 5px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1;
+        text-transform: capitalize;
+        letter-spacing: 0.54px;
+    }
+
+    p{
+        color: $light-text-color;
+        font-size: 14px;
+        text-transform: capitalize;
+        line-height: 24px;
+        letter-spacing: 0.42px;
+    }
+}

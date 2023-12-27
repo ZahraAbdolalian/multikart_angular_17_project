@@ -1,0 +1,26 @@
+a {
+    text-decoration: none;
+}
+
+.product_detail_container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.product_box {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+    display: flex;
+}
+
+
+.product_box_left {
+    width: 25%;
+    padding-right: 12px;
+}
+
+.product_box_right_container{
+    width: 75%;
+}

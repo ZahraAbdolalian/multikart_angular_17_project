@@ -1,0 +1,15 @@
+<div class="product_left_top">
+    <div class="category">
+      <h3 class="category_title" (click)="toggleCategoryList()">category</h3>
+      <div class="category_item">
+        <mat-list class="category_list" [class.open] = "isCategoryListOpen">
+            @for (item of categoryArray; track $index) {
+                <mat-list-item>
+                  <a  [routerLink]="['/collection',item]"> {{ item }} </a>
+                </mat-list-item>
+            }
+        </mat-list>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,261 @@
+@import '../../shared/shared-style/shared-style';
+
+@mixin h6-style () {
+    font-size: 14px;
+    color: $main-text-color;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 24px;
+}
+
+.product_box_right {
+    display: flex;
+    padding-left: 13px;
+}
+
+.product_box_right_img {
+    width: 501px;
+}
+
+.product_box_right_infos {
+    width: 501px;
+    padding-left: 26px;
+}
+
+.main_img {
+    width: 440px;
+    height: 480px;
+}
+
+.product_quantity,
+.product_details,
+.product_media {
+    border-bottom: 1px dashed $border-color;
+}
+
+.product_name {
+    font-size: 25px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: $main-text-color;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.product_discount_price {
+    margin-bottom: 7px;
+
+    del {
+        color: $light-text-color;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    span {
+        color: $main-color;
+        padding-left: 5px;
+        font-size: 16px;
+        line-height: 1;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+    }
+}
+
+.product_price {
+    color: $main-text-color;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 0.78px;
+}
+
+.quantity_wrapper {
+    padding-top: 15px;
+    padding-bottom: 27px;
+
+    h5 {
+        color: $main-color;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.75px;
+        line-height: 24px;
+    }
+
+    h6 {
+        @include h6-style();
+    }
+}
+
+.quantity_box {
+    margin-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+
+    div {
+        width: 80px;
+        height: 49px;
+        font-size: 16px;
+        font-weight: 400;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        background-color: #e9ecef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.quantity_num {
+    padding: 6px 12px;
+    width: 60px;
+    text-align: end;
+    background-color: #e9ecef;
+    border-color: $border-color;
+    border-left: none;
+    border-top: none;
+    font-size: 16px;
+}
+
+.quantity_btn {
+    background-color: $white-color;
+    height: 100%;
+    border: 1px solid $border-color;
+    cursor: pointer;
+    padding: 16.2px 13.8px;
+    color: #585858;
+}
+
+.quantity_link_btn {
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    margin-right: 7px;
+}
+
+.submit_btn:hover {
+    background-position: 100%;
+    color: $main-text-color;
+    background-color: $white-color;
+    transition: 0.3s ease-in-out;
+}
+
+.disable {
+    opacity: 0.6;
+    opacity: 0.6;
+    cursor: context-menu;
+}
+
+.product_details,
+.product_media,
+.product_reminder {
+    padding-top: 15px;
+    padding-bottom: 20px;
+
+    h6 {
+        @include h6-style();
+    }
+}
+
+.product_details p {
+    color: $light-text-color;
+    font-size: 14px;
+    letter-spacing: 0.42px;
+    line-height: 21px;
+}
+
+.product_media div {
+    display: flex;
+    align-items: center;
+
+}
+
+.media_icons {
+    border-right: 1px solid $border-color;
+
+    mat-list {
+        display: flex;
+        margin-top: 5px;
+    }
+
+    mat-list a {
+        padding-right: 30px;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        color: $main-text-color;
+    }
+
+    mat-list a:hover {
+        color: $main-color;
+    }
+}
+
+mat-list-item {
+    width: auto;
+}
+
+.instagram {
+    padding-right: 12px !important;
+}
+
+.wishlist_btn button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 1px 6px;
+
+    i {
+        margin-left: 5px;
+        margin-right: 10px;
+        transition: all 0.5s ease;
+    }
+
+    span {
+        line-height: 27px;
+        text-align: center;
+    }
+}
+
+.wishlist_btn:hover .fa-heart {
+    color: $main-color;
+}
+
+.product_reminder div {
+    background-color: #f7f7f7;
+    margin-top: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 40px;
+    display: inline-block;
+
+    p {
+        font-size: 18px;
+        letter-spacing: 0.54px;
+        line-height: 27px;
+        color: $main-text-color;
+    }
+
+    span {
+        width: 70px;
+        display: inline-block;
+    }
+}
+
+.timer_num {
+    width: auto !important;
+}
+
+.timer_dot {
+    display: inline !important;
+    padding-left: 16px;
+}
+
+.timer_cal {
+    color: $light-text-color;
+    font-size: 12px;
+}

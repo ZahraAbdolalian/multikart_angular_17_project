@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-home-slider',
   standalone: true,
-  imports: [MatButtonModule],
+  imports: [
+    MatButtonModule,
+    RouterLink
+  ],
   templateUrl: './home-slider.component.html',
   styleUrl: './home-slider.component.scss'
 })

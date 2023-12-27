@@ -1,0 +1,92 @@
+@if (isLoading) {
+    <app-spinner></app-spinner>
+}
+
+@else {
+    <div class="product_box_right">
+        <div class="product_box_right_img">
+            <img class="main_img" [src]="product.image" alt="">
+            <div class="product_all_img">
+            </div>
+        </div>
+        <div class="product_box_right_infos">
+            <div class="product_details">
+                <h2 class="product_name">{{product.title}}</h2>
+                <h4 class="product_discount_price">
+                    <del>{{priceBeforeDiscount | currency}}</del>
+                    <span>40% Off</span>
+                </h4>
+                <h3 class="product_price">{{product.price | currency}}</h3>
+                <ul class="product_color">
+    
+                </ul>
+            </div>
+            <div class="product_quantity quantity_wrapper">
+                <h5 class="stock">{{stock}}</h5>
+                <h6>quantity</h6>
+                <div class="quantity_box">
+                    <button class="quantity_btn quantity_btn_left" type="button" (click)="reduceQuantity(quantity)">
+                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <input type="number" disabled value="1" class="quantity_num" #quantity>
+                    <button class="quantity_btn quantity_btn_right" type="button" (click)="increaseQuantity(quantity)">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="quantity_link">
+                    <button mat-raised-button color="primary" class="quantity_link_btn"
+                        [class]="stock === 'Out of Stock' ? 'disable' : 'able'" routerLink="/cart"
+                        (click)="addToCart(product,quantity)">add to cart</button>
+    
+                    <button mat-raised-button color="primary" class="quantity_link_btn"
+                        [class]="stock === 'Out of Stock' ? 'disable' : 'able'" routerLink="/checkout"
+                        (click)="addToCart(product,quantity)">buy now</button>
+                </div>
+            </div>
+            <div class="product_details">
+                <h6>product details</h6>
+                <p>It is a long established fact that a reader will be distracted by the readable content of
+                    a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+                    more-or-less normal distrib...</p>
+            </div>
+            <div class="product_media">
+                <h6>share it</h6>
+                <div>
+                    <div class="media_icons">
+                        <mat-list>
+                            @for (item of mediaIcons; track $index) {
+                                <mat-list-item>
+                                    <a [href]="item.url">
+                                        <i _ngcontent-serverapp-c2628554100="" [class]="item.name"></i>
+                                    </a>
+                                </mat-list-item>
+                            }
+                        </mat-list>
+                    </div>
+                    <div class="wishlist_btn">
+                        <button>
+                            <i _ngcontent-serverapp-c3931259297="" class="fa fa-heart"></i>
+                            <span>Add To WishList</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product_reminder">
+                <h6>Time Reminder</h6>
+                <div>
+                    <p>
+                        @for (item of timer; track $index) {
+                            <span class="timer_box">
+                                <span class="timer_num" [class]="item.className">{{item.amount}}</span>
+                                @if (item.timerCal !== 'Sec') {
+                                    <span class="timer_dot">:</span>
+                                }
+                                <span class="timer_cal">{{item.timerCal}}</span>
+                            </span>
+                        }
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}

@@ -16,7 +16,7 @@
             <div class="special_box">
                 @for (item of productsArray.slice(0,2); track $index) {
                     <div class="special_item">
-                        <a>
+                        <a [routerLink]="['/product-details',item.id]">
                             <img class="special_image" [src]="item.image" alt="special_image">
                         </a>
         
@@ -26,7 +26,7 @@
                                     <div class="star">★</div>
                                 }
                             </div>
-                            <a>
+                            <a [routerLink]="['/product-details',item.id]">
                                 <h6 class="special_name">{{item.title}}</h6>
                             </a>
                             <h4 class="special_price"> {{item.price | currency}}
@@ -47,7 +47,7 @@
                                 <span class="special_on_sale">
                                     on sale
                                 </span>
-                                <a>
+                                <a [routerLink]="['/product-details',item.id]">
                                     <img class="special_img" [src]="item.image" alt="special_img">
                                 </a>
                                 <div class="special_icons">
@@ -74,7 +74,7 @@
                                         <div class="star">★</div>
                                     }
                                 </div>
-                                <a>
+                                <a [routerLink]="['/product-details',item.id]">
                                     <h6 class="special_name">{{item.title}}</h6>
                                 </a>
                                 <h4 class="special_price"> {{item.price | currency}}
@@ -88,7 +88,7 @@
             <div class="special_box">
                 @for (item of productsArray.slice(3,5); track $index) {
                     <div class="special_item">
-                        <a>
+                        <a [routerLink]="['/product-details',item.id]">
                             <img class="special_image" [src]="item.image" alt="special_image">
                         </a>
         
@@ -98,7 +98,7 @@
                                     <div class="star">★</div>
                                 }
                             </div>
-                            <a>
+                            <a [routerLink]="['/product-details',item.id]">
                                 <h6 class="special_name">{{item.title}}</h6>
                             </a>
                             <h4 class="special_price"> {{item.price | currency}}

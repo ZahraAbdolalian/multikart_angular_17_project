@@ -1,0 +1,20 @@
+<app-title 
+[titleOfPage]="productName"
+[lacationOfPage]="'product'"
+></app-title>
+
+<section class="product_detail_container">
+  <div class="product_box">
+    <div class="product_box_left">
+      <app-collection-filter></app-collection-filter>
+      <app-product-service></app-product-service>
+      <app-new-product></app-new-product>
+    </div>
+    <div class="product_box_right_container">
+      <app-product-information (productName)="getProductName($event)" ></app-product-information>
+      <app-tab-product></app-tab-product>
+    </div>
+  </div>
+  <app-related-product></app-related-product>
+</section>
+

@@ -16,7 +16,7 @@
                                 @for (item of headerItem.list; track $index) {
                                     @if (item.link) {
                                     <mat-list-item class="header_submenu_item">
-                                        <a>
+                                        <a [routerLink]="['/collection', item.link]">
                                             {{ item.name }}
                                         </a>
                                     </mat-list-item>
@@ -35,7 +35,7 @@
                                 <h3>{{item.name}}</h3>
                                 @for (item of item.options; track $index) {
                                 <mat-list-item class="header_submenu_item">
-                                    <a>
+                                    <a [routerLink]="['/', item.link]">
                                         {{ item.title }}
                                     </a>
                                 </mat-list-item>
@@ -85,7 +85,7 @@
             </div>
 
             <div class="bottom_header_icon_box">
-                <a routerLink="cart">
+                <a routerLink="/cart">
                     <img class="bottom_header_icon" src="../../../assets/images/cart.png" alt="cart" />
                     <span id="mat-badge-content-0" aria-hidden="true"
                         class="mat-badge-content mat-badge-active cart-badge">{{shoppingCartSize}}</span>

@@ -1,0 +1,31 @@
+<div class="collection_left_bottom">
+    <div class="new_product">
+        <div class="new_product_head">
+            <h5 class="new_product_title">New Products</h5>
+            <i class="fa-solid fa-angle-left new_angle_left" (click)="paginator()"></i>
+            <i class="fa-solid fa-angle-right new_angle_right" (click)="paginator()"></i>
+        </div>
+
+        @if (!selectedProducts) {
+            <app-spinner></app-spinner>
+        }
+
+        <div class="new_product_box">
+            @for (item of selectedProducts; track $index) {
+                <div class="new_product_content">
+                    <div class="new_product_img_box">
+                        <a [routerLink]="['/product-details',item.id]">
+                            <img class="new_product_img" [src]="item.image" alt="new product" />
+                        </a>
+                    </div>
+                    <div>
+                        <a [routerLink]="['/product-details',item.id]" class="new_product_name">{{item.title}}</a>
+                        <h4 class="new_product_price">
+                            {{item.price | currency}}
+                        </h4>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

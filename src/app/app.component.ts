@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,6 +18,7 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     RouterOutlet,
+    RouterLink,
     HeaderComponent,
     HomeComponent,
     MatButtonModule,

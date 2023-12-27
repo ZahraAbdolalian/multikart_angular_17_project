@@ -18,7 +18,7 @@
                         <div class="trending_product_box">
                             <div class="trending_img_container_part2">
                                 <span class="trending_new"> new </span>
-                                <a>
+                                <a [routerLink]="['/product-details',item.id]">
                                     <div class="trending_img_box">
                                         <img class="trending_img" [src]="item.image" alt="" />
                                     </div>
@@ -47,7 +47,7 @@
                                         <div class="star">★</div>
                                     }
                                 </div>
-                                <a>
+                                <a [routerLink]="['/product-details',item.id]">
                                     <h6 class="trending_name">{{ item.title }}</h6>
                                 </a>
                                 <h4 class="trending_price">{{ item.price | currency}}</h4>

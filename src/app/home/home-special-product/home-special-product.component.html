@@ -1,0 +1,112 @@
+<section class="special_products">
+    <div class="special_title">
+        <h2 class="title_h2">special products</h2>
+
+        <div class="page_line">
+            <span class="page_line_span"></span>
+        </div>
+    </div>
+
+    @if (!productsArray) {
+        <app-spinner></app-spinner>
+    }
+
+    @else {
+        <div class="special_container">
+            <div class="special_box">
+                @for (item of productsArray.slice(0,2); track $index) {
+                    <div class="special_item">
+                        <a>
+                            <img class="special_image" [src]="item.image" alt="special_image">
+                        </a>
+        
+                        <div class="special_detail">
+                            <div class="stars">
+                                @for (item of starsArray; track $index) {
+                                    <div class="star">★</div>
+                                }
+                            </div>
+                            <a>
+                                <h6 class="special_name">{{item.title}}</h6>
+                            </a>
+                            <h4 class="special_price"> {{item.price | currency}}
+                            </h4>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            @for (item of productsArray.slice(2,3); track $index) {
+                <div class="special_box_ceneter">
+                    <div class="special_product">
+                        <div class="special_product_box">
+                            <div class="special_img_box">
+                                <span class="special_new">
+                                    new
+                                </span>
+                                <span class="special_on_sale">
+                                    on sale
+                                </span>
+                                <a>
+                                    <img class="special_img" [src]="item.image" alt="special_img">
+                                </a>
+                                <div class="special_icons">
+                                    <a title="Add to cart" class="special_icons_link" href="#">
+                                        <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                                    </a>
+        
+                                    <a title="Add to Wishlist" class="special_icons_link" href="#">
+                                        <i class="fa fa-heart shopping heart"></i>
+                                    </a>
+        
+                                    <a title="Quick View" class="special_icons_link" href="#">
+                                        <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                    </a>
+        
+                                    <a title="Compare" class="special_icons_link" href="#">
+                                        <i class="fa fa-refresh shopping refresh"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="special_detail_part2">
+                                <div class="stars stars_part2">
+                                    @for (item of starsArray; track $index) {
+                                        <div class="star">★</div>
+                                    }
+                                </div>
+                                <a>
+                                    <h6 class="special_name">{{item.title}}</h6>
+                                </a>
+                                <h4 class="special_price"> {{item.price | currency}}
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+    
+            <div class="special_box">
+                @for (item of productsArray.slice(3,5); track $index) {
+                    <div class="special_item">
+                        <a>
+                            <img class="special_image" [src]="item.image" alt="special_image">
+                        </a>
+        
+                        <div class="special_detail">
+                            <div class="stars stars_part2">
+                                @for (item of starsArray; track $index) {
+                                    <div class="star">★</div>
+                                }
+                            </div>
+                            <a>
+                                <h6 class="special_name">{{item.title}}</h6>
+                            </a>
+                            <h4 class="special_price"> {{item.price | currency}}
+                            </h4>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</section>

@@ -1,0 +1,257 @@
+@import '../../shared/shared-style/shared-style';
+
+.special_products {
+    padding-top: 70px;
+    margin: 0 auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.special_container {
+    display: flex;
+    justify-content: center;
+}
+
+.title_h2 {
+    text-align: center;
+    font-size: 36px;
+    color: $main-text-color;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.72px;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+    margin-top: -5px;
+}
+
+.page_line {
+    position: relative;
+    width: 180px;
+    height: 1px;
+    background-color: $main-color;
+    bottom: 0;
+    top: 0;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: $main-color;
+    top: -4px;
+}
+
+.page_line::before {
+    left: 64px;
+}
+
+.page_line::after {
+    left: 78px;
+}
+
+.page_line_span::before {
+    right: 64px;
+}
+
+.page_line_span::after {
+    right: 78px;
+}
+
+.special_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.special_item {
+    display: flex;
+    padding-left: 12px;
+    padding-right: 12px;
+
+    &:first-child {
+        border-bottom: 1px solid $border-color;
+    }
+}
+
+.special_image {
+    height: 270px;
+    transform: scale(1);
+    transition: all 0.5s ease;
+    padding: 15px 15px 15px 0;
+}
+
+.special_detail {
+    display: block;
+    align-self: center;
+}
+
+.special_item:hover .special_image {
+    transform: scale(1.03);
+    transition: all 0.5s ease;
+}
+
+.special_box,
+.special_box_ceneter {
+    width: 33%;
+}
+
+.special_box_ceneter {
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color
+}
+
+.special_img_box {
+    position: relative;
+    right: 12px;
+}
+
+.special_img {
+    width: 100%;
+    padding: 15px;
+}
+
+.special_detail_part2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.special_new {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: var(--main-color);
+    color: $white-color;
+    border-radius: 100%;
+    padding: 11px 4px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    text-align: center;
+}
+
+.special_on_sale {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    color: #212529;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+}
+
+.special_product_box {
+    width: 315px;
+    height: 340px;
+    margin: 0 auto;
+}
+
+.special_icons_link {
+    transition: 0.5s ease;
+    position: relative;
+}
+
+.special_name {
+    color: $light-text-color;
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.special_price {
+    color: $main-text-color;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+.special_product {
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 140px;
+
+    &:hover .special_icons{
+        opacity: 1;
+        transition: all 0.2s ease;
+        animation: icons_part2 400ms ease-in-out;
+    }
+}
+
+@keyframes icons_part2 {
+    from {
+        bottom: 0px;
+    }
+
+    to {
+        bottom: 30px;
+    }
+}
+
+.special_icons {
+    background-color: $white-color;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    padding: 3px 8px;
+    display: flex;
+    width: max-content;
+    border-radius: 50px;
+    box-shadow: 0 0 12px 0 $border-color;
+    margin: 0 auto;
+    opacity: 0;
+    transition: all 0.2s ease;
+}
+
+.stars {
+    display: flex;
+    font-size: 18px;
+    color: #edb867;
+}
+
+.shopping {
+    padding: 10px;
+    display: block;
+    color: $icon-color;
+    font-size: 18px;
+    transition: all 0.5s ease;
+    position: relative; 
+
+    &:hover {
+        color: $main-color;
+        transition: all 0.5s ease;
+    }
+}
+
+.special_new {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+    background-color: $main-color;
+    color: $white-color;
+    border-radius: 100%;
+    padding: 11px 4px;
+    position: absolute;
+    top: 7px;
+    left: 7px;
+    text-align: center;
+}
+
+.spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

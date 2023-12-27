@@ -1,0 +1,21 @@
+<section class="banner">
+    <div class="banner_container">
+        @for (item of bannerItems; track $index) {
+            <div class="banner_item">
+                <a>
+                    <div class="banner_box">
+                        <img class="banner_image" [src]="item.imgUrl" alt="banner1">
+                        @if (item.title) {
+                            <div class="banner_flex">
+                                <div class="banner_info">
+                                    <h4 class="banner_info_subtitle">{{item.subtitle}}</h4>
+                                    <h2 class="banner_info_title">{{item.title}}</h2>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</section>

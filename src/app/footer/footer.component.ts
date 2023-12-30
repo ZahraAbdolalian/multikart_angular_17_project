@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';;
+import { SharedImports } from '../shared/shared-imports/shared.module';
 
 
 
@@ -11,11 +8,8 @@ import { MatListModule } from '@angular/material/list';
   selector: 'app-footer',
   standalone: true,
   imports: [
-    MatFormFieldModule,
+    SharedImports,
     ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatListModule
   ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'

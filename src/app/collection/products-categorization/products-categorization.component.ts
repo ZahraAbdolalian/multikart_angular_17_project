@@ -2,14 +2,11 @@ import { Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ActivatedRoute, Params, RouterLink } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
-import { MatTableModule } from '@angular/material/table';
-import { CurrencyPipe } from '@angular/common';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 
@@ -17,11 +14,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
   selector: 'app-products-categorization',
   standalone: true,
   imports: [
-    SpinnerComponent,
-    MatTableModule,
-    RouterLink,
-    CurrencyPipe,
-    MatPaginatorModule
+    SharedImports
   ],
   templateUrl: './products-categorization.component.html',
   styleUrl: './products-categorization.component.scss'

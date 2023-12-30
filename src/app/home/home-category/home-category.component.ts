@@ -1,12 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
-import { MatCardModule } from '@angular/material/card';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { MatButtonModule } from '@angular/material/button';
-import { RouterLink } from '@angular/router';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 
@@ -14,10 +11,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   selector: 'app-home-category',
   standalone: true,
   imports: [
-    SpinnerComponent,
-    MatCardModule,
-    MatButtonModule,
-    RouterLink,
+    SharedImports,
     NgxSkeletonLoaderModule
   ],
   templateUrl: './home-category.component.html',

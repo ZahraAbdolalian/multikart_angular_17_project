@@ -1,18 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { CurrencyPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 @Component({
   selector: 'app-home-special-product',
   standalone: true,
   imports: [
-    SpinnerComponent,
-    CurrencyPipe,
-    RouterLink
+    SharedImports
   ],
   templateUrl: './home-special-product.component.html',
   styleUrl: './home-special-product.component.scss'

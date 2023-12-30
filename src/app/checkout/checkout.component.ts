@@ -1,17 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { TitleComponent } from '../shared/shared-component/title/title.component';
 import { FormGroup, FormControl, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CartProduct } from '../model/cart-product.model';
 import { UserCartService } from '../service/user-cart.service';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { CurrencyPipe } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatSelectModule } from '@angular/material/select';
 import { CheckoutCardComponent } from './checkout-card/checkout-card.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
 import { ScrollingService } from '../service/scrolling.service';
+import { SharedImports } from '../shared/shared-imports/shared.module';
 
 
 
@@ -19,16 +12,9 @@ import { ScrollingService } from '../service/scrolling.service';
   selector: 'app-checkout',
   standalone: true,
   imports: [
-    TitleComponent,
-    MatFormFieldModule,
     ReactiveFormsModule,
-    CurrencyPipe,
-    MatIconModule,
-    MatCardModule,
-    MatSelectModule,
     CheckoutCardComponent,
-    MatInputModule,
-    MatButtonModule
+    SharedImports
   ],
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.scss'

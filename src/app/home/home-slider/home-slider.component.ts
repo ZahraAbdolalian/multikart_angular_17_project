@@ -1,14 +1,12 @@
 import { Component } from '@angular/core';
-import {MatButtonModule} from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 @Component({
   selector: 'app-home-slider',
   standalone: true,
   imports: [
-    MatButtonModule,
-    RouterLink
+    SharedImports
   ],
   templateUrl: './home-slider.component.html',
   styleUrl: './home-slider.component.scss'

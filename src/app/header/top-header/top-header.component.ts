@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatListModule } from '@angular/material/list';
-import { MatIconModule } from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatButtonModule} from '@angular/material/button';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 
@@ -11,11 +7,8 @@ import {MatButtonModule} from '@angular/material/button';
   selector: 'app-top-header',
   standalone: true,
   imports: [
-    MatToolbarModule,
-    MatListModule,
-    MatIconModule,
-    MatMenuModule,
-    MatButtonModule],
+    SharedImports
+  ],
   templateUrl: './top-header.component.html',
   styleUrl: './top-header.component.scss'
 })

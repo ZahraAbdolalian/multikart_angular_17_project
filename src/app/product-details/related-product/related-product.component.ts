@@ -1,18 +1,14 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
-import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { CurrencyPipe } from '@angular/common';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 @Component({
   selector: 'app-related-product',
   standalone: true,
   imports: [
-    SpinnerComponent,
-    RouterLink,
-    CurrencyPipe
+    SharedImports
   ],
   templateUrl: './related-product.component.html',
   styleUrl: './related-product.component.scss'

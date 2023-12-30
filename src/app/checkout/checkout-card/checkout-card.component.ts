@@ -1,14 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 @Component({
   selector: 'app-checkout-card',
   standalone: true,
   imports: [
-    MatCardModule,
-    MatTableModule
+    SharedImports
   ],
   templateUrl: './checkout-card.component.html',
   styleUrl: './checkout-card.component.scss'

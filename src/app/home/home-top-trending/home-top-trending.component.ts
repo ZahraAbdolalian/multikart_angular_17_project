@@ -1,21 +1,16 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatTabsModule } from '@angular/material/tabs';
-import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
-import { CurrencyPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 @Component({
   selector: 'app-home-top-trending',
   standalone: true,
   imports: [
-    MatTabsModule,
-    SpinnerComponent,
-    CurrencyPipe,
-    RouterLink
+    SharedImports
   ],
   templateUrl: './home-top-trending.component.html',
   styleUrl: './home-top-trending.component.scss'

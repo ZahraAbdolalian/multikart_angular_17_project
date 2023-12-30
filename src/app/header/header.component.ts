@@ -5,7 +5,10 @@ import { TopHeaderComponent } from './top-header/top-header.component';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [BottomHeaderComponent, TopHeaderComponent],
+  imports: [
+    BottomHeaderComponent,
+    TopHeaderComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })

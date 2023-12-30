@@ -1,13 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { TitleComponent } from '../shared/shared-component/title/title.component';
-import { MatTable, MatTableModule } from '@angular/material/table';
+import { MatTable } from '@angular/material/table';
 import { CartProduct } from '../model/cart-product.model';
 import { UserCartService } from '../service/user-cart.service';
-import { RouterLink } from '@angular/router';
-import { CurrencyPipe } from '@angular/common';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { ScrollingService } from '../service/scrolling.service';
+import { SharedImports } from '../shared/shared-imports/shared.module';
 
 
 
@@ -15,12 +11,7 @@ import { ScrollingService } from '../service/scrolling.service';
   selector: 'app-cart',
   standalone: true,
   imports: [
-    TitleComponent,
-    MatTableModule,
-    RouterLink,
-    CurrencyPipe,
-    MatIconModule,
-    MatButtonModule
+    SharedImports
   ],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'

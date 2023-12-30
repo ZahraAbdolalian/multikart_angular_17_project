@@ -9,7 +9,6 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { HomeSpecialProductComponent } from './home-special-product/home-special-product.component';
 import { HomeRecentStoryComponent } from './home-recent-story/home-recent-story.component';
 import { HomeServiceComponent } from './home-service/home-service.component';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-home',
@@ -25,7 +24,6 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
     HomeSpecialProductComponent,
     HomeRecentStoryComponent,
     HomeServiceComponent,
-    NgxSkeletonLoaderModule
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

@@ -1,18 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
-import { CurrencyPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
-import { RouterLink } from '@angular/router';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 @Component({
   selector: 'app-home-bottom-trending',
   standalone: true,
   imports: [
-    SpinnerComponent,
-    CurrencyPipe,
-    RouterLink
+    SharedImports
   ],
   templateUrl: './home-bottom-trending.component.html',
   styleUrl: './home-bottom-trending.component.scss'

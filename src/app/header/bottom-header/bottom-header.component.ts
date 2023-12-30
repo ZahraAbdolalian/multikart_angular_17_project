@@ -1,24 +1,14 @@
 import { Component } from '@angular/core';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatListModule } from '@angular/material/list';
-import { MatCardModule } from '@angular/material/card';
-import { CurrencyPipe } from '@angular/common';
-import { RouterLink } from '@angular/router';
 
 import { UserCartService } from '../../service/user-cart.service';
-import { MatButtonModule } from '@angular/material/button';
+import { SharedImports } from '../../shared/shared-imports/shared.module';
 
 
 @Component({
   selector: 'app-bottom-header',
   standalone: true,
   imports: [
-    MatToolbarModule,
-    MatListModule,
-    MatCardModule,
-    CurrencyPipe,
-    RouterLink,
-    MatButtonModule
+    SharedImports
   ],
   templateUrl: './bottom-header.component.html',
   styleUrl: './bottom-header.component.scss'

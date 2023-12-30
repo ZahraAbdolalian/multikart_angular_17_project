@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { CurrencyPipe } from '@angular/common';
 import { Subscription } from 'rxjs';
@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home-bottom-trending.component.html',
   styleUrl: './home-bottom-trending.component.scss'
 })
-export class HomeBottomTrendingComponent {
+export class HomeBottomTrendingComponent implements OnInit{
   private apiSubscription!: Subscription;
 
   starsArray: any[] = new Array(5);

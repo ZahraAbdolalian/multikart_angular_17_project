@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { CurrencyPipe } from '@angular/common';
@@ -20,7 +20,7 @@ import { Router, RouterLink } from '@angular/router';
   templateUrl: './home-top-trending.component.html',
   styleUrl: './home-top-trending.component.scss'
 })
-export class HomeTopTrendingComponent {
+export class HomeTopTrendingComponent implements OnInit, OnDestroy{
   private apiSubscription!: Subscription;
 
   labels = ['NEW ARRIVAL','ON SALE','BEST SELLERS']

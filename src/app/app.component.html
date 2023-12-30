@@ -6,7 +6,7 @@
         </a>
         <mat-list role="list">
             <mat-list-item role="listitem" class="menu_item">
-                <a routerLink="home" (click)="drawer.toggle()">home</a>
+                <a [routerLink]="'home'" (click)="drawer.toggle()">home</a>
             </mat-list-item>
             <mat-list-item role="listitem" class="menu_item" >collection
                 <i [matMenuTriggerFor]="menu" aria-hidden="true" class="fa fa-angle-right"></i>
@@ -15,6 +15,7 @@
                     mat-menu-item 
                     *ngFor="let item of collection"
                     (click)="drawer.toggle()"
+                    [routerLink]="item"
                     >{{item}}</button>
                 </mat-menu>
             </mat-list-item>

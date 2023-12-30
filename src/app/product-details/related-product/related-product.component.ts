@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -17,7 +17,7 @@ import { CurrencyPipe } from '@angular/common';
   templateUrl: './related-product.component.html',
   styleUrl: './related-product.component.scss'
 })
-export class RelatedProductComponent {
+export class RelatedProductComponent implements OnInit, OnDestroy{
   private apiSubscription!: Subscription;
 
   starsArray: any[] = new Array(5);

@@ -291,10 +291,7 @@ export class BottomHeaderComponent {
     }
   ]
 
-  constructor(private userCart: UserCartService) {
-
-    console.log(this.userCart.cartProducts);
-   }
+  constructor(private userCart: UserCartService) { }
 
   get shoppingCartSize() {
     return this.userCart.cartProducts.length;
@@ -302,6 +299,5 @@ export class BottomHeaderComponent {
 
   get cartProduct() {
     return this.userCart.cartProducts;
-    
   }
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
@@ -24,7 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './product-information.component.html',
   styleUrl: './product-information.component.scss'
 })
-export class ProductInformationComponent {
+export class ProductInformationComponent implements OnInit, OnDestroy{
   private routeSubscription!: Subscription;
   private apiSubscription!: Subscription;
 

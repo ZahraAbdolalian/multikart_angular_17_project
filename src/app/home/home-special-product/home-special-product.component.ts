@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
@@ -17,7 +17,7 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home-special-product.component.html',
   styleUrl: './home-special-product.component.scss'
 })
-export class HomeSpecialProductComponent {
+export class HomeSpecialProductComponent implements OnInit, OnDestroy{
   private apiSubscription!: Subscription;
 
   starsArray: any[] = new Array(5);

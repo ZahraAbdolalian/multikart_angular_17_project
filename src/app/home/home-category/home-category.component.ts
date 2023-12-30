@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { SpinnerComponent } from '../../shared/shared-component/spinner/spinner.component';
 import { MatCardModule } from '@angular/material/card';
 import { Subscription } from 'rxjs';
@@ -6,6 +6,7 @@ import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 
 
@@ -16,12 +17,13 @@ import { RouterLink } from '@angular/router';
     SpinnerComponent,
     MatCardModule,
     MatButtonModule,
-    RouterLink
+    RouterLink,
+    NgxSkeletonLoaderModule
   ],
   templateUrl: './home-category.component.html',
   styleUrl: './home-category.component.scss'
 })
-export class HomeCategoryComponent {
+export class HomeCategoryComponent implements OnInit, OnDestroy{
   private categoriesNameSubscription!: Subscription;
   private categoriProductsSubscription!: Subscription;
 

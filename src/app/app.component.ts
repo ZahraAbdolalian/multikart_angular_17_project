@@ -34,6 +34,6 @@ import { FooterComponent } from './footer/footer.component';
 export class AppComponent {
   title = 'multikart_angular_17_project';
 
-  collection = ['Electronics', 'Jewelery', "Men's clothing", "Women's clothing"]
+  collection = ['electronics', 'jewelery', "men's clothing", "women's clothing"]
 
 }

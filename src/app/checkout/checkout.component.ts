@@ -11,6 +11,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { CheckoutCardComponent } from './checkout-card/checkout-card.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ScrollingService } from '../service/scrolling.service';
 
 
 
@@ -53,9 +54,12 @@ export class CheckoutComponent implements OnInit {
 
   subtotal = 0
 
-  constructor(private userCart: UserCartService) { }
+  constructor(private userCart: UserCartService, private scrollinhService: ScrollingService) { }
 
   ngOnInit(): void {
+
+    this.scrollinhService.scrollToTop()
+
     this.checkoutForm = new FormGroup({
       'First Name': new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z]{3,}$/)]),
       'Last Name': new FormControl('', [Validators.required, Validators.pattern(/^[a-zA-Z]{3,}$/)]),

@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { TitleComponent } from '../shared/shared-component/title/title.component';
 import { MatTable, MatTableModule } from '@angular/material/table';
 import { CartProduct } from '../model/cart-product.model';
@@ -7,6 +7,7 @@ import { RouterLink } from '@angular/router';
 import { CurrencyPipe } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { ScrollingService } from '../service/scrolling.service';
 
 
 
@@ -24,7 +25,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
-export class CartComponent {
+export class CartComponent implements OnInit {
   dataSource = this.userCart.cartProducts
 
   displayedColumns: string[] = ['image', 'name', 'price', 'quantity', 'action', 'total'];
@@ -32,8 +33,13 @@ export class CartComponent {
   @ViewChild(MatTable) table!: MatTable<CartProduct>;
 
   constructor(
-    private userCart: UserCartService
+    private userCart: UserCartService,
+    private scrollinhService: ScrollingService
   ) { }
+
+  ngOnInit(): void {
+    this.scrollinhService.scrollToTop()
+  }
 
   getTotalCost() {
     return this.dataSource.map(t => t.total).reduce((acc, value) => acc + value, 0);

@@ -1,8 +1,8 @@
-<div class="product_right_bottom">
+<div class="!pt-[105px] !pl-3">
     <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
         <mat-tab label="Description">
-            <div class="product_right_bottom_container">
-                <p class="description">
+            <div class="!pt-2.5">
+                <p class="text-sm text-[#777777] leading-6 tracking-[0.14px]">
                     It is a long established fact that a reader will be distracted by the readable content of a page
                     when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
                     distribution of letters,It is a long established fact that a reader will be distracted by the readable content of
@@ -13,34 +13,34 @@
         </mat-tab>
         <mat-tab label="Video"></mat-tab>
         <mat-tab label="Write Review">
-            <div class="product_right_bottom_container">
+            <div class="!pt-2.5">
                 <form>
-                    <div class="write_box">
-                        <div class="rating_box">
+                    <div class="flex flex-wrap capitalize !pr-[60px] text-sm">
+                        <div class="flex items-center w-full !pr-3 !mb-[25px]">
                             <p>rating</p>
                             <div>
-                                <div class="stars_rating">
+                                <div class="stars_rating flex text-xs text-[#ffa200] !ml-4">
                                     @for (item of starsArray; track $index) {
-                                        <div class="star"><i class="fa fa-star"></i></div>
+                                        <div class="!mr-[5px]"><i class="fa fa-star"></i></div>
                                     }
                                 </div>
                             </div>
                         </div>
-                        <div class="name_input">
-                            <label for="name">name</label>
-                            <input type="text" name="name" id="name" placeholder="Enter Your name">
+                        <div class="w-[50%] !pr-3">
+                            <label class="!mb-[6px] inline-block" for="name">name</label>
+                            <input class="border border-[#dddddd] !py-[15px] !px-[25px] outline-none w-full !mb-[17px] text-[15px] h-[inherit]" type="text" name="name" id="name" placeholder="Enter Your name">
                         </div>
-                        <div class="email_input">
-                            <label for="email">email</label>
-                            <input type="text" name="email" id="email" placeholder="Email">
+                        <div class="w-[50%]">
+                            <label class="!mb-[6px] inline-block" for="email">email</label>
+                            <input class="border border-[#dddddd] !py-[15px] !px-[25px] outline-none w-full !mb-[17px] text-[15px] h-[inherit]" type="text" name="email" id="email" placeholder="Email">
                         </div>
-                        <div class="review_title">
-                            <label for="review">Review Title</label>
-                            <input type="text" name="review" id="review" placeholder="Enter your Review Subjects">
+                        <div class="w-full">
+                            <label class="!mb-[6px] inline-block" for="review">Review Title</label>
+                            <input class="border border-[#dddddd] !py-[15px] !px-[25px] outline-none w-full !mb-[17px] text-[15px] h-[inherit]" type="text" name="review" id="review" placeholder="Enter your Review Subjects">
                         </div>
-                        <div class="review_title">
-                            <label for="review">Review Title</label>
-                            <textarea type="text" name="review" id="review"
+                        <div class="w-full">
+                            <label class="!mb-[6px] inline-block" for="review">Review Title</label>
+                            <textarea type="text" name="review" id="review" class="border border-[#dddddd] !py-[15px] !px-[25px] outline-none w-full !mb-[17px] text-[15px] h-[170px]"
                                 placeholder="Wrire Your Testimonial Here"></textarea>
                         </div>
                         <div>

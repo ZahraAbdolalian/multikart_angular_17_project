@@ -3,60 +3,60 @@
 }
 
 @else {
-    <div class="product_box_right">
-        <div class="product_box_right_img">
-            <img class="main_img" [src]="product.image" alt="">
+    <div class="flex !pl-[13px]">
+        <div class="w-[501px]">
+            <img class="w-[440px] h-[480px]" [src]="product.image" alt="">
             <div class="product_all_img">
             </div>
         </div>
-        <div class="product_box_right_infos">
-            <div class="product_details">
-                <h2 class="product_name">{{product.title}}</h2>
-                <h4 class="product_discount_price">
-                    <del>{{priceBeforeDiscount | currency}}</del>
-                    <span>40% Off</span>
+        <div class="w-[501px] !pl-[26px]">
+            <div class="border-b border-[#dddddd] !pt-[15px] !pb-5">
+                <h2 class="text-2xl leading-[30px] uppercase !mb-[15px] text-[#222222] font-bold tracking-[0.5px]">{{product.title}}</h2>
+                <h4 class="!mb-[7px]">
+                    <del class="text-[#777777] text-sm font-normal">{{priceBeforeDiscount | currency}}</del>
+                    <span class="text-primary !pl-[5px] text-base leading-none font-normal tracking-[0.5px]">40% Off</span>
                 </h4>
-                <h3 class="product_price">{{product.price | currency}}</h3>
+                <h3 class="text-[#222222] text-[26px] font-normal !mb-[15px] tracking-[0.78px]">{{product.price | currency}}</h3>
                 <ul class="product_color">
     
                 </ul>
             </div>
-            <div class="product_quantity quantity_wrapper">
-                <h5 class="stock">{{stock}}</h5>
-                <h6>quantity</h6>
-                <div class="quantity_box">
-                    <button class="quantity_btn quantity_btn_left" type="button" (click)="reduceQuantity(quantity)">
+            <div class="border-b border-[#dddddd] !pt-[15px] !pb-[27px]">
+                <h5 class="text-primary text-[15px] font-semibold tracking-[0.75px] leading-6">{{stock}}</h5>
+                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">quantity</h6>
+                <div class="!mt-2.5 !pb-5 flex">
+                    <button class="bg-[#fff] h-full border border-[#dddddd] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_left" type="button" (click)="reduceQuantity(quantity)">
                         <i class="fa fa-chevron-left" aria-hidden="true"></i>
                     </button>
-                    <input type="number" disabled value="1" class="quantity_num" #quantity>
-                    <button class="quantity_btn quantity_btn_right" type="button" (click)="increaseQuantity(quantity)">
+                    <input type="number" disabled value="1" class="!py-[6px] !px-3 w-[60px] text-end bg-[#e9ecef] border-r border-b border-[#dddddd] text-base" #quantity>
+                    <button class="bg-[#fff] h-full border border-[#dddddd] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_right" type="button" (click)="increaseQuantity(quantity)">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="quantity_link">
-                    <button mat-raised-button color="primary" class="quantity_link_btn"
+                    <button mat-raised-button color="primary" class="!py-2.5 !px-[25px] uppercase text-sm font-bold leading-5 tracking-[0.7px] !ml-[7px]"
                         [class]="stock === 'Out of Stock' ? 'disable' : 'able'" [routerLink]="'/cart'"
-                        (click)="addToCart(product,quantity)">add to cart</button>
+                        (click)="addToCart(product,quantity)">Add To Cart</button>
     
-                    <button mat-raised-button color="primary" class="quantity_link_btn"
+                    <button mat-raised-button color="primary" class="!py-2.5 !px-[25px] uppercase text-sm font-bold leading-5 tracking-[0.7px] !ml-[7px]"
                         [class]="stock === 'Out of Stock' ? 'disable' : 'able'" [routerLink]="'/checkout'"
-                        (click)="addToCart(product,quantity)">buy now</button>
+                        (click)="addToCart(product,quantity)">Buy Now</button>
                 </div>
             </div>
-            <div class="product_details">
-                <h6>product details</h6>
-                <p>It is a long established fact that a reader will be distracted by the readable content of
+            <div class="border-b border-[#dddddd] !pt-[15px] !pb-5">
+                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">product details</h6>
+                <p class="text-[#777777] text-sm tracking-[0.42px] leading-[21px]">It is a long established fact that a reader will be distracted by the readable content of
                     a page when looking at its layout. The point of using Lorem Ipsum is that it has a
                     more-or-less normal distrib...</p>
             </div>
-            <div class="product_media">
-                <h6>share it</h6>
-                <div>
-                    <div class="media_icons">
-                        <mat-list>
+            <div class="border-b border-[#dddddd] !pt-[15px] !pb-[15px]">
+                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">share it</h6>
+                <div class="flex items-center">
+                    <div class="border-r border-[#dddddd]">
+                        <mat-list class="!flex !mt-[5px]">
                             @for (item of mediaIcons; track $index) {
-                                <mat-list-item>
-                                    <a [href]="item.url">
+                                <mat-list-item class="!w-auto">
+                                    <a [href]="item.url" class="!pr-[30px] text-lg transition-all text-[#222222] hover:text-primary">
                                         <i _ngcontent-serverapp-c2628554100="" [class]="item.name"></i>
                                     </a>
                                 </mat-list-item>
@@ -71,17 +71,17 @@
                     </div>
                 </div>
             </div>
-            <div class="product_reminder">
-                <h6>Time Reminder</h6>
-                <div>
-                    <p>
+            <div class="!pt-[15px] !pb-5">
+                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">Time Reminder</h6>
+                <div class="bg-[#f7f7f7] !mt-2.5 !pt-[15px] !pb-[15px] !pl-10 inline-block">
+                    <p class="text-lg tracking-[0.54px] leading-[27px] text-[#222222]">
                         @for (item of timer; track $index) {
-                            <span class="timer_box">
-                                <span class="timer_num" [class]="item.className">{{item.amount}}</span>
+                            <span class="timer_box w-[70px] inline-block">
+                                <span class="!w-auto inline-block" [class]="item.className">{{item.amount}}</span>
                                 @if (item.timerCal !== 'Sec') {
-                                    <span class="timer_dot">:</span>
+                                    <span class="!inline !pl-4 w-[70px]">:</span>
                                 }
-                                <span class="timer_cal">{{item.timerCal}}</span>
+                                <span class="text-[#777777] text-xs w-[70px] inline-block">{{item.timerCal}}</span>
                             </span>
                         }
                     </p>

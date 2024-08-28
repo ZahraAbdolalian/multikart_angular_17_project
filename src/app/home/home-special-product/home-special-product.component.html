@@ -1,8 +1,8 @@
-<section class="special_products">
+<section class="!pt-[70px] !my-0 !mx-auto !pl-3 !pr-3">
     <div class="special_title">
-        <h2 class="title_h2">special products</h2>
+        <h2 class="text-center text-4xl text-[#222222] uppercase relative font-bold leading-[1] tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">special products</h2>
 
-        <div class="page_line">
+        <div class="page_line relative w-[180px] h-[1px] bg-primary bottom-0 top-0 !my-0 !mx-auto !mb-[55px]">
             <span class="page_line_span"></span>
         </div>
     </div>
@@ -12,24 +12,24 @@
     }
 
     @else {
-        <div class="special_container">
-            <div class="special_box">
+        <div class="flex justify-center max-w-[1400px] !mx-auto !my-0">
+            <div class="flex flex-col w-1/3">
                 @for (item of productsArray.slice(0,2); track $index) {
-                    <div class="special_item">
+                    <div class="special_item flex !pl-3 !pr-3">
                         <a [routerLink]="['/product-details',item.id]">
-                            <img class="special_image" [src]="item.image" alt="special_image">
+                            <img class="special_image h-[270px] scale-100 transition-all !p-[15px] !pl-0" [src]="item.image" alt="special_image">
                         </a>
         
-                        <div class="special_detail">
-                            <div class="stars">
+                        <div class="flex flex-col self-center">
+                            <div class="flex text-[#edb867] text-lg">
                                 @for (item of starsArray; track $index) {
                                     <div class="star">★</div>
                                 }
                             </div>
                             <a [routerLink]="['/product-details',item.id]">
-                                <h6 class="special_name">{{item.title}}</h6>
+                                <h6 class="text-[#777777] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
                             </a>
-                            <h4 class="special_price"> {{item.price | currency}}
+                            <h4 class="text-[#222222] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
                             </h4>
                         </div>
                     </div>
@@ -37,47 +37,47 @@
             </div>
 
             @for (item of productsArray.slice(2,3); track $index) {
-                <div class="special_box_ceneter">
-                    <div class="special_product">
-                        <div class="special_product_box">
-                            <div class="special_img_box">
-                                <span class="special_new">
+                <div class="w-1/3 border-l border-r border-[#dddddd]">
+                    <div class="special_product !pl-3 !pr-3 !mb-[140px]">
+                        <div class="w-[315px] h-[340px] !my-0 !mx-auto">
+                            <div class="relative right-3">
+                                <span class="uppercase text-[13px] font-bold bg-primary text-[#fff] rounded-full !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center">
                                     new
                                 </span>
-                                <span class="special_on_sale">
+                                <span class="uppercase text-sm font-bold tracking-[1.4px] text-[#222222] absolute top-[7px] right-[-13px] rotate-[270deg]">
                                     on sale
                                 </span>
                                 <a [routerLink]="['/product-details',item.id]">
-                                    <img class="special_img" [src]="item.image" alt="special_img">
+                                    <img class="w-full !p-[15px]" [src]="item.image" alt="special_img">
                                 </a>
-                                <div class="special_icons">
-                                    <a title="Add to cart" class="special_icons_link" href="#">
-                                        <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                                <div class="special_icons bg-[#fff] absolute left-0 right-0 bottom-[30px] !py-[3px] !px-2 flex w-max rounded-[50px] shadow-[0_0_12px_0_#dddddd] !my-0 !mx-auto opacity-0 transition-all">
+                                    <a title="Add to cart" class="transition-all relative" href="#">
+                                        <i class="fa fa-shopping-cart fa-flip-horizontal !p-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary"></i>
                                     </a>
         
-                                    <a title="Add to Wishlist" class="special_icons_link" href="#">
-                                        <i class="fa fa-heart shopping heart"></i>
+                                    <a title="Add to Wishlist" class="transition-all relative" href="#">
+                                        <i class="fa fa-heart !p-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary"></i>
                                     </a>
         
-                                    <a title="Quick View" class="special_icons_link" href="#">
-                                        <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                    <a title="Quick View" class="transition-all relative" href="#">
+                                        <i class="fa-solid fa-magnifying-glass !p-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary"></i>
                                     </a>
         
-                                    <a title="Compare" class="special_icons_link" href="#">
-                                        <i class="fa fa-refresh shopping refresh"></i>
+                                    <a title="Compare" class="transition-all relative" href="#">
+                                        <i class="fa fa-refresh !p-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="special_detail_part2">
-                                <div class="stars stars_part2">
+                            <div class="flex flex-col items-center">
+                                <div class="flex text-[#edb867] text-lg">
                                     @for (item of starsArray; track $index) {
                                         <div class="star">★</div>
                                     }
                                 </div>
                                 <a [routerLink]="['/product-details',item.id]">
-                                    <h6 class="special_name">{{item.title}}</h6>
+                                    <h6 class="text-[#777777] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
                                 </a>
-                                <h4 class="special_price"> {{item.price | currency}}
+                                <h4 class="text-[#222222] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
                                 </h4>
                             </div>
                         </div>
@@ -85,23 +85,23 @@
                 </div>
             }
     
-            <div class="special_box">
+            <div class="flex flex-col w-1/3">
                 @for (item of productsArray.slice(3,5); track $index) {
-                    <div class="special_item">
+                    <div class="special_item flex !pl-3 !pr-3">
                         <a [routerLink]="['/product-details',item.id]">
-                            <img class="special_image" [src]="item.image" alt="special_image">
+                            <img class="special_image h-[270px] scale-100 transition-all !p-[15px] !pl-0" [src]="item.image" alt="special_image">
                         </a>
         
-                        <div class="special_detail">
-                            <div class="stars stars_part2">
+                        <div class="flex flex-col self-center">
+                            <div class="flex text-[#edb867] text-lg">
                                 @for (item of starsArray; track $index) {
                                     <div class="star">★</div>
                                 }
                             </div>
                             <a [routerLink]="['/product-details',item.id]">
-                                <h6 class="special_name">{{item.title}}</h6>
+                                <h6 class="text-[#777777] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
                             </a>
-                            <h4 class="special_price"> {{item.price | currency}}
+                            <h4 class="text-[#222222] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
                             </h4>
                         </div>
                     </div>

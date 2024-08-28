@@ -1,6 +1,6 @@
-<section class="brands">
+<section class="!flex !p-[15px] !max-w-[1400px] !m-auto">
     @for (item of brandsItems; track $index) {
-        <div class="brand_img">
+        <div class="brand_img !my-0 !mx-auto !pt-[70px] opacity-50 cursor-pointer">
             <img [src]="item.url" [alt]="item.alt">
         </div>
     }

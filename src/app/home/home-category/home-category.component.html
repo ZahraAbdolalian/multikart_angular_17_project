@@ -1,8 +1,8 @@
-<section class="category">
+<section class="!min-w-[1400px] !py-[70px] !px-16 flex text-center items-center justify-evenly">
     @for (item of categoryList; track $index) {
-    <div class="category_product_box">
+    <div class="w-[304px] !my-0 !mx-auto relative">
         @if (isLoading) {
-            <mat-card ng-no-style class="category_product">
+            <mat-card ng-no-style class="!py-10 !px-0 !border-solid !border-[1px] !border-[#dddddd] !shadow-none !rounded-none">
                 <div>
                     <ngx-skeleton-loader count="1" animation="pulse" [theme]="{height: '175px',width:'108px'}"></ngx-skeleton-loader>
                 </div>
@@ -12,25 +12,25 @@
                 <mat-card-content class="category_item_content">
                     <ngx-skeleton-loader count="3" appearance="line" animation="pulse" [theme]="{height: '15px', width:'230px','margin-bottom':'0px'}"></ngx-skeleton-loader>      
                 </mat-card-content>
-                <mat-card-actions>
+                <mat-card-actions class="!flex justify-center">
                     <button mat-raised-button color="primary" [routerLink]="['/collection',item.category]"
-                        class="category_link">view more</button>
+                        class="!uppercase !font-bold !py-[13px] !px-[29px] !mt-5 !tracking-wide !text-[14px]">view more</button>
                 </mat-card-actions>
             </mat-card>
         }@else {
-            <mat-card ng-no-style class="category_product">
-                <div>
-                    <img class="category_img" [src]="item.image" alt="watch1">
+            <mat-card ng-no-style class="!py-10 !px-0 !border-solid !border-[1px] !border-[#dddddd] !shadow-none !rounded-none">
+                <div class="flex justify-center items-center">
+                    <img class="w-[108px] h-[175px]" [src]="item.image" alt="watch1">
                 </div>
-                <mat-card-header class="category_title_box">
-                    <mat-card-title class="category_title">{{item.category}}</mat-card-title>
+                <mat-card-header class="flex justify-center overflow-hidden">
+                    <mat-card-title class="w-[240px] !py-[14px] !px-0 text-[#2d2a25] uppercase !font-bold !text-[18px] text-ellipsis overflow-hidden whitespace-nowrap">{{item.category}}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content class="category_item_content">
                     {{item.description}}
                 </mat-card-content>
-                <mat-card-actions>
+                <mat-card-actions class="!flex justify-center">
                     <button mat-raised-button color="primary" [routerLink]="['/collection',item.category]"
-                        class="category_link">view more</button>
+                        class="!uppercase !font-bold !py-[13px] !px-[29px] !mt-5 !tracking-wide !text-[14px]">view more</button>
                 </mat-card-actions>
             </mat-card>
         }

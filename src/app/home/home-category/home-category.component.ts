@@ -44,7 +44,7 @@ export class HomeCategoryComponent implements OnInit, OnDestroy{
   }
 
   ngOnDestroy(): void {
-    this.categoriesNameSubscription.unsubscribe();
-    this.categoriProductsSubscription.unsubscribe();
+    this.categoriesNameSubscription?.unsubscribe();
+    this.categoriProductsSubscription?.unsubscribe();
   }
 }

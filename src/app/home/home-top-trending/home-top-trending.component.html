@@ -1,15 +1,15 @@
-<section class="trending_products_part1">
+<section class="!bg-[#faeae8] !pt-[70px] !pb-[5px] !px-[50px] relative">
     <div>
       <div class="trending_title">
-        <h2 class="title_h2">trending products</h2>
+        <h2 class="text-center !text-4xl text-[#222222] uppercase relative font-bold leading-3 tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">trending products</h2>
   
-        <div class="page_line">
+        <div class="page_line relative w-[180px] h-[1px] bg-primary bottom-0 top-0 !my-0 !mx-auto !mb-[55px]">
           <span class="page_line_span"></span>
         </div>
       </div>
   
-      <div class="trending_list_box">
-        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="trending_list">
+      <div class="!mb-30px text-left">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center" class="!flex items-center justify-center">
             @for (item of labels; track $index) {
                 <mat-tab [label]="item">
         
@@ -18,42 +18,42 @@
                     }
                     @else {
                         <div>
-                          <div class="trending_container">
+                          <div class="flex flex-wrap justify-center transition-opacity ease-linear">
                             @for (item of newArrivalItems; track $index) {
-                                <div class="trending_product">
-                                  <div class="trending_product_box">
-                                    <div class="trending_img_container">
-                                      <span class="trending_new"> new </span>
+                                <div class="!mt-0 !mb-[130px] !mx-[12px]">
+                                  <div class="trending_product_box w-[315px] h-[340px]">
+                                    <div class="relative overflow-hidden">
+                                      <span class="uppercase text-[13px] font-bold bg-primary text-[#fff] rounded-full !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center"> new </span>
                                       <a>
-                                        <div class="trending_img_box">
-                                          <img class="trending_img" [src]="item.image" alt="trending_img" />
+                                        <div class="bg-[#fff] h-[360px] w-[330px] flex items-center justify-center">
+                                          <img class="h-[270px] w-[230px]" [src]="item.image" alt="trending_img" />
                                         </div>
                                       </a>
-                                      <div class="trending_icons">
-                                        <a title="Add to cart" class="trending_icons_link" href="#">
-                                          <i class="fa fa-shopping-cart fa-flip-horizontal shopping"></i>
+                                      <div class="trending_icons text-left bottom-0 left-[unset] absolute right-[-10px] my-0 mx-auto inline-block opacity-0 transition-all">
+                                        <a title="Add to cart" class="transition-all relative" href="#">
+                                          <i class="fa fa-shopping-cart fa-flip-horizontal !p-2.5 !block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary"></i>
                                         </a>
-                                        <a title="Add to Wishlist" class="trending_icons_link" href="#">
-                                          <i class="fa fa-heart shopping heart"></i>
+                                        <a title="Add to Wishlist" class="transition-all relative" href="#">
+                                          <i class="fa fa-heart !p-2.5 !block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary heart"></i>
                                         </a>
-                                        <a title="Quick View" class="trending_icons_link" href="#">
-                                          <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                        <a title="Quick View" class="transition-all relative" href="#">
+                                          <i class="fa-solid fa-magnifying-glass !p-2.5 !block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary magnifying"></i>
                                         </a>
-                                        <a title="Compare" class="trending_icons_link" href="#">
-                                          <i class="fa fa-refresh shopping refresh"></i>
+                                        <a title="Compare" class="transition-all relative" href="#">
+                                          <i class="fa fa-refresh !p-2.5 !block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary refresh"></i>
                                         </a>
                                       </div>
                                     </div>
-                                    <div class="trending_detail">
-                                      <div class="stars">
+                                    <div class="!block">
+                                      <div class="flex text-[18px] text-[#edb867]">
                                         @for (item of starsArray; track $index) {
-                                            <div class="star">★</div>
+                                            <div>★</div>
                                         }
                                       </div>
                                       <a [routerLink]="['/product-details',item.id]">
                                         <h6 class="trending_name">{{ item.title }}</h6>
                                       </a>
-                                      <h4 class="trending_price">{{ item.price | currency}}</h4>
+                                      <h4 class="text-[#222222] text-[18px] font-bold tracking-wide !m-0">{{ item.price | currency}}</h4>
                                     </div>
                                   </div>
                                 </div>

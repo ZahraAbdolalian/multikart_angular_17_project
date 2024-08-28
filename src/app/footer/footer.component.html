@@ -1,15 +1,15 @@
-<footer class="footer">
-    <div class="footer_container">
-        <div class="footer_top">
-            <div class="footer_top_left">
-                <h4 class="footer_top_title">know it all first!</h4>
-                <p class="footer_top_text">
+<footer class="relative">
+    <div class="bg-[#F9F9F9]">
+        <div class="max-w-[1400px] !py-[35px] !px-0 !my-0 !mx-auto border-b border-[#dddddd] flex justify-between items-center">
+            <div class="h-full w-1/2 border-r border-[#dddddd]">
+                <h4 class="text-[#222222] text-lg font-bold uppercase !mb-2.5 !mt-0 tracking-[0.54px]">know it all first!</h4>
+                <p class="text-[#777777] text-sm leading-[1] tracking-[0.42px]">
                     Never Miss Anything From Multikart By Signing Up To Our Newsletter.x
                 </p>
             </div>
-            <div class="footer_top_right">
-                <form class="example-form">
-                    <mat-form-field>
+            <div class="flex">
+                <form>
+                    <mat-form-field class="w-[300px]">
                         <mat-label>Enter your email</mat-label>
                         <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
                         @if (emailFormControl.hasError('email') && !emailFormControl.hasError('required')) {
@@ -24,28 +24,28 @@
                         }
                     </mat-form-field>
                 </form>
-                <button mat-flat-button color="primary" class="footer_top_btn">subscribe</button>
+                <button mat-flat-button color="primary" class="!w-[130px] !h-[56px] !ml-5 rounded-none uppercase font-bold">subscribe</button>
             </div>
         </div>
         
         
-        <div class="footer_bottom">
-            <div class="footer_bottom_left">
-                <div class="footer_bottom_logo">
+        <div class="max-w-[1400px] !py-[70px] !px-3 !my-0 !mx-auto flex">
+            <div class="w-[33%] flex flex-col justify-center">
+                <div class="!mb-[5px]">
                     <img src="../../../assets/images/multikart-logo.png" alt="logo" />
                 </div>
-                <p class="footer_bottom_text">
+                <p class="text-[#777777] text-sm tracking-[0.42px] leading-[32px]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam,
                 </p>
         
-                <div class="footer_bottom_icon">
-                    <mat-list class="footer_bottom_icon_list">
+                <div class="!ml-4">
+                    <mat-list class="flex items-center">
                         @for (iconName of iconsList; track $index) {
-                            <mat-list-item class="footer_bottom_icon_item">
+                            <mat-list-item class="!pr-10">
                                 <a href="#">
-                                    <i aria-hidden="true" class="footer_bottom_i fa" [class]="iconName"></i>
+                                    <i aria-hidden="true" class="text-[#000000] text-[20px] transition-all hover:text-primary fa" [class]="iconName"></i>
                                 </a>
                             </mat-list-item>
                         }
@@ -53,14 +53,14 @@
                 </div>
             </div>
         
-            <div class="footer_bottom_center footer_margin">
-                <div class="footer_bottom_center_title">
-                    <h4 class="footer_bottom_center_h4">Categories</h4>
+            <div class="!pr-3 !pl-3 w-[22%] !ml-[8%]">
+                <div class="text-lg font-bold leading-[18px] uppercase tracking-[0.54px] !mb-[25px]">
+                    <h4 class="text-[#222222]">Categories</h4>
                 </div>
                 <div class="footer_bottom_center_content">
                     <mat-list>
                         @for (category of categoriesList; track $index) {
-                            <mat-list-item class="footer_bottom_center_item list_hov_item">
+                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777]">
                                 <a matListItemTitle class="footer_bottom_center_link" href="#">{{
                                     category
                                     }}</a>
@@ -69,14 +69,14 @@
                     </mat-list>
                 </div>
             </div>
-            <div class="footer_bottom_center">
-                <div class="footer_bottom_center_title">
-                    <h4 class="footer_bottom_center_h4">why we choose</h4>
+            <div class="!pr-3 !pl-3 w-[22%]">
+                <div class="text-lg font-bold leading-[18px] uppercase tracking-[0.54px] !mb-[25px]">
+                    <h4 class="text-[#222222]">why we choose</h4>
                 </div>
                 <div class="footer_bottom_center_content">
                     <mat-list>
                         @for (item of chooseList; track $index) {
-                            <mat-list-item class="footer_bottom_center_item list_hov_item">
+                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777]">
                                 <a matListItemTitle class="footer_bottom_center_link" href="#">{{
                                     item
                                     }}</a>
@@ -85,16 +85,16 @@
                     </mat-list>
                 </div>
             </div>
-            <div class="footer_bottom_center">
-                <div class="footer_bottom_center_title">
-                    <h4 class="footer_bottom_center_h4">store information</h4>
+            <div class="!pr-3 !pl-3 w-[22%]">
+                <div class="text-lg font-bold leading-[18px] uppercase tracking-[0.54px] !mb-[25px]">
+                    <h4 class="text-[#222222]">store information</h4>
                 </div>
                 <div class="footer_bottom_center_content">
                     <mat-list>
                         @for (item of informationsList; track $index) {
-                            <mat-list-item class="footer_bottom_center_item">
+                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777]">
                                 <div class="footer_bootom_item_left">
-                                    <i class="footer_bottom_center_i fa" [class]="item.icon"></i>
+                                    <i class="absolute left-0 top-[11px] fa" [class]="item.icon"></i>
                                     <div>{{ item.text }}</div>
                                 </div>
                             </mat-list-item>
@@ -105,20 +105,20 @@
         </div>
         
     </div>
-    <div class="sub_footer">
-        <div class="sub_footer_container">
+    <div class="max-w-[1400px] !pr-3 !pl-3 !my-0 !mx-auto">
+        <div class="flex items-center justify-between">
             <div class="sub_footer_left">
-                <p class="sub_footer_text">
+                <p class="text-[#777777] !py-5 !px-0 text-sm leading-[32px] tracking-[0.42px] !m-0">
                     <i class="fa fa-copyright"></i>
                     2023 theme forest powered by pixelstrap
                 </p>
             </div>
     
             <div class="sub_footer_right">
-                <mat-list class="sub_footer_icon_list">
+                <mat-list class="!flex">
                     @for (item of paymentCards; track $index) {
                     <mat-list-item>
-                        <img class="sub_footer_icon" [src]="item.imgUrl" [alt]="item.name">
+                        <img class="!px-[7px]" [src]="item.imgUrl" [alt]="item.name">
                     </mat-list-item>
                     }
                 </mat-list>

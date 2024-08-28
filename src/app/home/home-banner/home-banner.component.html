@@ -1,15 +1,15 @@
 <section class="banner">
-    <div class="banner_container">
+    <div class="flex justify-start !pt-[70px] max-w-[1400px] relative !my-0 !mx-auto">
         @for (item of bannerItems; track $index) {
-            <div class="banner_item">
+            <div class="banner_item !pl-3 !pr-3 relative overflow-hidden">
                 <a>
-                    <div class="banner_box">
-                        <img class="banner_image" [src]="item.imgUrl" alt="banner1">
+                    <div class="w-[442px] h-[204px] relative overflow-hidden">
+                        <img class="banner_image max-w-full h-auto align-middle transition-all" [src]="item.imgUrl" alt="banner1">
                         @if (item.title) {
-                            <div class="banner_flex">
+                            <div class="absolute top-0 w-full h-full flex items-center !pl-[50px] pr-[50px]">
                                 <div class="banner_info">
-                                    <h4 class="banner_info_subtitle">{{item.subtitle}}</h4>
-                                    <h2 class="banner_info_title">{{item.title}}</h2>
+                                    <h4 class="text-[#ffff] font-bold tracking-[1.8px] uppercase text-[18px]">{{item.subtitle}}</h4>
+                                    <h2 class="text-[#ffff] font-bold tracking-[1.8px] uppercase text-4xl !mt-[5px]">{{item.title}}</h2>
                                 </div>
                             </div>
                         }

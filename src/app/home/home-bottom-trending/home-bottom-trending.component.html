@@ -1,9 +1,9 @@
-<section class="trending_products_part2">
+<section class="relative !pt-[70px] !pb-[5px] !px-[50px]">
     <div>
         <div class="trending_title">
-            <h2 class="title_h2">trending products</h2>
+            <h2 class="text-center text-[36px] text-[#222222] uppercase relative font-bold leading-[1] tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">trending products</h2>
 
-            <div class="page_line">
+            <div class="page_line relative w-[180px] h-[1px] bg-[#ff4c3b] bottom-0 top-0 !my-0 !mx-auto !mb-[55px]">
                 <span class="page_line_span"></span>
             </div>
         </div>
@@ -12,45 +12,45 @@
         <app-spinner></app-spinner>
         }
         @else {
-            <div class="trending_container_part2">
+            <div class="text-center w-[344px] flex items-center">
                 @for (item of productsArray; track $index) {
-                    <div class="trending_product_part2">
-                        <div class="trending_product_box">
-                            <div class="trending_img_container_part2">
-                                <span class="trending_new"> new </span>
+                    <div class="trending_product_part2 !pl-3 !pr-3 !mb-[140px]">
+                        <div class="w-[315px] h-[340px]">
+                            <div class="relative overflow-hidden">
+                                <span class="uppercase text-[13px] font-bold bg-primary text-[#ffff] rounded-full !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center"> new </span>
                                 <a [routerLink]="['/product-details',item.id]">
-                                    <div class="trending_img_box">
-                                        <img class="trending_img" [src]="item.image" alt="" />
+                                    <div class="bg-[#ffff] h-[360px] w-[330px] flex items-center justify-center">
+                                        <img class="w-[230px] h-[270px]" [src]="item.image" alt="" />
                                     </div>
                                 </a>
-                                <div class="trending_icons_part2">
-                                    <a title="Add to cart" class="trending_icons_link" href="#">
-                                        <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                                <div class="trending_icons_part2 bg-[#ffff] absolute left-0 right-0 bottom-[30px] !py-[3px] !px-2 flex w-max rounded-[50px] shadow-[0_0_12px_0_#dddddd] !my-0 !mx-auto opacity-0 transition-all">
+                                    <a title="Add to cart" class="transition-all relative" href="#">
+                                        <i class="fa fa-shopping-cart fa-flip-horizontal  shopping_cart !p-2.5 block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary"></i>
                                     </a>
         
-                                    <a title="Add to Wishlist" class="trending_icons_link" href="#">
-                                        <i class="fa fa-heart shopping heart"></i>
+                                    <a title="Add to Wishlist" class="transition-all relative" href="#">
+                                        <i class="fa fa-heart  heart !p-2.5 block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary"></i>
                                     </a>
         
-                                    <a title="Quick View" class="trending_icons_link" href="#">
-                                        <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                    <a title="Quick View" class="transition-all relative" href="#">
+                                        <i class="fa-solid fa-magnifying-glass  magnifying !p-2.5 block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary"></i>
                                     </a>
         
-                                    <a title="Compare" class="trending_icons_link" href="#">
-                                        <i class="fa fa-refresh shopping refresh"></i>
+                                    <a title="Compare" class="transition-all relative" href="#">
+                                        <i class="fa fa-refresh  refresh !p-2.5 block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary"></i>
                                     </a>
                                 </div>
                             </div>
-                            <div class="trending_detail">
-                                <div class="stars">
+                            <div class="block">
+                                <div class="flex justify-center text-[18px] text-[#edb867]">
                                     @for (item of starsArray; track $index) {
                                         <div class="star">★</div>
                                     }
                                 </div>
                                 <a [routerLink]="['/product-details',item.id]">
-                                    <h6 class="trending_name">{{ item.title }}</h6>
+                                    <h6 class="text-[#777777] text-base !mb-[5px] !mt-0 font-normal overflow-hidden text-ellipsis">{{ item.title }}</h6>
                                 </a>
-                                <h4 class="trending_price">{{ item.price | currency}}</h4>
+                                <h4 class="text-[#222222] text-[18px] font-bold tracking-wide !m-0">{{ item.price | currency}}</h4>
                             </div>
                         </div>
                     </div>

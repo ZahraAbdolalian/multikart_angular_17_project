@@ -1,2 +1,166 @@
-<app-top-header></app-top-header>
-<app-bottom-header></app-bottom-header>
+<div class="bg-[#f8f8f8]">
+    <mat-toolbar class="!text-[#999999] !max-w-[1400px] !my-0 !mx-auto h-[51px] !py-0 px-2 leading-[21px] !font-thin">
+        <span class="!pr-[25px] !text-sm">Welcome to Our store Multikart</span>
+        <mat-icon class="!text-sm !h-5 text-primary">call</mat-icon>
+        <span class="!pr-[25px] !text-sm">Call Us: 123 - 456 - 7890</span>
+        <span class="flex-auto !text-sm"></span>
+
+        <mat-list class="top_header_right !flex">
+            <mat-list-item class="!overflow-visible !p-0">
+                <a href="#"
+                    class="hover:!text-primary !pr-0 header_right_content !text-[#999999] !py-[15px] !px-[25px] !transition-all !duration-500 !delay-0 !ease-in-out">
+                    <i class="fa fa-random !pr-[5px]"></i>
+                    <span class="!text-sm">Compare</span>
+                </a>
+            </mat-list-item>
+            <mat-list-item class="!overflow-visible !p-0">
+                <a href="#"
+                    class="hover:!text-primary header_right_content !text-[#999999] !py-[15px] !px-[25px] !transition-all !duration-500 !delay-0 !ease-in-out">
+                    <mat-icon class="!text-base	!h-[18px]">favorite</mat-icon>
+                    <span class="!text-sm">Wishlist</span>
+                </a>
+            </mat-list-item>
+            <mat-list-item class="!overflow-visible !p-0">
+                <a href="#"
+                    class="!pl-0 header_right_content !text-[#999999] !py-[15px] !px-[25px] !transition-all !duration-500 !delay-0 !ease-in-out">
+                    <mat-icon class="!text-base	!h-[18px]">person</mat-icon>
+                    <button mat-button [matMenuTriggerFor]="menu" class="!text-sm">
+                        Menu
+                        <i class="fa-solid fa-chevron-down !text-[10px] !pl-2.5"></i>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>Login</button>
+                        <button mat-menu-item>Logout</button>
+                    </mat-menu>
+                </a>
+            </mat-list-item>
+        </mat-list>
+    </mat-toolbar>
+</div>
+
+<div class="!pt-5">
+    <mat-toolbar class="!max-w-[1400px] !my-0 !mx-auto !pr-[19px] !pl-2 !pt-[14px]">
+        <a routerLink="home" class="multikart-logo !pl-16">
+            <img src="../../../assets/images/multikart-logo.png" alt="multikart-logo"
+                class="!py-[37px] !px-0 cursor-pointer" />
+        </a>
+        <span class="flex-auto"></span>
+        <div>
+            <mat-list class="!flex">
+                @for (headerItem of headerItems; track $index) {
+                @if (headerItem.name != 'features') {
+                <mat-list-item class="header_bottom_item">
+                    <div>
+                        <span class="header_item_title">{{headerItem.name}}</span>
+                        <i class="fa-solid fa-chevron-down header_item_icon"></i>
+                        <mat-list class="header_submenu">
+                            @for (item of headerItem.list; track $index) {
+                            @if (item.link) {
+                            <mat-list-item class="header_submenu_item">
+                                <a [routerLink]="['/collection', item.link]">
+                                    {{ item.name }}
+                                </a>
+                            </mat-list-item>
+                            }
+                            }
+                        </mat-list>
+                    </div>
+                </mat-list-item>
+                }@else {
+                <mat-list-item class="header_bottom_item">
+                    <span class="header_item_title">features</span>
+                    <i class="fa-solid fa-chevron-down header_item_icon"></i>
+                    <mat-list class="header_submenu !flex !right-[800px] !top-[25px] !bg-[unset] !shadow-none">
+                        @for (item of features; track $index) {
+                        <div class="header_submenu_container">
+                            <h3 class="!py-[5px] !px-[35px] !font-bold">{{item.name}}</h3>
+                            @for (item of item.options; track $index) {
+                            <mat-list-item class="header_submenu_item">
+                                <a [routerLink]="['/', item.link]">
+                                    {{ item.title }}
+                                </a>
+                            </mat-list-item>
+                            }
+                        </div>
+                        }
+                    </mat-list>
+                    <span class="absolute">
+                        <span
+                            class="new-badge bg-primary text-[#fff] !absolute !top-[-24px] !right-[54px] !text-[9px] !leading-[11px] !py-[2px] !px-[7px] !rounded-none">new</span>
+                    </span>
+                </mat-list-item>
+                }
+                }
+
+            </mat-list>
+        </div>
+
+        <div class="!pl-[25px] flex">
+            <div class="bottom_header_icon_box">
+                <a href="">
+                    <img class="!pt-10 !pr-0 !pb-10 !pl-5 cursor-pointer" src="../../../assets/images/search.png"
+                        alt="search" />
+                </a>
+            </div>
+
+            <div class="bottom_header_icon_box">
+                <a href="">
+                    <img class="!pt-10 !pr-0 !pb-10 !pl-5 cursor-pointer" src="../../../assets/images/setting.png"
+                        alt="setting" />
+                </a>
+                <mat-list class="bottom_header_icon_hover">
+                    @for (item of settingItems; track $index) {
+                    <ng-container>
+                        <div>
+                            <h4>Language</h4>
+                            @for (item of item.language; track $index) {
+                            <mat-list-item><a href="">{{ item }}</a></mat-list-item>
+                            }
+                        </div>
+                        <div>
+                            <h4>Currency</h4>
+                            @for (item of item.currency; track $index) {
+                            <mat-list-item><a href="">{{item}}</a></mat-list-item>
+                            }
+                        </div>
+                    </ng-container>
+                    }
+                </mat-list>
+            </div>
+
+            <div class="bottom_header_icon_box">
+                <a routerLink="/cart">
+                    <img class="!pt-10 !pr-0 !pb-10 !pl-5 cursor-pointer" src="../../../assets/images/cart.png"
+                        alt="cart" />
+                    <span id="mat-badge-content-0" aria-hidden="true"
+                        class="mat-badge-content mat-badge-active !bg-primary w-5 h-5 top-[21px] right-[-10px] text-[12px] leading-5">{{shoppingCartSize}}</span>
+                </a>
+                <mat-list class="bottom_header_icon_hover">
+                    @if (!cartProduct.length) {
+                    <mat-list-item><a href="#">Your cart is currently
+                            empty.</a></mat-list-item>
+                    }@else {
+                    @for (item of cartProduct; track $index) {
+                    <mat-card>
+                        <mat-card-header>
+                            <mat-card-title-group class="!flex">
+                                <div>
+                                    <mat-card-title class="w-[170px] text-balance">{{item.name}}</mat-card-title>
+                                    <mat-card-subtitle>{{item.price | currency}}</mat-card-subtitle>
+                                </div>
+                                <img class="mb-2" mat-card-sm-image [src]="item.image">
+                            </mat-card-title-group>
+                        </mat-card-header>
+                    </mat-card>
+                    }
+                    <mat-card-actions class="!flex justify-between">
+                        <button mat-button [routerLink]="'/cart'" class="text-sm hover:!text-primary transition ease-in-out delay-150">View Cart</button>
+                        <button mat-button [routerLink]="'/checkout'" class="text-sm hover:!text-primary transition ease-in-out delay-150">Checkout</button>
+                    </mat-card-actions>
+                    }
+
+                </mat-list>
+            </div>
+        </div>
+    </mat-toolbar>
+</div>

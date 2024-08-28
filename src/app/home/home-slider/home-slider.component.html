@@ -1,19 +1,17 @@
-<section class="slider" [style.background-image]="'url(' + imagePath  + ')'">
-    <div class="slider_contents slider_effect">
-      <h4 class="slider_subtitile">{{ subtitle }}</h4>
-      <h1 class="slider_title">{{ title }}</h1>
-      <button 
-      mat-raised-button 
-      color="primary" 
-      [routerLink]="['/collection','electronics']" 
-      class="slider_btn">Shop now</button>
-    </div>
-  
-    <div class="arrow_left" (click)="sliderHandler()">
-      <i class="fa fa-angle-left"></i>
-    </div>
-  
-    <div class="arrow_right" (click)="sliderHandler()">
-      <i class="fa fa-angle-right"></i>
-    </div>
-  </section>
+<section class="slider !h-[75vh] bg-cover bg-no-repeat bg-center flex !p-[74px] relative !mt-8"
+  [style.background-image]="'url(' + imagePath  + ')'">
+  <div class="flex flex-col justify-center items-center slider_effect">
+    <h4 class="text-center font-bold text-[#777777] tracking-[7px] text-lg">{{ subtitle }}</h4>
+    <h1 class="text-center font-bold text-[#222222] text-[60px] uppercase tracking-[1.5px] !mt-2.5 !mb-0">{{ title }}</h1>
+    <button mat-raised-button color="primary" [routerLink]="['/collection','electronics']" class="text-center font-bold text-sm uppercase !py-5 !px-[29px] !mt-5 leading-5	tracking-[0.7px]">Shop
+      now</button>
+  </div>
+
+  <div class="arrow_left" (click)="sliderHandler()">
+    <i class="fa fa-angle-left"></i>
+  </div>
+
+  <div class="arrow_right" (click)="sliderHandler()">
+    <i class="fa fa-angle-right"></i>
+  </div>
+</section>

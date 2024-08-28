@@ -1,15 +1,15 @@
-<mat-drawer-container class="container" autosize>
-    <mat-drawer #drawer class="sidenav" mode="over">
-        <a class="back_btn" (click)="drawer.toggle()">
-            <i aria-hidden="true" class="fa fa-angle-left"></i>
+<mat-drawer-container class="!relative" autosize>
+    <mat-drawer #drawer class="!w-[300px] !p-[27px] uppercase" mode="over">
+        <a class="!block cursor-pointer border-b-[1px] border-solid border-b-[#dddddd] !pb-5 text-[#222222] text-lg font-bold z" (click)="drawer.toggle()">
+            <i aria-hidden="true" class="fa fa-angle-left !pr-2.5"></i>
             back
         </a>
         <mat-list role="list">
-            <mat-list-item role="listitem" class="menu_item">
+            <mat-list-item role="listitem">
                 <a [routerLink]="'home'" (click)="drawer.toggle()">home</a>
             </mat-list-item>
-            <mat-list-item role="listitem" class="menu_item" >collection
-                <i [matMenuTriggerFor]="menu" aria-hidden="true" class="fa fa-angle-right"></i>
+            <mat-list-item role="listitem">collection
+                <i [matMenuTriggerFor]="menu" aria-hidden="true" class="fa fa-angle-right !pl-[62px] cursor-pointer"></i>
                 <mat-menu #menu="matMenu" class="mat_menu" xPosition="after">
                     <button 
                     mat-menu-item 
@@ -27,10 +27,10 @@
             </mat-list-item>
         </mat-list>
     </mat-drawer>
-    <mat-drawer-content>
-        <div class="sidenav_icon">
+    <mat-drawer-content class="!overflow-hidden">
+        <div class="absolute top-[90px] left-[50px] !mt-4">
             <button type="button" mat-button (click)="drawer.toggle()">
-                <mat-icon class="menu_icon">menu</mat-icon>
+                <mat-icon class="!text-[28px] !w-auto !h-auto !ml-0">menu</mat-icon>
             </button>
         </div>
         <!-- <app-top-button></app-top-button> -->

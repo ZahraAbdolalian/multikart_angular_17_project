@@ -1,19 +1,5 @@
 @import '../../shared/shared-style/shared-style';
 
-.service {
-    max-width: 1400px;
-    padding-bottom: 70px;
-    padding-top: 70px;
-    margin: 0 auto;
-}
-
-.service_container {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
-    display: flex;
-}
 
 .sevrice_box {
     display: flex;
@@ -69,9 +55,4 @@
     color: $light-text-color;
     letter-spacing: 0.42px;
     line-height: 24px;
-}
-
-.service_border {
-    border-left: 1px solid $border-color;
-    border-right: 1px solid $border-color;
 }

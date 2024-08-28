@@ -3,34 +3,34 @@
 }
 
 @else {
-    <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 products_table">
+    <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 !pl-[5px]">
     
       <ng-container matColumnDef="image">
         <th mat-header-cell *matHeaderCellDef> Image </th>
-        <td mat-cell *matCellDef="let element" class="product_box_list">
-          <div class="product_img_box">
-            <span class="new_sapn">
+        <td mat-cell *matCellDef="let element" class="product_box_list text-base border-r border-[#dddddd]">
+          <div class="relative overflow-hidden">
+            <span class="uppercase text-[13px] font-bold bg-primary text-[#fff] rounded-[100%] !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center">
               new
             </span>
             <a [routerLink]="['/product-details',element.id]">
-              <img class="product_img" [src]="element.image" alt="">
+              <img class="max-w-full w-[200px] h-[200px] !py-5 !px-0 flex !my-0 !mx-auto" [src]="element.image" alt="">
             </a>
     
-            <div class="product_icons">
-              <a class="product_icons_link" href="#">
-                <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+            <div class="product_icons text-left bottom-0 left-[unset] absolute right-[-10px] !my-0 !mx-auto inline-block opacity-0 transition-all">
+              <a class="transition-all relative" href="#">
+                <i class="fa fa-shopping-cart fa-flip-horizontal !px-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary"></i>
               </a>
     
-              <a class="product_icons_link" href="#">
-                <i class="fa fa-heart shopping heart"></i>
+              <a class="transition-all relative" href="#">
+                <i class="fa fa-heart !px-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary heart"></i>
               </a>
     
-              <a class="product_icons_link" href="#">
-                <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+              <a class="transition-all relative" href="#">
+                <i class="fa-solid fa-magnifying-glass !px-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary magnifying"></i>
               </a>
     
-              <a class="product_icons_link" href="#">
-                <i class="fa fa-refresh shopping refresh"></i>
+              <a class="transition-all relative" href="#">
+                <i class="fa fa-refresh !px-2.5 !pb-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary refresh"></i>
               </a>
             </div>
           </div>
@@ -39,20 +39,20 @@
     
       <ng-container matColumnDef="title">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
-        <td mat-cell *matCellDef="let element">
-          <a [routerLink]="['/product-details',element.id]"><h3 class="product_title">{{element.title}}</h3></a>
+        <td mat-cell *matCellDef="let element" class="text-base border-r border-[#dddddd]">
+          <a [routerLink]="['/product-details',element.id]"><h3 class="max-w-[250px] text-pretty text-[#222222]">{{element.title}}</h3></a>
         </td>
       </ng-container>
     
       <ng-container matColumnDef="price">
         <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by price"> Price </th>
-        <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+        <td mat-cell *matCellDef="let element" class="text-base border-r border-[#dddddd]"> {{element.price | currency}} </td>
       </ng-container>
     
       <ng-container matColumnDef="rating">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating </th>
-        <td mat-cell *matCellDef="let element">
-          <div class="stars">
+        <td mat-cell *matCellDef="let element" class="text-base border-r border-[#dddddd]">
+          <div class="flex text-lg text-[#edb867]">
             @for (item of starsArray; track $index) {
                 <div class="star">★</div>
             }

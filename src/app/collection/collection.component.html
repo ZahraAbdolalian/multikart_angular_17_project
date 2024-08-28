@@ -1,18 +1,37 @@
 <app-title [titleOfPage]="'collection'" [lacationOfPage]="'collection'"></app-title>
 
-<section class="collection_container">
-    <div class="collection_box">
-        <div class="collection_box_left">
+<section class="!pt-[70px] !pb-[70px]">
+    <div class="max-w-[1400px] !my-0 !mx-auto !pl-3 !pr-3 flex">
+        <div class="w-1/4 !pr-3">
             <app-collection-filter></app-collection-filter>
             <app-category-filters></app-category-filters>
             <app-new-product></app-new-product>
-            <div class="collection_left_banner">
-                <a href="#"><img src="../../assets/images/collection-sidebar-banner.png" alt="collection-sidebar-banner"></a>
+            <div class="!mt-[30px] w-[345px]">
+                <a href="#"><img src="../../assets/images/collection-sidebar-banner.png" alt="collection-sidebar-banner" class="w-full h-auto"></a>
             </div>
         </div>
-        <div class="collection_box_right">
+        <div class="w-3/4 !pl-3">
             <div>
-                <app-collection-banner></app-collection-banner>
+                <div>
+                    <a routerLink="home">
+                        <img class="w-full" src="../../../assets/images/collection-banner.jpg" alt="collection-banner">
+                    </a>
+                
+                    <div class="!pt-[30px] !pb-[35px]">
+                        <h4 class="text-[#444444] font-semibold text-lg capitalize leading-[1] tracking-[0.54px] !mb-[15px]">fashion</h4>
+                        <h5 class="text-[#444444] font-semibold leading-[1.2] tracking-[1px] !mb-2.5 text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </h5>
+                        <p class="text-[#444444] text-sm leading-[1.5] tracking-[0.42px]">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                            Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                            unknown printer took a galley of type and scrambled it to make a type specimen book.
+                            It has survived not only five centuries, but also the leap into electronic
+                            typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                            the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            with desktop publishing software like Aldus PageMaker including versions of Lorem
+                            Ipsum.
+                        </p>
+                    </div>
+                </div>
                 <app-products-categorization></app-products-categorization>
             </div>
         </div>

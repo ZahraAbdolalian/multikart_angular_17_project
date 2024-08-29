@@ -1,23 +1,23 @@
 <app-title [titleOfPage]="'cart'" [lacationOfPage]="'cart'"></app-title>
 
 @if (!dataSource.length) {
-    <section class="cart_empty">
-        <div>
-            <img class="icon_empty" src="../../assets/images/icon-empty-cart.png" alt="empty-cart">
-            <h3>Your Cart is Empty</h3>
-            <h4>Add Something To Make Me Happy :)</h4>
+    <section class="flex items-center justify-center">
+        <div class="!py-[70px] flex flex-col items-center">
+            <img class="!mb-6" src="../../assets/images/icon-empty-cart.png" alt="empty-cart">
+            <h3 class="text-2xl font-bold tracking-[0.72px] leading-[29px] text-[#777777] !mb-2">Your Cart is Empty</h3>
+            <h4 class="text-lg tracking-[0.54px] leading-none font-normal">Add Something To Make Me Happy :)</h4>
         </div>
     </section>
 }
 @else {
-    <section class="cart_container">
-        <div class="product_info">
+    <section>
+        <div class="!py-[70px] !px-3 max-w-[1400px] !my-0 !mx-auto">
             <table mat-table [dataSource]="dataSource">
                 <ng-container matColumnDef="image">
                     <th mat-header-cell *matHeaderCellDef> image </th>
                     <td mat-cell *matCellDef="let element">
                         <a [routerLink]="['/product-details',element.id]">
-                            <img [src]="element.image" alt="product image">
+                            <img class="h-[106px] w-[95px] !py-2" [src]="element.image" alt="product image">
                         </a>
                     </td>
                 </ng-container>
@@ -25,7 +25,7 @@
                 <ng-container matColumnDef="name">
                     <th mat-header-cell *matHeaderCellDef> name </th>
                     <td mat-cell *matCellDef="let element">
-                        <a href="" class="product_name">
+                        <a href="" class="text-[#777777] capitalize font-normal text-sm">
                             {{element.name}}
                         </a>
                     </td>
@@ -34,7 +34,7 @@
                 <ng-container matColumnDef="price">
                     <th mat-header-cell *matHeaderCellDef> price </th>
                     <td mat-cell *matCellDef="let element">
-                        <h2 class="product_price">
+                        <h2 class="text-[#222222] text-2xl font-normal">
                             {{element.price | currency}}
                         </h2>
                     </td>
@@ -45,13 +45,13 @@
                     <td mat-cell *matCellDef="let element">
 
                         <div class="product_quantity quantity_wrapper">
-                            <div class="quantity_box">
-                                <button class="quantity_btn quantity_btn_left" type="button"
+                            <div class="flex justify-center">
+                                <button class="bg-[#fff] h-full border border-[#dddddd] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_left" type="button"
                                     (click)="reduceQuantity(quantity,element.id)">
                                     <i class="fa fa-chevron-left" aria-hidden="true"></i>
                                 </button>
-                                <input type="number" disabled [value]="element.quantity" class="quantity_num" #quantity>
-                                <button class="quantity_btn quantity_btn_right" type="button"
+                                <input type="number" disabled [value]="element.quantity" class="!py-[6px] !px-3 w-[60px] text-end bg-[#e9ecef] border-r border-b border-[#dddddd] text-base" #quantity>
+                                <button class="bg-[#fff] h-full border border-[#dddddd] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_right" type="button"
                                     (click)="increaseQuantity(quantity,element.id)">
                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>
                                 </button>
@@ -63,26 +63,26 @@
                 <ng-container matColumnDef="action">
                     <th mat-header-cell *matHeaderCellDef> action </th>
                     <td mat-cell *matCellDef="let element">
-                        <mat-icon (click)="removeProduct(element.id)">close</mat-icon>
+                        <mat-icon class="cursor-pointer text-[#777777]" (click)="removeProduct(element.id)">close</mat-icon>
                     </td>
                 </ng-container>
 
                 <ng-container matColumnDef="total">
                     <th mat-header-cell *matHeaderCellDef> total </th>
-                    <td mat-cell *matCellDef="let element" class="total_price"> {{element.total | currency}} </td>
+                    <td mat-cell *matCellDef="let element" class="text-2xl font-normal text-primary"> {{element.total | currency}} </td>
                 </ng-container>
 
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
 
-            <div class="total_footer">
+            <div class="text-[15px] font-bold flex items-center justify-end !pl-[57px] !pt-[30px] border-t border-[#dddddd]">
                 Total Price:
-                <h2>{{getTotalCost() | currency}}</h2>
+                <h2 class="text-2xl !pl-[60px]">{{getTotalCost() | currency}}</h2>
             </div>
-            <div class="cart_btn">
-                <button mat-raised-button color="primary" routerLink="/collection/electronics">continue shopping</button>
-                <button mat-raised-button color="primary" routerLink="/checkout">check out</button>
+            <div class="flex items-center justify-between !pt-[35px]">
+                <button class="!p-[22px] text-base uppercase font-bold" mat-raised-button color="primary" routerLink="/collection/electronics">continue shopping</button>
+                <button class="!p-[22px] text-base uppercase font-bold" mat-raised-button color="primary" routerLink="/checkout">check out</button>
             </div>
         </div>
 

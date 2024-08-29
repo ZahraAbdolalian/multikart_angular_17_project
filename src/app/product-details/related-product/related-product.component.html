@@ -1,52 +1,52 @@
-<div class="related_products_container">
-    <div class="related_product_title">
-        <h2>Related Products</h2>
+<div class="max-w-[1400px] !py-[70px] !pl-3 !my-0 !mx-auto">
+    <div class="w-full">
+        <h2 class="text-4xl text-[#222222] border-b border-[#dddddd] leading-[0.8] uppercase font-bold tracking-[0.72px] !mb-5 !pb-5">Related Products</h2>
     </div>
 
     @if (!relatedProducts) {
         <app-spinner></app-spinner>
     }
     @else {
-        <div class="related_product_list">
+        <div class="flex">
             @for (item of relatedProducts; track $index) {
-                <div class="related_product_item">
+                <div class="!pl-3 !pr-3 relative w-1/6">
                     <div class="related_product_item_box">
-                        <div class="related_product_img_box">
-                            <span class="new_sapn">
+                        <div class="relative overflow-hidden">
+                            <span class="uppercase text-[13px] font-bold bg-primary text-[#fff] rounded-[100%] !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center">
                                 new
                             </span>
-                            <a [routerLink]="['/product-details',item.id]" class="related_product_img_container">
-                                <img class="related_product_img" [src]="item.image" alt="">
+                            <a [routerLink]="['/product-details',item.id]" class="bg-[#fff] w-full">
+                                <img class="w-[170px] h-[180px]" [src]="item.image" alt="">
                             </a>
-                            <div class="related_product_icons">
-                                <a class="related_product_icons_link" href="#" title="Add to cart">
-                                    <i class="fa fa-shopping-cart fa-flip-horizontal shopping shopping_cart"></i>
+                            <div class="related_product_icons text-left bottom-0 left-[unset] absolute right-[-10px] !my-0 !mx-auto inline-block opacity-0 transition-all">
+                                <a class="transition-all relative" href="#" title="Add to cart">
+                                    <i class="fa fa-shopping-cart fa-flip-horizontal !px-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary"></i>
                                 </a>
         
-                                <a class="related_product_icons_link" href="#" title="Add to Wishlist">
-                                    <i class="fa fa-heart shopping heart"></i>
+                                <a class="transition-all relative" href="#" title="Add to Wishlist">
+                                    <i class="fa fa-heart !px-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary heart"></i>
                                 </a>
         
-                                <a class="related_product_icons_link" href="#" title="Quick View">
-                                    <i class="fa-solid fa-magnifying-glass shopping magnifying"></i>
+                                <a class="transition-all relative" href="#" title="Quick View">
+                                    <i class="fa-solid fa-magnifying-glass !px-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary magnifying"></i>
                                 </a>
         
-                                <a class="related_product_icons_link" href="#" title="Compare">
-                                    <i class="fa fa-refresh shopping refresh"></i>
+                                <a class="transition-all relative" href="#" title="Compare">
+                                    <i class="fa fa-refresh !px-2.5 !pb-2.5 block text-[#6f6f6f] text-lg transition-all relative hover:text-primary refresh"></i>
                                 </a>
                             </div>
                         </div>
-                        <div class="related_product_detail">
-                            <div class="stars">
+                        <div class="block">
+                            <div class="flex text-lg text-[#edb867]">
                                 @for (item of starsArray; track $index) {
                                     <div class="star">★</div>
                                 }
                             </div>
                             <a [routerLink]="['/product-details',item.id]">
-                                <h6 class="related_product_name">{{item.title}}</h6>
+                                <h6 class="text-[#777777] text-base !mt-[7px] font-normal leading-none overflow-hidden text-ellipsis">{{item.title}}</h6>
                             </a>
-                            <h4 class="related_product_discounted_price"> {{item.price | currency}}
-                                <del class="related_product_price">{{45 | currency}}</del>
+                            <h4 class="text-[#222222] text-lg font-bold tracking-[0.54px] leading-none !mt-[7px]"> {{item.price | currency}}
+                                <del class="text-[#ccc] text-sm font-normal tracking-[0.54px] leading-none">{{45 | currency}}</del>
                             </h4>
                         </div>
                     </div>

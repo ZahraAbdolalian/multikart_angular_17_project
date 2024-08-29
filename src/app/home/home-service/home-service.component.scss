@@ -1,6 +1,3 @@
-@import '../../shared/shared-style/shared-style';
-
-
 .sevrice_box {
     display: flex;
     align-items: center;
@@ -14,7 +11,7 @@
     }
 
     &:hover .service_h4 {
-        color: $main-color;
+        color: #ff4c3b;
         transition: all 0.3s ease;
     }
 }
@@ -52,7 +49,7 @@
 
 .service_text {
     font-size: 14px;
-    color: $light-text-color;
+    color: #777777;
     letter-spacing: 0.42px;
     line-height: 24px;
 }

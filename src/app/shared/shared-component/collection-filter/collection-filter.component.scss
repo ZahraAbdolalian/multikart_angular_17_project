@@ -1,10 +1,7 @@
-@import '../../shared-style/shared-style';
-
-
 .category_title::after {
     content: "\f0d7";
     font-family: FontAwesome;
-    color: $secondary-text-content;
+    color: #444444;
     position: absolute;
     right: -3px;
     top: 0;
@@ -32,6 +29,6 @@
 .open::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-image: -webkit-gradient(linear, left bottom, left top,
-            color-stop(0.62, $main-color),
-            color-stop(0.86, $main-color));
+            color-stop(0.62, #ff4c3b),
+            color-stop(0.86, #ff4c3b));
 }

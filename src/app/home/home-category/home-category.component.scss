@@ -1,5 +1,3 @@
-@import '../../shared/shared-style/shared-style';
-
 .category_item_content {
     color: #948e8c;
     transition: 0.5s ease;
@@ -12,7 +10,7 @@
     white-space: pre-wrap;
 
     &:hover {
-        color: $main-color;
+        color: #ff4c3b;
         transition: 0.5s ease;
     }
 }

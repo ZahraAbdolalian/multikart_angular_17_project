@@ -1,5 +1,3 @@
-@import '../../shared/shared-style/shared-style';
-
 .page_line::before,
 .page_line::after,
 .page_line_span::after,
@@ -8,7 +6,7 @@
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: $main-color;
+    background-color: #ff4c3b;
     top: -4px;
 }
 

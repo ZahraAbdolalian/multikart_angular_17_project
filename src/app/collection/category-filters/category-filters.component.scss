@@ -1,11 +1,9 @@
-@import '../../shared/shared-style/shared-style';
-
 .filter_title {
 
     &::after {
         content: "\f0d7";
         font-family: FontAwesome;
-        color: $main-text-color;
+        color: #222222;
         position: absolute;
         right: -3px;
         top: 0;
@@ -42,6 +40,6 @@
 .open::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-image: -webkit-gradient(linear, left bottom, left top,
-            color-stop(0.62, $main-color),
-            color-stop(0.86, $main-color));
+            color-stop(0.62, #ff4c3b),
+            color-stop(0.86, #ff4c3b));
 }

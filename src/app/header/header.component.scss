@@ -1,12 +1,10 @@
-@import '../shared/shared-style/shared-style';
-
 @mixin line_hover_act() {
     
     &::before {
         content: "";
         position: absolute;
         bottom: 0;
-        background-color: $main-color;
+        background-color: #ff4c3b;
         transition: 0.5s ease;
         height: 2px;
         width: 0;
@@ -25,7 +23,7 @@ mat-toolbar {
 .header_bottom_item {
     overflow: visible;
     text-transform: uppercase;
-    color: $main-text-color;
+    color: #222222;
     letter-spacing: 0.07em;
     position: relative;
     padding: 42px 18px;
@@ -35,7 +33,7 @@ mat-toolbar {
 
     &:hover .header_item_title,
     &:hover .header_item_icon {
-        color: $main-color;
+        color: #ff4c3b;
         transition: all 0.5s ease 0s;
     }
 
@@ -64,12 +62,12 @@ mat-toolbar {
     position: absolute;
     top: 40px;
     width: 200px;
-    background-color: $white-color;
+    background-color: #fff;
 }
 
 
 .header_submenu_container {
-    background-color: $white-color;
+    background-color: #fff;
     box-shadow: 0 0 1px #ebebeb;
     height: 330px;
     padding-left: 30px;
@@ -88,7 +86,7 @@ mat-toolbar {
 
     a {
         @include line_hover_act();
-        color: $main-text-color;
+        color: #222222;
         font-size: 14px;
         font-weight: 400;
         line-height: 2.3;
@@ -112,7 +110,7 @@ mat-toolbar {
 
     a {
         @include line_hover_act();
-        color: $main-text-color;
+        color: #222222;
         font-size: 14px;
     }
 }
@@ -122,7 +120,7 @@ mat-toolbar {
     position: absolute;
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 5px solid $main-color;
+    border-top: 5px solid #ff4c3b;
     top: 15px;
     left: 5px;
 }
@@ -150,7 +148,7 @@ mat-toolbar {
 .bottom_header_icon_hover {
     min-width: 160px;
     padding: 15px 20px;
-    background-color: $white-color;
+    background-color: #fff;
     position: absolute;
     transform: translateY(30px);
     transition: all linear 0.3s;

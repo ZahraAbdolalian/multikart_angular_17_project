@@ -1,15 +1,15 @@
 <app-title [titleOfPage]="'checkout'" [lacationOfPage]="'checkout'"></app-title>
 
-<section class="billing_details">
-    <div class="billing_container">
-        <div class="billing_title">
-            <h3>Billing Details</h3>
+<section class="!py-[70px] max-w-[1400px] !mx-auto !my-0 !px-3 flex">
+    <div class="w-1/2">
+        <div class="!mb-[35px]">
+            <h3 class="!mb-2 text-[#444444] text-2xl font-bold tracking-[0.72px]">Billing Details</h3>
         </div>
         <form [formGroup]="checkoutForm" class="billing_form">
             @for (item of formFields; let i = $index; track i){
                 @if (item != 'Country') {
                     <span>
-                        <mat-form-field color="accent"
+                        <mat-form-field color="accent" class="!h-[75px] relative !mr-[25px] !mb-[25px]"
                             [class]="{'half-width': i < 4, 'full-width': i >= 4}">
                             <mat-label>{{item}}</mat-label>
                             <input matInput [formControlName]="item" required>
@@ -23,7 +23,7 @@
                 }
                 @else {
                     <ng-template #countrySelector>
-                        <mat-form-field color="accent" class="full-width">
+                        <mat-form-field color="accent" class="full-width !h-[75px] relative !mr-[25px] !mb-[25px]">
                             <mat-label>Select Country</mat-label>
                             <mat-select formControlName="Country" required>
                                 @for (country of countryOptions; track $index) {
@@ -49,71 +49,71 @@
             [dataSource]="dataSourcePaypal"></app-checkout-card>
 
     </div>
-    <div class="order_container">
-        <mat-card class="order_card">
+    <div class="w-1/2">
+        <mat-card class="bg-[#f9f9f9] border-[#dddddd] shadow-none rounded-none relative !p-10">
             <mat-card-content>
                 <div>
-                    <div class="odrer_title">
-                        <h2>Product</h2>
-                        <h2 class="last_child">Total</h2>
+                    <div class="!border-b border-[#dddddd] !pb-[25px] flex justify-between !mb-5">
+                        <h2 class="text-[22px] font-semibold leading-[33px] text-[#444444]">Product</h2>
+                        <h2 class="w-[35%] text-[22px] font-semibold leading-[33px] text-[#444444]">Total</h2>
                     </div>
 
                     @for (item of productsList; track $index) {
-                        <div class="product_detail">
-                            <p class="product_name">
+                        <div class="flex justify-between !mb-5">
+                            <p class="text-[15px] leading-5 text-[#444444] w-[300px]">
                                 {{item.name}}
-                                <mat-icon>close</mat-icon>
+                                <mat-icon class="text-sm !pt-[13px] !pl[5px]">close</mat-icon>
                                 {{item.quantity}}
                             </p>
-                            <p class="product_price last_child">{{item.price | currency}}</p>
+                            <p class="text-lg text-[#222222] leading-5 font-normal w-[35%]">{{item.price | currency}}</p>
                         </div>
                     }
 
-                    <div class="subtotal_box">
-                        <div class="subtotal">
-                            <p class="total_title">subtotal</p>
-                            <p class="total_price last_child">{{subtotal | currency}}</p>
+                    <div class="capitalize border-b border-t border-[#dddddd] !mb-[30px] !pt-5">
+                        <div class="flex justify-between !mb-5">
+                            <p class="font-semibold leading-5 text-base text-[#333333]">subtotal</p>
+                            <p class="text-lg leading-5 !text-primary w-[35%]">{{subtotal | currency}}</p>
                         </div>
-                        <div class="shipping">
-                            <p class="total_title">shipping</p>
-                            <div class="shoping_option">
+                        <div class="flex justify-between !mb-5">
+                            <p class="font-semibold leading-5 text-base text-[#333333]">shipping</p>
+                            <div class="w-[36.6%]">
 
-                                <div>
+                                <div class="block !pl-2.5 !mb-2 text-[#6f6f6f] font-semibold leading-8">
                                     <input type="radio" name="radio1" id="shipping_option">
-                                    <label for="shipping_option">Shipping</label>
+                                    <label for="shipping_option" class="!pl-2.5 cursor-pointer">Shipping</label>
                                 </div>
 
-                                <div>
+                                <div class="block !pl-2.5 !mb-2 text-[#6f6f6f] font-semibold leading-8">
                                     <input type="radio" name="radio1" id="local_pickup_option">
-                                    <label for="local_pickup_option">Local Pickup</label>
+                                    <label for="local_pickup_option" class="!pl-2.5 cursor-pointer">Local Pickup</label>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="total_box">
-                        <p class="total">total</p>
-                        <p class="total_price last_child">{{subtotal | currency}}</p>
+                    <div class="flex justify-between !mb-10 capitalize">
+                        <p class="text-[#333333] text-base leading-5">total</p>
+                        <p class="text-lg leading-5 !text-primary w-[35%]">{{subtotal | currency}}</p>
                     </div>
                 </div>
-                <div class="payment">
-                    <div class="payment_radio">
-                        <div>
+                <div>
+                    <div>
+                        <div class="!mb-[15px] text-[#6f6f6f] text-base font-semibold leading-5">
                             <input type="radio" name="radio2" id="stripe_option">
-                            <label for="stripe_option">Stripe</label>
+                            <label for="stripe_option" class="!pl-2.5 cursor-pointer">Stripe</label>
                         </div>
-                        <div class="paypal_box">
+                        <div class="cursor-pointer !mb-[15px] text-[#6f6f6f] text-base font-semibold leading-5">
                             <input type="radio" name="radio2" id="paypal_option">
-                            <label for="paypal_option">PayPal</label>
+                            <label for="paypal_option" class="!pl-2.5 cursor-pointer">PayPal</label>
 
-                            <div class="payment_img">
+                            <div class="!mb-[5px]">
                                 <img src="../../assets/images/paypal-checkout.png" alt="paypal">
                             </div>
                         </div>
                     </div>
 
-                    <div class="payment_btn_box">
+                    <div class="text-right">
                         <button mat-raised-button type="submit" color="primary" [disabled]="!checkoutForm.valid"
-                            class="payment_btn">Place Order</button>
+                            class="text-sm !py-[25px] !px-9 uppercase">Place Order</button>
                     </div>
                 </div>
             </mat-card-content>

@@ -29,8 +29,7 @@ export class HomeTopTrendingComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
     this.apiSubscription = this.apiService.getSomeProducts(8).subscribe(data => {
-      this.newArrivalItems = data
-      console.log(this.newArrivalItems);
+      this.newArrivalItems = data;
     })
   }
 

@@ -40,8 +40,6 @@ export class ProductsCategorizationComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    console.log(this.isLoading);
-
     this.isLoading = true;
 
     this.routeSubscription = this.route.params.subscribe(
@@ -56,7 +54,6 @@ export class ProductsCategorizationComponent implements OnInit, OnDestroy {
         this.isLoading = false;
       }
     )
-    console.log(this.isLoading);
   }
 
   ngOnDestroy(): void {

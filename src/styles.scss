@@ -2,12 +2,12 @@
 
 @include mat.core();
 
-$multikart_angular_17_project-primary: mat.define-palette(mat.$red-palette, 500);
-$multikart_angular_17_project-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400);
+$multikart_angular_17_project-primary: mat.m2-define-palette(mat.$m2-red-palette, 500);
+$multikart_angular_17_project-accent: mat.m2-define-palette(mat.$m2-indigo-palette, A200, A100, A400);
 
-$multikart_angular_17_project-warn: mat.define-palette(mat.$red-palette);
+$multikart_angular_17_project-warn: mat.m2-define-palette(mat.$m2-red-palette);
 
-$multikart_angular_17_project-theme: mat.define-light-theme((
+$multikart_angular_17_project-theme: mat.m2-define-light-theme((
   color: (
     primary: $multikart_angular_17_project-primary,
     accent: $multikart_angular_17_project-accent,

@@ -47,3 +47,12 @@ a {
 .mat-drawer-container{
   background: #ffffff !important;
 }
+
+.dark {
+  .mat-drawer-container{
+    background: #383838 !important;
+  }
+  a {
+    color: #cfd4d4;
+  }
+}

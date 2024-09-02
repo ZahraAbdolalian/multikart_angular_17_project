@@ -9,6 +9,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from './footer/footer.component';
+import { log } from 'node:console';
 
 
 
@@ -36,4 +37,9 @@ export class AppComponent {
 
   collection = ['electronics', 'jewelery', "men's clothing", "women's clothing"]
 
+  toggleTheme() {
+    document.body.classList.toggle('dark');
+    console.log(document.body.classList);
+    
+  }
 }

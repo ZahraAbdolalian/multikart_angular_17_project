@@ -1,7 +1,7 @@
 <section class="relative !pt-[70px] !pb-[5px] !px-[50px]">
     <div>
         <div class="trending_title">
-            <h2 class="text-center text-[36px] text-[#222222] uppercase relative font-bold leading-none tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">trending products</h2>
+            <h2 class="text-center text-[36px] text-[#222222] dark:text-[#f1f3f5] uppercase relative font-bold leading-none tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">trending products</h2>
 
             <div class="page_line relative w-[180px] h-[1px] bg-[#ff4c3b] bottom-0 top-0 !my-0 !mx-auto !mb-[55px]">
                 <span class="page_line_span"></span>
@@ -48,9 +48,9 @@
                                     }
                                 </div>
                                 <a [routerLink]="['/product-details',item.id]">
-                                    <h6 class="text-[#777777] text-base !mb-[5px] !mt-0 font-normal overflow-hidden text-ellipsis">{{ item.title }}</h6>
+                                    <h6 class="text-[#777777] dark:!text-[#bdbdbd] text-base !mb-[5px] !mt-0 font-normal overflow-hidden text-ellipsis">{{ item.title }}</h6>
                                 </a>
-                                <h4 class="text-[#222222] text-[18px] font-bold tracking-wide !m-0">{{ item.price | currency}}</h4>
+                                <h4 class="text-[#222222] dark:text-[#f1f3f5] text-[18px] font-bold tracking-wide !m-0">{{ item.price | currency}}</h4>
                             </div>
                         </div>
                     </div>

@@ -55,7 +55,7 @@
     }
 }
 
-.trending_name{
+.trending_name {
     color: #777777;
     font-size: 16px;
     margin-bottom: 5px;
@@ -64,6 +64,16 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1; 
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+::ng-deep .dark {
+    .mdc-tab__text-label {
+        color: #f1f3f5 !important;
+    }
+
+    .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+        color: #ff4c3b !important;
+    }
 }

@@ -1,4 +1,4 @@
-<div class="bg-[#f8f8f8]">
+<div class="bg-[#f8f8f8] dark:bg-[#2b2b2b] dark:text-[#cfd4da]">
     <mat-toolbar class="!text-[#999999] !max-w-[1400px] !my-0 !mx-auto h-[51px] !py-0 px-2 leading-[21px] !font-thin">
         <span class="!pr-[25px] !text-sm">Welcome to Our store Multikart</span>
         <mat-icon class="!text-sm !h-5 text-primary">call</mat-icon>
@@ -50,7 +50,7 @@
                 @for (headerItem of headerItems; track $index) {
                 @if (headerItem.name != 'features') {
                 <mat-list-item class="header_bottom_item">
-                    <div>
+                    <div class="dark:!text-[#cfd4d4]">
                         <span class="header_item_title">{{headerItem.name}}</span>
                         <i class="fa-solid fa-chevron-down header_item_icon"></i>
                         <mat-list class="header_submenu">
@@ -68,7 +68,8 @@
                 </mat-list-item>
                 }@else {
                 <mat-list-item class="header_bottom_item">
-                    <span class="header_item_title">features</span>
+                    <div class="dark:!text-[#cfd4d4]">
+                        <span class="header_item_title">features</span>
                     <i class="fa-solid fa-chevron-down header_item_icon"></i>
                     <mat-list class="header_submenu !flex !right-[800px] !top-[25px] !bg-[unset] !shadow-none">
                         @for (item of features; track $index) {
@@ -88,6 +89,7 @@
                         <span
                             class="new-badge bg-primary text-[#fff] !absolute !top-[-24px] !right-[54px] !text-[9px] !leading-[11px] !py-[2px] !px-[7px] !rounded-none">new</span>
                     </span>
+                    </div>
                 </mat-list-item>
                 }
                 }

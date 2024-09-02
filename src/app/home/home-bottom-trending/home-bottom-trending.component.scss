@@ -26,8 +26,7 @@
     right: 78px;
 }
 
-.trending_product_part2:hover .trending_icons_part2,
-.special_product:hover .special_icons {
+.trending_product_part2:hover .trending_icons_part2 {
     opacity: 1;
     transition: all 0.2s ease;
     animation: icons_part2 400ms ease-in-out;

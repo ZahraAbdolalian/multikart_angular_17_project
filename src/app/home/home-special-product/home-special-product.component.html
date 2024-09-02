@@ -1,6 +1,6 @@
 <section class="!pt-[70px] !my-0 !mx-auto !pl-3 !pr-3">
     <div class="special_title">
-        <h2 class="text-center text-4xl text-[#222222] uppercase relative font-bold leading-none tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">special products</h2>
+        <h2 class="text-center text-4xl text-[#222222] dark:!text-[#f1f3f5] uppercase relative font-bold leading-none tracking-[0.72px] !pb-[25px] !mb-0 !mt-[-5px]">special products</h2>
 
         <div class="page_line relative w-[180px] h-[1px] bg-primary bottom-0 top-0 !my-0 !mx-auto !mb-[55px]">
             <span class="page_line_span"></span>
@@ -27,9 +27,9 @@
                                 }
                             </div>
                             <a [routerLink]="['/product-details',item.id]">
-                                <h6 class="text-[#777777] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
+                                <h6 class="text-[#777777] dark:!text-[#bdbdbd] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
                             </a>
-                            <h4 class="text-[#222222] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
+                            <h4 class="text-[#222222] dark:text-[#f1f3f5] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
                             </h4>
                         </div>
                     </div>
@@ -37,14 +37,14 @@
             </div>
 
             @for (item of productsArray.slice(2,3); track $index) {
-                <div class="w-1/3 border-l border-r border-[#dddddd]">
+                <div class="w-1/3 border-l border-r border-[#dddddd] dark:border-[#616060]">
                     <div class="special_product !pl-3 !pr-3 !mb-[140px]">
                         <div class="w-[315px] h-[340px] !my-0 !mx-auto">
                             <div class="relative right-3">
                                 <span class="uppercase text-[13px] font-bold bg-primary text-[#fff] rounded-full !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center">
                                     new
                                 </span>
-                                <span class="uppercase text-sm font-bold tracking-[1.4px] text-[#222222] absolute top-[7px] right-[-13px] rotate-[270deg]">
+                                <span class="uppercase text-sm font-bold tracking-[1.4px] text-[#222222] absolute top-[45px] right-[-13px] rotate-[270deg]">
                                     on sale
                                 </span>
                                 <a [routerLink]="['/product-details',item.id]">
@@ -75,9 +75,9 @@
                                     }
                                 </div>
                                 <a [routerLink]="['/product-details',item.id]">
-                                    <h6 class="text-[#777777] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
+                                    <h6 class="text-[#777777] dark:!text-[#bdbdbd] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
                                 </a>
-                                <h4 class="text-[#222222] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
+                                <h4 class="text-[#222222] dark:text-[#f1f3f5] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
                                 </h4>
                             </div>
                         </div>
@@ -99,9 +99,9 @@
                                 }
                             </div>
                             <a [routerLink]="['/product-details',item.id]">
-                                <h6 class="text-[#777777] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
+                                <h6 class="text-[#777777] dark:!text-[#bdbdbd] text-base !mb-[5px] !pb-[5px] font-normal !mt-0">{{item.title}}</h6>
                             </a>
-                            <h4 class="text-[#222222] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
+                            <h4 class="text-[#222222] dark:text-[#f1f3f5] text-lg font-bold !mt-[5px] !mb-0"> {{item.price | currency}}
                             </h4>
                         </div>
                     </div>

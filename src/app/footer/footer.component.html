@@ -1,9 +1,9 @@
 <footer class="relative">
-    <div class="bg-[#F9F9F9]">
-        <div class="max-w-[1400px] !py-[35px] !px-0 !my-0 !mx-auto border-b border-[#dddddd] flex justify-between items-center">
-            <div class="h-full w-1/2 border-r border-[#dddddd]">
-                <h4 class="text-[#222222] text-lg font-bold uppercase !mb-2.5 !mt-0 tracking-[0.54px]">know it all first!</h4>
-                <p class="text-[#777777] text-sm leading-none tracking-[0.42px]">
+    <div class="bg-[#F9F9F9] dark:bg-[#2b2b2b]">
+        <div class="max-w-[1400px] !py-[35px] !px-0 !my-0 !mx-auto border-b border-[#dddddd] dark:border-[#616060] flex justify-between items-center">
+            <div class="h-full w-1/2 border-r border-[#dddddd] dark:border-[#616060]">
+                <h4 class="text-[#222222] dark:text-[#f1f3f5] text-lg font-bold uppercase !mb-2.5 !mt-0 tracking-[0.54px]">know it all first!</h4>
+                <p class="text-[#777777] dark:!text-[#bdbdbd] text-sm leading-none tracking-[0.42px]">
                     Never Miss Anything From Multikart By Signing Up To Our Newsletter.x
                 </p>
             </div>
@@ -34,7 +34,7 @@
                 <div class="!mb-[5px]">
                     <img src="../../../assets/images/multikart-logo.png" alt="logo" />
                 </div>
-                <p class="text-[#777777] text-sm tracking-[0.42px] leading-[32px]">
+                <p class="text-[#777777] dark:!text-[#bdbdbd] text-sm tracking-[0.42px] leading-[32px]">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                     veniam,
@@ -45,7 +45,7 @@
                         @for (iconName of iconsList; track $index) {
                             <mat-list-item class="!pr-4">
                                 <a href="#">
-                                    <i aria-hidden="true" class="text-[#000000] text-[20px] transition-all hover:text-primary fa" [class]="iconName"></i>
+                                    <i aria-hidden="true" class="text-[#000000] dark:text-[#f1f3f5] text-[20px] transition-all hover:text-primary fa" [class]="iconName"></i>
                                 </a>
                             </mat-list-item>
                         }
@@ -55,12 +55,12 @@
         
             <div class="!pr-3 !pl-3 w-[22%] !ml-[8%]">
                 <div class="text-lg font-bold leading-[18px] uppercase tracking-[0.54px] !mb-[25px]">
-                    <h4 class="text-[#222222]">Categories</h4>
+                    <h4 class="text-[#222222] dark:text-[#f1f3f5]">Categories</h4>
                 </div>
                 <div class="footer_bottom_center_content">
                     <mat-list>
                         @for (category of categoriesList; track $index) {
-                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777]">
+                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777] dark:!text-[#bdbdbd]">
                                 <a matListItemTitle class="footer_bottom_center_link" href="#">{{
                                     category
                                     }}</a>
@@ -71,12 +71,12 @@
             </div>
             <div class="!pr-3 !pl-3 w-[22%]">
                 <div class="text-lg font-bold leading-[18px] uppercase tracking-[0.54px] !mb-[25px]">
-                    <h4 class="text-[#222222]">why we choose</h4>
+                    <h4 class="text-[#222222] dark:text-[#f1f3f5]">why we choose</h4>
                 </div>
                 <div class="footer_bottom_center_content">
                     <mat-list>
                         @for (item of chooseList; track $index) {
-                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777]">
+                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777] dark:!text-[#bdbdbd]">
                                 <a matListItemTitle class="footer_bottom_center_link" href="#">{{
                                     item
                                     }}</a>
@@ -87,12 +87,12 @@
             </div>
             <div class="!pr-3 !pl-3 w-[22%]">
                 <div class="text-lg font-bold leading-[18px] uppercase tracking-[0.54px] !mb-[25px]">
-                    <h4 class="text-[#222222]">store information</h4>
+                    <h4 class="text-[#222222] dark:text-[#f1f3f5]">store information</h4>
                 </div>
                 <div class="footer_bottom_center_content">
                     <mat-list>
                         @for (item of informationsList; track $index) {
-                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777]">
+                            <mat-list-item class="!pt-[7px] text-sm leading-[28px] capitalize text-[#777777] dark:!text-[#bdbdbd]">
                                 <div class="footer_bootom_item_left">
                                     <i class="absolute left-0 top-[11px] fa" [class]="item.icon"></i>
                                     <div>{{ item.text }}</div>
@@ -108,7 +108,7 @@
     <div class="max-w-[1400px] !pr-3 !pl-3 !my-0 !mx-auto">
         <div class="flex items-center justify-between">
             <div class="sub_footer_left">
-                <p class="text-[#777777] !py-5 !px-0 text-sm leading-[32px] tracking-[0.42px] !m-0">
+                <p class="text-[#777777] !py-5 !px-0 text-sm leading-[32px] tracking-[0.42px] !m-0 dark:!text-[#bdbdbd]">
                     <i class="fa fa-copyright"></i>
                     2023 theme forest powered by pixelstrap
                 </p>

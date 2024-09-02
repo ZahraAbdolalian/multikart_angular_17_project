@@ -7,6 +7,7 @@ module.exports = {
       primary: '#ff4c3b'
     }
   },
+  darkMode: 'selector',
   plugins: [],
 }
 

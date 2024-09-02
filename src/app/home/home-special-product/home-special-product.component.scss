@@ -27,9 +27,16 @@
 }
 
 .special_item {
-
     &:first-child {
         border-bottom: 1px solid #dddddd;
+    }
+}
+
+::ng-deep.dark {
+    .special_item {
+        &:first-child {
+            border-bottom: 1px solid #616060;
+        }
     }
 }
 

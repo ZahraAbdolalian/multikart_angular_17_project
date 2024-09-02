@@ -16,14 +16,14 @@
                     <button mat-raised-button color="primary" [routerLink]="['/collection',item.category]"
                         class="!uppercase !font-bold !py-[13px] !px-[29px] !mt-5 !tracking-wide !text-[14px]">view more</button>
                 </mat-card-actions>
-            </mat-card>
+            </mat-card> 
         }@else {
-            <mat-card ng-no-style class="!py-10 !px-0 !border-solid !border-[1px] !border-[#dddddd] !shadow-none !rounded-none">
+            <mat-card ng-no-style class="!py-10 !px-0 !border-solid !border-[1px] !border-[#dddddd] !shadow-none !rounded-none dark:!bg-[#2b2b2b]">
                 <div class="flex justify-center items-center">
                     <img class="w-[108px] h-[175px]" [src]="item.image" alt="watch1">
                 </div>
                 <mat-card-header class="flex justify-center overflow-hidden">
-                    <mat-card-title class="w-[240px] !py-[14px] !px-0 text-[#2d2a25] uppercase !font-bold !text-[18px] text-ellipsis overflow-hidden whitespace-nowrap">{{item.category}}</mat-card-title>
+                    <mat-card-title class="w-[240px] !py-[14px] !px-0 text-[#2d2a25] dark:text-[#f1f3f5] uppercase !font-bold !text-[18px] text-ellipsis overflow-hidden whitespace-nowrap">{{item.category}}</mat-card-title>
                 </mat-card-header>
                 <mat-card-content class="category_item_content">
                     {{item.description}}

@@ -30,12 +30,14 @@
     <mat-drawer-content class="!overflow-hidden">
         <div class="absolute top-[90px] left-[50px] !mt-4">
             <button type="button" mat-button (click)="drawer.toggle()">
-                <mat-icon class="!text-[28px] !w-auto !h-auto !ml-0">menu</mat-icon>
+                <mat-icon class="!text-[28px] !w-auto !h-auto !ml-0  dark:!text-[#cfd4d4]">menu</mat-icon>
             </button>
         </div>
-        <!-- <app-top-button></app-top-button> -->
         <app-header></app-header>
         <router-outlet></router-outlet>
         <app-footer></app-footer>
+        <div class="dark_light_btn" (click)="toggleTheme()">
+            <p>Dark</p>
+        </div>
     </mat-drawer-content>
 </mat-drawer-container>

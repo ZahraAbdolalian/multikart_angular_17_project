@@ -114,7 +114,6 @@ export class ProductInformationComponent implements OnInit, OnDestroy{
       total : (product.price * +quantity.value)
     }
     this.userCart.addProduct(newProduct)
-    console.log(this.userCart.cartProducts);
   }
 
   ngOnDestroy(): void {

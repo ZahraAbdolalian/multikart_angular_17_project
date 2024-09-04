@@ -34,12 +34,16 @@ import { log } from 'node:console';
 })
 export class AppComponent {
   title = 'multikart_angular_17_project';
+  theme: string = 'dark_mode'
 
   collection = ['electronics', 'jewelery', "men's clothing", "women's clothing"]
 
   toggleTheme() {
     document.body.classList.toggle('dark');
-    console.log(document.body.classList);
-    
+    if (document.body.classList.contains('dark')) {
+      this.theme = 'wb_sunny';
+    } else {
+      this.theme = 'dark_mode'
+    }
   }
 }

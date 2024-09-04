@@ -78,9 +78,4 @@ export class CheckoutComponent implements OnInit {
     }
     return '';
   }
-
-  placeOrder() {
-    console.log(this.checkoutForm.value);
-    
-  }
 }

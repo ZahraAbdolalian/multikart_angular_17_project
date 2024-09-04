@@ -7,6 +7,8 @@ import { Subscription } from 'rxjs';
 import { Post } from '../../model/post.model';
 import { ApiService } from '../../service/api.service';
 import { SharedImports } from '../../shared/shared-imports/shared.module';
+import { CartProduct } from '../../model/cart-product.model';
+import { UserCartService } from '../../service/user-cart.service';
 
 
 
@@ -35,7 +37,8 @@ export class ProductsCategorizationComponent implements OnInit, OnDestroy {
 
   constructor(
     private apiService: ApiService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private userCart: UserCartService
   ) { }
 
   ngOnInit(): void {
@@ -54,6 +57,18 @@ export class ProductsCategorizationComponent implements OnInit, OnDestroy {
         this.isLoading = false;
       }
     )
+  }
+
+  addToCart(product: Post , quantity: number) {
+    const newProduct : CartProduct= {
+      name: product.title,
+      id: product.id,
+      image : product.image,
+      price : product.price,
+      quantity : quantity,
+      total : (product.price * quantity)
+    }
+    this.userCart.addProduct(newProduct)
   }
 
   ngOnDestroy(): void {

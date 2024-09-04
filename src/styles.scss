@@ -48,15 +48,6 @@ a {
   background: #ffffff !important;
 }
 
-.dark {
-  .mat-drawer-container{
-    background: #383838 !important;
-  }
-  a {
-    color: #cfd4d4;
-  }
-}
-
 input:-webkit-autofill {
   -webkit-background-clip: text;
 }
@@ -66,6 +57,12 @@ input:-webkit-autofill {
 }
 
 .dark {
+  .mat-drawer-container{
+    background: #383838 !important;
+  }
+  a {
+    color: #cfd4d4;
+  }
   .mat-mdc-table {
     background-color: #2b2b2b !important;
   }
@@ -73,7 +70,8 @@ input:-webkit-autofill {
   .mat-mdc-select,
   .mat-mdc-select-arrow,
   .mdc-floating-label,
-  .mdc-text-field__input  {
+  .mdc-text-field__input,
+  .mat-mdc-menu-item  {
     color: #f1f3f5 !important;
   }
 
@@ -99,5 +97,9 @@ input:-webkit-autofill {
   .mat-mdc-raised-button[disabled], .mat-mdc-raised-button.mat-mdc-button-disabled {
     background-color: #616060;
     color: #a9a9a9;
+  }
+
+  .mat-mdc-menu-panel {
+    background-color: #2b2b2b !important;
   }
 }

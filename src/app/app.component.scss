@@ -18,3 +18,7 @@
     cursor: pointer;
     font-size: 14px;
 }
+
+::ng-deep .dark .mdc-list-item__primary-text {
+    color: #bdbdbd !important;
+}

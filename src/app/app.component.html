@@ -1,6 +1,6 @@
 <mat-drawer-container class="!relative" autosize>
-    <mat-drawer #drawer class="!w-[300px] !p-[27px] uppercase" mode="over">
-        <a class="!block cursor-pointer border-b-[1px] border-solid border-b-[#dddddd] !pb-5 text-[#222222] text-lg font-bold z" (click)="drawer.toggle()">
+    <mat-drawer #drawer class="!w-[300px] !p-[27px] uppercase dark:!bg-[#2b2b2b]" mode="over">
+        <a class="!block cursor-pointer border-b-[1px] border-solid border-b-[#dddddd] dark:border-[#616060] !pb-5 text-[#222222] text-lg font-bold z" (click)="drawer.toggle()">
             <i aria-hidden="true" class="fa fa-angle-left !pr-2.5"></i>
             back
         </a>
@@ -10,12 +10,12 @@
             </mat-list-item>
             <mat-list-item role="listitem">collection
                 <i [matMenuTriggerFor]="menu" aria-hidden="true" class="fa fa-angle-right !pl-[62px] cursor-pointer"></i>
-                <mat-menu #menu="matMenu" class="mat_menu" xPosition="after">
+                <mat-menu #menu="matMenu" class="dark:bg-[#2b2b2b] dark:text-[#bdbdbd]" xPosition="after">
                     <button 
                     mat-menu-item 
                     *ngFor="let item of collection"
                     (click)="drawer.toggle()"
-                    [routerLink]="item"
+                    [routerLink]="['/collection',item]"
                     >{{item}}</button>
                 </mat-menu>
             </mat-list-item>

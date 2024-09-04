@@ -24,7 +24,7 @@
                                     </div>
                                 </a>
                                 <div class="trending_icons_part2 bg-[#ffff] absolute left-0 right-0 bottom-[30px] !py-[3px] !px-2 flex w-max rounded-[50px] shadow-[0_0_12px_0_#dddddd] !my-0 !mx-auto opacity-0 transition-all">
-                                    <a title="Add to cart" class="transition-all relative" href="#">
+                                    <a title="Add to cart" class="transition-all relative" (click)="addToCart(item,1)" [routerLink]="'/cart'">
                                         <i class="fa fa-shopping-cart fa-flip-horizontal  shopping_cart !p-2.5 block text-[#6f6f6f] text-[18px] transition-all relative hover:text-primary"></i>
                                     </a>
         

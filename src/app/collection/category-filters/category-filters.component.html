@@ -1,26 +1,26 @@
-<div class="bg-[#fff] border border-[#dddddd] !py-0 !px-[30px] !mb-[30px]">
+<div class="bg-[#fff] dark:!bg-[#2b2b2b] border border-[#dddddd] dark:border-[#616060] !py-0 !px-[30px] !mb-[30px]">
     <div class="!pb-6">
-        <h3 class="filter_title text-[#222222] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="toggleBrandList()">brand</h3>
+        <h3 class="filter_title text-[#222222] dark:text-[#f1f3f5] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="toggleBrandList()">brand</h3>
         <div class="brand_filter">
             <div class="max-h-0 overflow-hidden transition-all" [class.open]="isBrandListOpen">
                 @for (brand of brandList; track $index) {
                     <div class="flex items-center !mb-[11px] cursor-pointer">
                         <input type="checkbox" [value]="brand" [id]="brand" class="cursor-pointer">
-                        <label [for]="brand" class="text-[#777777] text-xs font-semibold uppercase !ml-[15px] tracking-[0.5px] cursor-pointer">{{brand}}</label>
+                        <label [for]="brand" class="text-[#777777] dark:!text-[#bdbdbd] text-xs font-semibold uppercase !ml-[15px] tracking-[0.5px] cursor-pointer">{{brand}}</label>
                     </div>
                 }
             </div>
         </div>
     </div>
     <div class="!pb-6">
-        <h3 class="filter_title text-[#222222] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="toggleColorList()">colors</h3>
+        <h3 class="filter_title text-[#222222] dark:text-[#f1f3f5] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="toggleColorList()">colors</h3>
         <div class="colors_filter">
             <div class="max-h-0 overflow-hidden transition-all" [class.open]="isColorListOpen">
                 @for (color of colorList; track $index) {
                     <div class="flex items-center !mb-[11px] cursor-pointer">
                         <input type="checkbox" [value]="color" [id]="color" class="cursor-pointer">
                         <span class="w-[14px] h-[14px] rounded-full border border-[#dddddd] relative top-0 left-0 !ml-2.5" [style]="{'background-color' : color}"></span>
-                        <label [for]="color" class="text-[#777777] text-xs font-semibold uppercase !ml-[15px] tracking-[0.5px] cursor-pointer !ml-2">{{color}}</label>
+                        <label [for]="color" class="text-[#777777] dark:!text-[#bdbdbd] text-xs font-semibold uppercase tracking-[0.5px] cursor-pointer !ml-2">{{color}}</label>
                     </div>
                 }
             </div>
@@ -28,7 +28,7 @@
     </div>
 
     <div class="!pb-6">
-        <h3 class="filter_title text-[#222222] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="togglePriceList()">price</h3>
+        <h3 class="filter_title text-[#222222] dark:text-[#f1f3f5] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="togglePriceList()">price</h3>
         <div class="price_filter">
             <div class="max-h-0 overflow-hidden transition-all flex items-center justify-center h-[105px]" [class.open]="isPriceListOpen">
                 <mat-slider min="0" max="1000" discrete class="!w-[80%] !ml-2">

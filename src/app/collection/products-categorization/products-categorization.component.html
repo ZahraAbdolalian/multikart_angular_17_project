@@ -6,8 +6,8 @@
     <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z8 !pl-[5px]">
     
       <ng-container matColumnDef="image">
-        <th mat-header-cell *matHeaderCellDef> Image </th>
-        <td mat-cell *matCellDef="let element" class="product_box_list text-base border-r border-[#dddddd]">
+        <th mat-header-cell *matHeaderCellDef class="dark:text-[#f1f3f5] !border-b dark:!border-[#616060]"> Image </th>
+        <td mat-cell *matCellDef="let element" class="product_box_list text-base border-r !border-b border-[#dddddd] dark:!border-[#616060]">
           <div class="relative overflow-hidden">
             <span class="uppercase text-[13px] font-bold bg-primary text-[#fff] rounded-[100%] !py-[11px] !px-1 absolute top-[7px] left-[7px] text-center">
               new
@@ -38,20 +38,20 @@
       </ng-container>
     
       <ng-container matColumnDef="title">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Title </th>
-        <td mat-cell *matCellDef="let element" class="text-base border-r border-[#dddddd]">
-          <a [routerLink]="['/product-details',element.id]"><h3 class="max-w-[250px] text-pretty text-[#222222]">{{element.title}}</h3></a>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dark:text-[#f1f3f5] !border-b dark:!border-[#616060]"> Title </th>
+        <td mat-cell *matCellDef="let element" class="text-base border-r !border-b border-[#dddddd] dark:!border-[#616060]">
+          <a [routerLink]="['/product-details',element.id]"><h3 class="max-w-[250px] text-pretty text-[#222222] dark:!text-[#bdbdbd]">{{element.title}}</h3></a>
         </td>
       </ng-container>
     
       <ng-container matColumnDef="price">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by price"> Price </th>
-        <td mat-cell *matCellDef="let element" class="text-base border-r border-[#dddddd]"> {{element.price | currency}} </td>
+        <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by price" class="dark:text-[#f1f3f5] !border-b dark:!border-[#616060]"> Price </th>
+        <td mat-cell *matCellDef="let element" class="text-base border-r !border-b border-[#dddddd] dark:!border-[#616060] dark:text-[#f1f3f5]"> {{element.price | currency}} </td>
       </ng-container>
     
       <ng-container matColumnDef="rating">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating </th>
-        <td mat-cell *matCellDef="let element" class="text-base border-r border-[#dddddd]">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dark:text-[#f1f3f5] !border-b dark:!border-[#616060]"> Rating </th>
+        <td mat-cell *matCellDef="let element" class="text-base !border-b border-[#dddddd] dark:!border-[#616060]">
           <div class="flex text-lg text-[#edb867]">
             @for (item of starsArray; track $index) {
                 <div class="star">★</div>
@@ -66,4 +66,4 @@
 }
 
 
-<mat-paginator class="mat-elevation-z8" [pageSizeOptions]="[3, 5, 10, 15]" showFirstLastButtons></mat-paginator>
+<mat-paginator class="mat-elevation-z8 dark:!bg-[#2b2b2b] dark:!text-[#f1f3f5]" [pageSizeOptions]="[3, 5, 10, 15]" showFirstLastButtons></mat-paginator>

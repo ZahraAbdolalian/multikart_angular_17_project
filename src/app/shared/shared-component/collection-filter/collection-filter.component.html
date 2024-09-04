@@ -1,11 +1,11 @@
-<div class="bg-[#fff] border border-[#dddddd] !py-0 !px-[30px] !mb-[30px]">
+<div class="bg-[#fff] dark:!bg-[#2b2b2b] border border-[#dddddd] dark:border-[#616060] !py-0 !px-[30px] !mb-[30px]">
     <div class="category">
-      <h3 class="category_title !mb-6 text-[#444444] font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="toggleCategoryList()">category</h3>
+      <h3 class="category_title !mb-6 text-[#444444] dark:text-[#f1f3f5]  font-semibold text-base uppercase cursor-pointer relative !mt-[30px] tracking-[0.42px]" (click)="toggleCategoryList()">category</h3>
       <div class="category_item">
         <mat-list class="max-h-0 overflow-hidden transition-all !p-0" [class.open] = "isCategoryListOpen">
             @for (item of categoryArray; track $index) {
                 <mat-list-item class="!h-auto !p-0">
-                  <a class="!text-[#777777] capitalize !pb-2.5 text-base leading-[18px] block" [routerLink]="['/collection',item]"> {{ item }} </a>
+                  <a class="!text-[#777777] dark:!text-[#bdbdbd] capitalize !pb-2.5 text-base leading-[18px] block" [routerLink]="['/collection',item]"> {{ item }} </a>
                 </mat-list-item>
             }
         </mat-list>

@@ -1,9 +1,9 @@
 <div class="collection_left_bottom">
     <div class="new_product">
-        <div class="flex relative items-center !pb-2.5 border-b border-[#dddddd] !mb-5">
-            <h5 class="text-[#222222] font-bold uppercase text-base leading-[24px] tracking-[0.8px]">New Products</h5>
-            <i class="fa-solid fa-angle-left right-8 absolute text-[#222222] opacity-60 text-2xl cursor-pointer" (click)="paginator()"></i>
-            <i class="fa-solid fa-angle-right right-2.5 absolute text-[#222222] opacity-60 text-2xl cursor-pointer" (click)="paginator()"></i>
+        <div class="flex relative items-center !pb-2.5 border-b border-[#dddddd] dark:!border-[#616060] !mb-5">
+            <h5 class="text-[#222222] dark:text-[#f1f3f5] font-bold uppercase text-base leading-[24px] tracking-[0.8px]">New Products</h5>
+            <i class="fa-solid fa-angle-left right-8 absolute text-[#222222] dark:text-[#f1f3f5] opacity-60 text-2xl cursor-pointer" (click)="paginator()"></i>
+            <i class="fa-solid fa-angle-right right-2.5 absolute text-[#222222] dark:text-[#f1f3f5] opacity-60 text-2xl cursor-pointer" (click)="paginator()"></i>
         </div>
 
         @if (!selectedProducts) {
@@ -12,15 +12,15 @@
 
         <div class="new_product_box">
             @for (item of selectedProducts; track $index) {
-                <div class="flex !pb-[30px]">
-                    <div class="bg-[#fff] h-[160px] flex flex-col items-start justify-center">
+                <div class="flex !pb-[30px] gap-2 border-b border-[#dddddd] dark:!border-[#616060]">
+                    <div class="h-[160px] flex flex-col items-start justify-center">
                         <a [routerLink]="['/product-details',item.id]">
                             <img class="h-[150px] w-[130px] !p-[15px] !pl-0" [src]="item.image" alt="new product" />
                         </a>
                     </div>
                     <div class="flex flex-col items-start justify-center">
                         <a [routerLink]="['/product-details',item.id]" class="text-[#777777] text-sm font-normal leading-[24px] text-ellipsis overflow-hidden">{{item.title}}</a>
-                        <h4 class="text-lg font-normal capitalize leading-1 tracking-[0.54px] cursor-context-menu">
+                        <h4 class="text-lg font-normal capitalize leading-1 tracking-[0.54px] cursor-context-menu dark:text-[#f1f3f5]">
                             {{item.price | currency}}
                         </h4>
                     </div>

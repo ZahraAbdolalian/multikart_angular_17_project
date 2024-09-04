@@ -1,0 +1,6 @@
+.offer_container {
+  background-image: url(../../../assets/images/offer-banner.jpg);
+  background-size: cover;
+  height: 126px;
+  display: flex;
+}/*# sourceMappingURL=home-banner-timer.component.css.map */

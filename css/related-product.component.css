@@ -1,0 +1,24 @@
+.related_product_item_box:hover .related_product_icons {
+  opacity: 1;
+  transition: all 0.5s ease;
+  right: 0px;
+  animation: icons;
+}
+.related_product_item_box:hover .related_product_icons .heart {
+  animation: icons 500ms ease-in-out;
+}
+.related_product_item_box:hover .related_product_icons .magnifying {
+  animation: icons 700ms ease-in-out;
+}
+.related_product_item_box:hover .related_product_icons .refresh {
+  animation: icons 1000ms ease-in-out;
+}
+
+@keyframes icons {
+  from {
+    right: -20px;
+  }
+  to {
+    right: 0px;
+  }
+}/*# sourceMappingURL=related-product.component.css.map */

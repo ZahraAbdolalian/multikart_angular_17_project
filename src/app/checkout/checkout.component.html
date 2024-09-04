@@ -3,13 +3,13 @@
 <section class="!py-[70px] max-w-[1400px] !mx-auto !my-0 !px-3 flex">
     <div class="w-1/2">
         <div class="!mb-[35px]">
-            <h3 class="!mb-2 text-[#444444] text-2xl font-bold tracking-[0.72px]">Billing Details</h3>
+            <h3 class="!mb-2 text-[#444444] dark:text-[#f1f3f5] text-2xl font-bold tracking-[0.72px]">Billing Details</h3>
         </div>
         <form [formGroup]="checkoutForm" class="billing_form">
             @for (item of formFields; let i = $index; track i){
                 @if (item != 'Country') {
                     <span>
-                        <mat-form-field color="accent" class="!h-[75px] relative !mr-[25px] !mb-[25px]"
+                        <mat-form-field color="accent" class="!h-[75px] relative !mr-[25px] !mb-[25px] dark:bg-[#383838] dark:text-[#f1f3f5]"
                             [class]="{'half-width': i < 4, 'full-width': i >= 4}">
                             <mat-label>{{item}}</mat-label>
                             <input matInput [formControlName]="item" required>
@@ -22,7 +22,7 @@
                     </span>
                 }
                 @else {
-                    <ng-template #countrySelector>
+                    <span>
                         <mat-form-field color="accent" class="full-width !h-[75px] relative !mr-[25px] !mb-[25px]">
                             <mat-label>Select Country</mat-label>
                             <mat-select formControlName="Country" required>
@@ -36,7 +36,7 @@
                                 </mat-error>
                             }
                         </mat-form-field>
-                    </ng-template>
+                    </span>
                 }
             }
 
@@ -50,32 +50,32 @@
 
     </div>
     <div class="w-1/2">
-        <mat-card class="bg-[#f9f9f9] border-[#dddddd] shadow-none rounded-none relative !p-10">
+        <mat-card class="bg-[#f9f9f9] dark:!bg-[#2b2b2b] border-[#dddddd] dark:border-[#616060] shadow-none rounded-none relative !p-10">
             <mat-card-content>
                 <div>
-                    <div class="!border-b border-[#dddddd] !pb-[25px] flex justify-between !mb-5">
-                        <h2 class="text-[22px] font-semibold leading-[33px] text-[#444444]">Product</h2>
-                        <h2 class="w-[35%] text-[22px] font-semibold leading-[33px] text-[#444444]">Total</h2>
+                    <div class="!border-b border-[#dddddd] dark:border-[#616060] !pb-[25px] flex justify-between !mb-5">
+                        <h2 class="text-[22px] font-semibold leading-[33px] text-[#444444] dark:text-[#bdbdbd]">Product</h2>
+                        <h2 class="w-[35%] text-[22px] font-semibold leading-[33px] text-[#444444] dark:text-[#bdbdbd]">Total</h2>
                     </div>
 
                     @for (item of productsList; track $index) {
                         <div class="flex justify-between !mb-5">
-                            <p class="text-[15px] leading-5 text-[#444444] w-[300px]">
+                            <p class="text-[15px] leading-5 text-[#444444] dark:text-[#bdbdbd] w-[300px]">
                                 {{item.name}}
-                                <mat-icon class="text-sm !pt-[13px] !pl[5px]">close</mat-icon>
+                                <mat-icon class="text-sm !pt-[10px] !pl[5px]">close</mat-icon>
                                 {{item.quantity}}
                             </p>
-                            <p class="text-lg text-[#222222] leading-5 font-normal w-[35%]">{{item.price | currency}}</p>
+                            <p class="text-lg text-[#222222] dark:text-[#f1f3f5] leading-5 font-normal w-[35%]">{{item.price | currency}}</p>
                         </div>
                     }
 
-                    <div class="capitalize border-b border-t border-[#dddddd] !mb-[30px] !pt-5">
+                    <div class="capitalize border-b border-t border-[#dddddd] dark:border-[#616060] !mb-[30px] !pt-5">
                         <div class="flex justify-between !mb-5">
-                            <p class="font-semibold leading-5 text-base text-[#333333]">subtotal</p>
+                            <p class="font-semibold leading-5 text-base text-[#333333] dark:text-[#bdbdbd]">subtotal</p>
                             <p class="text-lg leading-5 !text-primary w-[35%]">{{subtotal | currency}}</p>
                         </div>
                         <div class="flex justify-between !mb-5">
-                            <p class="font-semibold leading-5 text-base text-[#333333]">shipping</p>
+                            <p class="font-semibold leading-5 text-base text-[#333333] dark:text-[#bdbdbd]">shipping</p>
                             <div class="w-[36.6%]">
 
                                 <div class="block !pl-2.5 !mb-2 text-[#6f6f6f] font-semibold leading-8">
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="flex justify-between !mb-10 capitalize">
-                        <p class="text-[#333333] text-base leading-5">total</p>
+                        <p class="text-[#333333] dark:text-[#bdbdbd] text-base leading-5">total</p>
                         <p class="text-lg leading-5 !text-primary w-[35%]">{{subtotal | currency}}</p>
                     </div>
                 </div>

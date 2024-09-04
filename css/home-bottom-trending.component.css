@@ -1,0 +1,42 @@
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4c3b;
+  top: -4px;
+}
+
+.page_line::before {
+  left: 64px;
+}
+
+.page_line::after {
+  left: 78px;
+}
+
+.page_line_span::before {
+  right: 64px;
+}
+
+.page_line_span::after {
+  right: 78px;
+}
+
+.trending_product_part2:hover .trending_icons_part2 {
+  opacity: 1;
+  transition: all 0.2s ease;
+  animation: icons_part2 400ms ease-in-out;
+}
+
+@keyframes icons_part2 {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 30px;
+  }
+}/*# sourceMappingURL=home-bottom-trending.component.css.map */

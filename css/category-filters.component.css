@@ -1,0 +1,44 @@
+.filter_title::after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  color: #222222;
+  position: absolute;
+  right: -3px;
+  top: 0;
+}
+
+::ng-deep .dark .filter_title::after {
+  color: #f1f3f5;
+}
+
+.colors_filter .open {
+  margin-bottom: 24px;
+  margin-top: 30px;
+  overflow-y: auto;
+}
+
+.brand_filter .open,
+.colors_filter .open,
+.price_filter .open {
+  max-height: 158px;
+  overflow-x: hidden;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.brand_filter .open,
+.colors_filter .open,
+.price_filter .open {
+  margin-top: 30px;
+}
+
+.open::-webkit-scrollbar {
+  background-color: #F5F5F5;
+  width: 5px;
+}
+
+.open::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.62, #ff4c3b), color-stop(0.86, #ff4c3b));
+}/*# sourceMappingURL=category-filters.component.css.map */

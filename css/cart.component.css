@@ -1,0 +1,11 @@
+th,
+td {
+  text-align: center;
+}
+
+th {
+  font-weight: 900;
+  color: #222222;
+  font-size: 16px;
+  text-transform: uppercase;
+}/*# sourceMappingURL=cart.component.css.map */

@@ -1,0 +1,81 @@
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4c3b;
+  top: -4px;
+}
+
+.page_line::before {
+  left: 64px;
+}
+
+.page_line::after {
+  left: 78px;
+}
+
+.page_line_span::before {
+  right: 64px;
+}
+
+.page_line_span::after {
+  right: 78px;
+}
+
+.recent_img_box::before,
+.recent_img_box::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  top: 0;
+  width: 25%;
+  opacity: 0;
+  transition: all 0.3s steps(4);
+  z-index: 1;
+  background-color: #ff4c3b;
+}
+
+.recent_img_box span::after,
+.recent_img_box span::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  top: 0;
+  width: 25%;
+  opacity: 0;
+  transition: all 0.3s steps(4);
+  z-index: 1;
+  background-color: #ff4c3b;
+}
+
+.recent_img_box::before {
+  transition-delay: 0s;
+  left: 0;
+}
+
+.recent_img_box::after {
+  left: 25%;
+  transition-delay: 0.025s;
+}
+
+.recent_img_box span::before {
+  left: 50%;
+  transition-delay: 0.05s;
+}
+
+.recent_img_box span::after {
+  left: 75%;
+  transition-delay: 0.15s;
+}
+
+.recent_img_box:hover:before,
+.recent_img_box:hover::after,
+.recent_img_box:hover .recent_effect::after,
+.recent_img_box:hover .recent_effect::before {
+  bottom: 0;
+  opacity: 0.5;
+}/*# sourceMappingURL=home-recent-story.component.css.map */

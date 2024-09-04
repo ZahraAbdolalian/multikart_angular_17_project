@@ -71,7 +71,9 @@ input:-webkit-autofill {
   }
 
   .mat-mdc-select,
-  .mat-mdc-select-arrow {
+  .mat-mdc-select-arrow,
+  .mdc-floating-label,
+  .mdc-text-field__input  {
     color: #f1f3f5 !important;
   }
 
@@ -87,4 +89,15 @@ input:-webkit-autofill {
     color: #f1f3f5 !important;
     border-bottom: 1px solid #616060 !important;
   } 
+
+  .mdc-text-field {
+    background-color: #383838 !important;
+    color: #f1f3f5 !important;
+    border-bottom: 1px solid #f1f3f5 !important;
+  }
+
+  .mat-mdc-raised-button[disabled], .mat-mdc-raised-button.mat-mdc-button-disabled {
+    background-color: #616060;
+    color: #a9a9a9;
+  }
 }

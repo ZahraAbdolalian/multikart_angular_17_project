@@ -1,0 +1,71 @@
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4c3b;
+  top: -4px;
+}
+
+.page_line::before {
+  left: 64px;
+}
+
+.page_line::after {
+  left: 78px;
+}
+
+.page_line_span::before {
+  right: 64px;
+}
+
+.page_line_span::after {
+  right: 78px;
+}
+
+.trending_product_box:hover .trending_icons {
+  opacity: 1;
+  transition: all 0.5s ease;
+  right: 0px;
+  animation: icons;
+}
+.trending_product_box:hover .trending_icons .heart {
+  animation: icons 500ms ease-in-out;
+}
+.trending_product_box:hover .trending_icons .magnifying {
+  animation: icons 700ms ease-in-out;
+}
+.trending_product_box:hover .trending_icons .refresh {
+  animation: icons 1000ms ease-in-out;
+}
+
+@keyframes icons {
+  from {
+    right: -50px;
+  }
+  to {
+    right: 0px;
+  }
+}
+.trending_name {
+  color: #777777;
+  font-size: 16px;
+  margin-bottom: 5px;
+  margin-top: 0;
+  font-weight: 400;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+::ng-deep .dark .mdc-tab__text-label {
+  color: #f1f3f5 !important;
+}
+::ng-deep .dark .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #ff4c3b !important;
+}/*# sourceMappingURL=home-top-trending.component.css.map */

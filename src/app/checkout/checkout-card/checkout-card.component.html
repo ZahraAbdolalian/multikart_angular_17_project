@@ -1,16 +1,16 @@
-<mat-card class="w-[96%] !bg-[#f9f9f9] border !border-[#dddddd] shadow-none rounded-none !mb-5 !p-5">
+<mat-card class="w-[96%] !bg-[#f9f9f9] dark:!bg-[#2b2b2b] border !border-[#dddddd] dark:!border-[#616060] shadow-none rounded-none !mb-5 !p-5">
     <mat-card-header>
-        <mat-card-title class="!mb-2 font-bold text-base text-[#222222] leading-6 tracking-wider">{{cardTitle}}</mat-card-title>
-        <mat-card-subtitle class="!mb-2 text-[#4f4f4f] font-normal tracking-wider">{{cardSubtitle}}</mat-card-subtitle>
+        <mat-card-title class="!mb-2 font-bold text-base text-[#222222] dark:text-[#f1f3f5] leading-6 tracking-wider">{{cardTitle}}</mat-card-title>
+        <mat-card-subtitle class="!mb-2 text-[#4f4f4f] dark:!text-[#bdbdbd] font-normal tracking-wider">{{cardSubtitle}}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
         <table mat-table [dataSource]="dataSource" class="!bg-[inherit]">
             <ng-container matColumnDef="title">
-                <td mat-cell *matCellDef="let element" class="text-[#9a9a9a] text-sm leading-[21px]"> {{element.title}} </td>
+                <td mat-cell *matCellDef="let element" class="text-[#9a9a9a] dark:text-[#bdbdbd] text-sm leading-[21px]"> {{element.title}} </td>
             </ng-container>
 
             <ng-container matColumnDef="value">
-                <td mat-cell *matCellDef="let element" class="text-end text-[#9a9a9a] text-sm leading-[21px]"> {{element.value}} </td>
+                <td mat-cell *matCellDef="let element" class="text-end text-[#9a9a9a] dark:text-[#bdbdbd] text-sm leading-[21px]"> {{element.value}} </td>
             </ng-container>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>

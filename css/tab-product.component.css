@@ -1,0 +1,34 @@
+.stars_rating div:last-child {
+  color: #dddddd;
+}
+
+.submit_btn {
+  font-family: "Lato", sans-serif;
+  padding: 13px 29px;
+  background-image: linear-gradient(30deg, #ff4c3b 50%, transparent 50%);
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #ff4c3b;
+  background-size: 850px;
+  background-repeat: no-repeat;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  margin-right: 7px;
+  transition: background 300ms ease-in-out;
+  cursor: pointer;
+}
+.submit_btn:hover {
+  background-position: 100%;
+  color: #222222;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+::ng-deep .dark .mdc-tab__text-label {
+  color: #f1f3f5 !important;
+}
+::ng-deep .dark .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #ff4c3b !important;
+}/*# sourceMappingURL=tab-product.component.css.map */

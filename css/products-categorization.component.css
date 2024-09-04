@@ -1,0 +1,24 @@
+.product_box_list:hover .product_icons {
+  opacity: 1;
+  transition: all 0.5s ease;
+  right: 0px;
+  animation: icons;
+}
+.product_box_list:hover .product_icons .heart {
+  animation: icons 500ms ease-in-out;
+}
+.product_box_list:hover .product_icons .magnifying {
+  animation: icons 700ms ease-in-out;
+}
+.product_box_list:hover .product_icons .refresh {
+  animation: icons 1000ms ease-in-out;
+}
+
+@keyframes icons {
+  from {
+    right: -20px;
+  }
+  to {
+    right: 0px;
+  }
+}/*# sourceMappingURL=products-categorization.component.css.map */

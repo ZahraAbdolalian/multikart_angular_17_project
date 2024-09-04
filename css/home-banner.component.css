@@ -1,0 +1,4 @@
+.banner_item:hover .banner_image {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
+}/*# sourceMappingURL=home-banner.component.css.map */

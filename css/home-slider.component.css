@@ -1,0 +1,58 @@
+.slider:hover .arrow_left {
+  left: 100px;
+}
+.slider:hover .arrow_right {
+  right: 100px;
+}
+.slider:hover .arrow_left, .slider:hover .arrow_right {
+  opacity: 1;
+  transform: scale(2.5);
+  transition: all 0.5s ease;
+}
+
+.slider_effect {
+  animation-name: slider_effect;
+  animation-duration: 1.5s;
+}
+
+@keyframes slider_effect {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100px;
+  }
+}
+.arrow_left,
+.arrow_right {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-top: -10px;
+  opacity: 0;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px 7px;
+  margin: 5px;
+  cursor: pointer;
+}
+.arrow_left i,
+.arrow_right i {
+  color: #212529;
+  font-size: 8px;
+}
+
+.arrow_right {
+  right: 1px;
+}
+
+.arrow_left {
+  left: 1px;
+}/*# sourceMappingURL=home-slider.component.css.map */

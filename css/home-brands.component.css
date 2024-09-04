@@ -1,0 +1,8 @@
+.brand_img {
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+.brand_img:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}/*# sourceMappingURL=home-brands.component.css.map */

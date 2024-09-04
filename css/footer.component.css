@@ -1,0 +1,38 @@
+mat-list-item {
+  width: auto;
+  height: auto !important;
+  padding: 0;
+}
+
+.footer_bottom_center_link {
+  color: #777777 !important;
+  padding: 0;
+  position: relative;
+}
+.footer_bottom_center_link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: #ff4c3b;
+  transition: 0.5s ease;
+  height: 2px;
+  width: 0;
+  top: 20px;
+}
+.footer_bottom_center_link:hover::before {
+  width: 100%;
+}
+
+.footer_bootom_item_left {
+  color: #777777;
+  padding-left: 25px;
+  padding-top: 5px;
+  position: relative;
+}
+.footer_bootom_item_left div {
+  text-wrap: wrap;
+}
+.footer_bootom_item_left:hover {
+  color: #999999;
+  transition: all 0.3s ease;
+}/*# sourceMappingURL=footer.component.css.map */

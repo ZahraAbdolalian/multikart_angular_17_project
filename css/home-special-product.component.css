@@ -1,0 +1,55 @@
+.page_line::before,
+.page_line::after,
+.page_line_span::after,
+.page_line_span::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ff4c3b;
+  top: -4px;
+}
+
+.page_line::before {
+  left: 64px;
+}
+
+.page_line::after {
+  left: 78px;
+}
+
+.page_line_span::before {
+  right: 64px;
+}
+
+.page_line_span::after {
+  right: 78px;
+}
+
+.special_item:first-child {
+  border-bottom: 1px solid #dddddd;
+}
+
+::ng-deep.dark .special_item:first-child {
+  border-bottom: 1px solid #616060;
+}
+
+.special_item:hover .special_image {
+  transform: scale(1.03);
+  transition: all 0.5s ease;
+}
+
+.special_product:hover .special_icons {
+  opacity: 1;
+  transition: all 0.2s ease;
+  animation: icons_part2 400ms ease-in-out;
+}
+
+@keyframes icons_part2 {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: 30px;
+  }
+}/*# sourceMappingURL=home-special-product.component.css.map */

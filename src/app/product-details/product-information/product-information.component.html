@@ -5,32 +5,31 @@
 @else {
     <div class="flex !pl-[13px]">
         <div class="w-[501px]">
-            <img class="w-[440px] h-[480px]" [src]="product.image" alt="">
-            <div class="product_all_img">
-            </div>
+            <img class="w-[440px] h-[480px]" [src]="product.image" alt="product-image">
+            <div class="product_all_img"></div>
         </div>
         <div class="w-[501px] !pl-[26px]">
-            <div class="border-b border-[#dddddd] !pt-[15px] !pb-5">
-                <h2 class="text-2xl leading-[30px] uppercase !mb-[15px] text-[#222222] font-bold tracking-[0.5px]">{{product.title}}</h2>
+            <div class="border-b border-[#dddddd] dark:border-[#616060] !pt-[15px] !pb-5">
+                <h2 class="text-2xl leading-[30px] uppercase !mb-[15px] text-[#222222] dark:text-[#f1f3f5] font-bold tracking-[0.5px]">{{product.title}}</h2>
                 <h4 class="!mb-[7px]">
-                    <del class="text-[#777777] text-sm font-normal">{{priceBeforeDiscount | currency}}</del>
+                    <del class="text-[#777777] dark:text-[#bdbdbd] text-sm font-normal">{{priceBeforeDiscount | currency}}</del>
                     <span class="text-primary !pl-[5px] text-base leading-none font-normal tracking-[0.5px]">40% Off</span>
                 </h4>
-                <h3 class="text-[#222222] text-[26px] font-normal !mb-[15px] tracking-[0.78px]">{{product.price | currency}}</h3>
+                <h3 class="text-[#222222] dark:text-[#f1f3f5] text-[26px] font-normal !mb-[15px] tracking-[0.78px]">{{product.price | currency}}</h3>
                 <ul class="product_color">
     
                 </ul>
             </div>
-            <div class="border-b border-[#dddddd] !pt-[15px] !pb-[27px]">
+            <div class="border-b border-[#dddddd] dark:border-[#616060] !pt-[15px] !pb-[27px]">
                 <h5 class="text-primary text-[15px] font-semibold tracking-[0.75px] leading-6">{{stock}}</h5>
-                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">quantity</h6>
+                <h6 class="text-sm text-[#222222] dark:text-[#f1f3f5] font-bold capitalize leading-6">quantity</h6>
                 <div class="!mt-2.5 !pb-5 flex">
-                    <button class="bg-[#fff] h-full border border-[#dddddd] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_left" type="button" (click)="reduceQuantity(quantity)">
-                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                    <button class="bg-[#fff] dark:bg-[#2b2b2b] h-full border border-[#dddddd] dark:border-[#616060] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_left" type="button" (click)="reduceQuantity(quantity)">
+                        <i class="fa fa-chevron-left dark:text-[#bdbdbd]" aria-hidden="true"></i>
                     </button>
-                    <input type="number" disabled value="1" class="!py-[6px] !px-3 w-[60px] text-end bg-[#e9ecef] border-r border-b border-[#dddddd] text-base" #quantity>
-                    <button class="bg-[#fff] h-full border border-[#dddddd] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_right" type="button" (click)="increaseQuantity(quantity)">
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    <input type="number" disabled value="1" class="!py-[6px] !px-3 w-[60px] text-end bg-[#e9ecef] dark:bg-[#3f3f3f] border-r border-b border-t border-[#dddddd] dark:border-[#616060] dark:text-[#bdbdbd] text-base" #quantity>
+                    <button class="bg-[#fff] dark:bg-[#2b2b2b] h-full border border-[#dddddd] dark:border-[#616060] cursor-pointer !py-[16.2px] !px-[13.8px] text-[#585858] quantity_btn_right" type="button" (click)="increaseQuantity(quantity)">
+                        <i class="fa fa-chevron-right dark:text-[#bdbdbd]" aria-hidden="true"></i>
                     </button>
                 </div>
                 <div class="quantity_link">
@@ -43,20 +42,20 @@
                         (click)="addToCart(product,quantity)">Buy Now</button>
                 </div>
             </div>
-            <div class="border-b border-[#dddddd] !pt-[15px] !pb-5">
-                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">product details</h6>
-                <p class="text-[#777777] text-sm tracking-[0.42px] leading-[21px]">It is a long established fact that a reader will be distracted by the readable content of
+            <div class="border-b border-[#dddddd] dark:border-[#616060] !pt-[15px] !pb-5">
+                <h6 class="text-sm text-[#222222] dark:text-[#f1f3f5] font-bold capitalize leading-6">product details</h6>
+                <p class="text-[#777777] dark:text-[#bdbdbd] text-sm tracking-[0.42px] leading-[21px]">It is a long established fact that a reader will be distracted by the readable content of
                     a page when looking at its layout. The point of using Lorem Ipsum is that it has a
                     more-or-less normal distrib...</p>
             </div>
-            <div class="border-b border-[#dddddd] !pt-[15px] !pb-[15px]">
-                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">share it</h6>
+            <div class="border-b border-[#dddddd] dark:border-[#616060] !pt-[15px] !pb-[15px]">
+                <h6 class="text-sm text-[#222222] dark:text-[#f1f3f5] font-bold capitalize leading-6">share it</h6>
                 <div class="flex items-center">
-                    <div class="border-r border-[#dddddd]">
+                    <div class="border-r border-[#dddddd] dark:border-[#616060]">
                         <mat-list class="!flex !mt-[5px]">
                             @for (item of mediaIcons; track $index) {
                                 <mat-list-item class="!w-auto">
-                                    <a [href]="item.url" class="!pr-[30px] text-lg transition-all text-[#222222] hover:text-primary">
+                                    <a [href]="item.url" class="!pr-[30px] text-lg transition-all text-[#222222] dark:text-[#f1f3f5] hover:text-primary">
                                         <i _ngcontent-serverapp-c2628554100="" [class]="item.name"></i>
                                     </a>
                                 </mat-list-item>
@@ -65,23 +64,23 @@
                     </div>
                     <div class="wishlist_btn">
                         <button>
-                            <i _ngcontent-serverapp-c3931259297="" class="fa fa-heart"></i>
-                            <span>Add To WishList</span>
+                            <i _ngcontent-serverapp-c3931259297="" class="fa fa-heart dark:text-[#bdbdbd]"></i>
+                            <span class="dark:text-[#bdbdbd]">Add To WishList</span>
                         </button>
                     </div>
                 </div>
             </div>
             <div class="!pt-[15px] !pb-5">
-                <h6 class="text-sm text-[#222222] font-bold capitalize leading-6">Time Reminder</h6>
-                <div class="bg-[#f7f7f7] !mt-2.5 !pt-[15px] !pb-[15px] !pl-10 inline-block">
-                    <p class="text-lg tracking-[0.54px] leading-[27px] text-[#222222]">
+                <h6 class="text-sm text-[#222222] dark:text-[#f1f3f5] font-bold capitalize leading-6">Time Reminder</h6>
+                <div class="bg-[#f7f7f7] dark:bg-[#2b2b2b] !mt-2.5 !pt-[15px] !pb-[15px] !pl-10 inline-block">
+                    <p class="text-lg tracking-[0.54px] leading-[27px] text-[#222222] dark:text-[#f1f3f5]">
                         @for (item of timer; track $index) {
                             <span class="timer_box w-[70px] inline-block">
                                 <span class="!w-auto inline-block" [class]="item.className">{{item.amount}}</span>
                                 @if (item.timerCal !== 'Sec') {
                                     <span class="!inline !pl-4 w-[70px]">:</span>
                                 }
-                                <span class="text-[#777777] text-xs w-[70px] inline-block">{{item.timerCal}}</span>
+                                <span class="text-[#777777] dark:text-[#bdbdbd] text-xs w-[70px] inline-block">{{item.timerCal}}</span>
                             </span>
                         }
                     </p>

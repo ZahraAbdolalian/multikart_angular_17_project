@@ -28,3 +28,13 @@
         transition: 0.3s ease-in-out;
     }
 }
+
+::ng-deep .dark {
+    .mdc-tab__text-label {
+        color: #f1f3f5 !important;
+    }
+
+    .mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+        color: #ff4c3b !important;
+    }
+}

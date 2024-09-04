@@ -1,6 +1,6 @@
 <div class="max-w-[1400px] !py-[70px] !pl-3 !my-0 !mx-auto">
     <div class="w-full">
-        <h2 class="text-4xl text-[#222222] border-b border-[#dddddd] leading-[0.8] uppercase font-bold tracking-[0.72px] !mb-5 !pb-5">Related Products</h2>
+        <h2 class="text-4xl text-[#222222] dark:text-[#f1f3f5] border-b border-[#dddddd] dark:border-[#616060] leading-[0.8] uppercase font-bold tracking-[0.72px] !mb-5 !pb-5">Related Products</h2>
     </div>
 
     @if (!relatedProducts) {
@@ -43,10 +43,10 @@
                                 }
                             </div>
                             <a [routerLink]="['/product-details',item.id]">
-                                <h6 class="text-[#777777] text-base !mt-[7px] font-normal leading-none overflow-hidden text-ellipsis">{{item.title}}</h6>
+                                <h6 class="text-[#777777] dark:text-[#bdbdbd] text-base !mt-[7px] font-normal leading-none overflow-hidden text-ellipsis">{{item.title}}</h6>
                             </a>
-                            <h4 class="text-[#222222] text-lg font-bold tracking-[0.54px] leading-none !mt-[7px]"> {{item.price | currency}}
-                                <del class="text-[#ccc] text-sm font-normal tracking-[0.54px] leading-none">{{45 | currency}}</del>
+                            <h4 class="text-[#222222] dark:text-[#f1f3f5] text-lg font-bold tracking-[0.54px] leading-none !mt-[7px]"> {{item.price | currency}}
+                                <del class="text-[#ccc] dark:text-[#999a9b] text-sm font-normal tracking-[0.54px] leading-none">{{45 | currency}}</del>
                             </h4>
                         </div>
                     </div>

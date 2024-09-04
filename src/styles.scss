@@ -56,3 +56,11 @@ a {
     color: #cfd4d4;
   }
 }
+
+input:-webkit-autofill {
+  -webkit-background-clip: text;
+}
+
+.dark input:-webkit-autofill {
+  -webkit-text-fill-color: #ffffff;
+}

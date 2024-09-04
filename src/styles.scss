@@ -64,3 +64,27 @@ input:-webkit-autofill {
 .dark input:-webkit-autofill {
   -webkit-text-fill-color: #ffffff;
 }
+
+.dark {
+  .mat-mdc-table {
+    background-color: #2b2b2b !important;
+  }
+
+  .mat-mdc-select,
+  .mat-mdc-select-arrow {
+    color: #f1f3f5 !important;
+  }
+
+  .mat-mdc-paginator-icon {
+    fill: #f1f3f5 !important;
+  }
+  
+  .mat-mdc-icon-button[disabled] .mat-mdc-paginator-icon {
+    fill: #f1f3f58e !important;
+  }
+
+  th {
+    color: #f1f3f5 !important;
+    border-bottom: 1px solid #616060 !important;
+  } 
+}
